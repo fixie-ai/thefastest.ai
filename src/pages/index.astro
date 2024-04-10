@@ -1,0 +1,20 @@
+---
+import { AppConfig } from '@/utils/AppConfig';
+import Base from '@/layouts/Base.astro';
+import Hero from '@/components/Hero.astro';
+import MarkdownTable from '@/components/MarkdownTable.astro';
+import { Content as CurrentMetrics } from '@/data/currentMetrics.md';
+import * as metrics from '@/data/currentMetrics.md'; 
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+
+---
+<Base head={{ title, description }}>
+	<Hero />
+	
+	<MarkdownTable>
+		<CurrentMetrics />
+		<p class="italic text-right">Last updated: {metrics.frontmatter.date}</p>
+	</MarkdownTable>
+</Base>
