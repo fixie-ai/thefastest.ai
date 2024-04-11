@@ -1,10 +1,15 @@
 ---
 import Section from './Section.astro';
+import fs from 'node:fs/promises';
+
+const url = new URL('../../public/logo.txt', import.meta.url);
+const data = await fs.readFile(url, 'utf8');
+
 ---
 
 <Section>
 	<div class="flex justify-between">
-		<div class="text-3xl font-bold">Fastest.ai</div>
+		<pre class="text-xs">{data}</pre>
 		<div class="flex items-center">
 			<!-- Light/Dark Mode Switch -->
 			<div class="ml-3 flex flex-col justify-center">
