@@ -1,0 +1,19 @@
+name: Update LLM Benchmark Data
+
+on:
+  schedule:
+    # Runs at 08:00 UTC every day
+    - cron: '0 8 * * *'
+
+jobs:
+  make-http-request:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Send Benchmark Requests
+      run: |
+        regions=("sea" "iad" "cdg')
+        for region in "${regions[@]}"
+        do
+          curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&store=true' -H "fly-prefer-region: $region"          
+        done
