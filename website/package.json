@@ -15,6 +15,8 @@
 		"@astrojs/tailwind": "^5.0.4",
 		"@types/react": "^18.2.45",
 		"@types/react-dom": "^18.2.18",
+		"ag-grid-community": "^31.2.1",
+		"ag-grid-react": "^31.2.1",
 		"astro": "^4.0.7",
 		"canvas-confetti": "^1.9.2",
 		"mdast-util-to-string": "^4.0.0",

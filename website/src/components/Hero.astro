@@ -1,6 +1,5 @@
 ---
 import Section from './Section.astro';
-
 ---
 
 <Section>
@@ -9,16 +8,6 @@ import Section from './Section.astro';
 		<p class="py-2">Apps are only as fast as their slowest component. LLMs vary tremendously on quality and speed. The table below shows the lastest performance metrics for many models and environments. We hope this data helps you choose the most performant model. </p>
 		<br />
 		<p>Have another model you want us to benchmark? Hit us up with an <a class="underline hover:text-orange-600" href="https://github.com/fixie-ai/fastest.ai/issues" target="_blank">issue on GitHub.</a></p>
-		<br />
-		<p>Definitions:</p>
-		<br />
-		<ul class="list-none">
-			<li class="pb-2"><b>TTR</b> → Time to (HTTP) Response. Indicates the overall speed of the serving infrastructure of the provider/model.</li>
-			<li class="pb-2"><b>TTFT</b> → Time to First Token. Time to get first text from the model. This translates directly into how quickly the UI starts to update when displaying the response and indicates the overall speed with which the model begins working on the request and processing the input tokens.</li>
-			<li class="pb-2"><b>TPS</b> → Tokens per Second. This is how quickly text is emitted from the model and translates directly into how quickly the UI finishes displaying the response. It also indicates how quickly the model can produce each output token.</li>
-			<li class="pb-2"><b>Tokens</b> → The total number of output tokens. Longer responses take longer to produce.</li>
-			<li class="pb-2"><b>Total Time</b> → The total time from the start of the request until the response is complete, i.e., the last token has been generated. Total time = TTFT + TPS * Tokens.</li>
-		</ul>
 	</div>
 </Section>
 

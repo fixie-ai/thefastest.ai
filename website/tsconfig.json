@@ -42,5 +42,6 @@
 			"@/*": ["./src/*"]
 		}
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro", "src/components/PostOverview.tsx"]
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro", "src/components/PostOverview.tsx"],
+	"exclude": ["src/components/DataGrid.astro"]
 }

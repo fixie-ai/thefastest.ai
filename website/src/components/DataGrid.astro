@@ -1,0 +1,64 @@
+---
+// Import the necessary CSS for AG Grid
+import 'ag-grid-community/styles/ag-grid.css';
+import 'ag-grid-community/styles/ag-theme-quartz.css';
+---
+<style>
+  .ag-theme-quartz {
+    font-family: monospace;
+  }
+</style>
+<div id="myGrid" class="ag-theme-quartz text-sm bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white " style="height: 800px; width: 1000px;"></div>
+
+<script>
+  import { createGrid } from 'ag-grid-community';
+  import { gridOptions } from '@/utils/DataGridDefinitions.ts';
+
+  let gridApi;
+  
+  // URLs of our JSON data
+  const urls = [
+    'https://storage.googleapis.com/thefastest-data/cdg/text/2024-04-13.json',
+    'https://storage.googleapis.com/thefastest-data/iad/text/2024-04-13.json',
+    'https://storage.googleapis.com/thefastest-data/sea/text/2024-04-13.json',
+  ];
+
+  async function fetchBenchmarkData(urls) {
+    try {
+      // Fetch all the JSON files concurrently
+      const fetchPromises = urls.map(url => fetch(url).then(response => response.json()));
+      const jsonFiles = await Promise.all(fetchPromises);
+
+      // Combine the data from all files
+      const combinedData = jsonFiles.map(file => {
+        // Extract date from the time string and ignore the timestamp
+        const date = file.time.split('T')[0];
+
+        // Map each result object to a new object that includes the date and region
+        return file.results.map(result => ({
+          date,
+          region: file.region,
+          ...result
+        }));
+      }).flat(); // Flatten the array of arrays into a single array
+
+      return combinedData;
+    } catch (error) {
+      console.error('Error combining JSON files:', error);
+    }
+  }
+  
+  fetchBenchmarkData(urls)
+    .then(combinedResults => {
+      console.log('Combined results:', combinedResults);
+      gridOptions.rowData = combinedResults;
+      gridApi = createGrid(document.querySelector("#myGrid"), gridOptions);
+    })
+    .catch(error => {
+      console.error('Error in combining JSON files:', error);
+    });
+
+</script>
+
+
+

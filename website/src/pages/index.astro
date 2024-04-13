@@ -2,9 +2,10 @@
 import { AppConfig } from '@/utils/AppConfig';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
-import MarkdownTable from '@/components/MarkdownTable.astro';
-import { Content as CurrentMetrics } from '@/data/currentMetrics.md';
-import * as metrics from '@/data/currentMetrics.md'; 
+import Section from '@/components/Section.astro';
+import DataGrid from '@/components/DataGrid.astro';
+import BenchmarkDefinitions from '@/components/BenchmarkDefinitions.astro';
+import HowToUse from '@/components/HowToUse.astro';
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -12,9 +13,10 @@ const { description } = AppConfig;
 ---
 <Base head={{ title, description }}>
 	<Hero />
-	
-	<MarkdownTable>
-		<CurrentMetrics />
-		<p class="italic text-right">Last updated: {metrics.frontmatter.date}</p>
-	</MarkdownTable>
+	<Section>
+		<DataGrid />
+		<p class="italic text-right">Last updated: April 13, 2024</p>
+	</Section>
+	<HowToUse />
+	<BenchmarkDefinitions />
 </Base>
