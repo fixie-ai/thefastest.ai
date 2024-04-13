@@ -2,7 +2,7 @@
 date: '04/10/2024'
 ---
 
-| Provider/Model                           | TTR  | TTFT | TPS | Tok | Total |
+| Provider/Model                           | TTR  | TTFT | TPS | Tokens | Total |
 | :--------------------------------------- | :--- | :--- | :-- | :-- | :---- |
 | gpt-4-turbo                              | 0.39 | 0.40 |  39 |  79 |  2.40 |
 | gpt-4-0125-preview                       | 0.35 | 0.46 |  23 |  91 |  4.39 |
