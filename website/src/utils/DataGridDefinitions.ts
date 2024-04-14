@@ -1,6 +1,30 @@
+
 interface ValueFormatterParam {
   value: number;
 }
+
+export const BenchmarkRegions = [
+	{
+		region: 'iad',
+		label: 'US East (Virginia)',
+		dateAdded: '2024-04-13',
+		latestData: 'https://storage.googleapis.com/thefastest-data/iad/text/2024-04-13.json',
+	},
+	{
+		region: 'cdg',
+		label: 'Europe (Paris)',
+		dateAdded: '2024-04-13',
+		latestData: 'https://storage.googleapis.com/thefastest-data/cdg/text/2024-04-13.json',
+	},
+	{
+		region: 'sea',
+		label: 'US West (Seattle)',
+		dateAdded: '2024-04-13',
+		latestData: 'https://storage.googleapis.com/thefastest-data/sea/text/2024-04-13.json',
+	},
+];
+
+export const LatestDataUrl = 'https://storage.googleapis.com/thefastest-data/latest/text/latest.json';
 
 export const ModelDefinition = {
 	title: "Provider/Model",
@@ -119,10 +143,8 @@ export const gridOptions = {
     filter: true,
     minWidth: 80,
   },
-  pagination: true,
-  paginationPageSizeSelector: [50, 150, 500],
-  paginationPageSize: 150,
+	domLayout: 'autoHeight',
   rowData: [],
-  // Columns to be displayed (Should match rowData properties)
-  columnDefs: [ columnModel, columnRegion, columnTTR, columnTTFT, columnTPS, columnNumTokens, columnTotalTime]
+  // Columns to be displayed (Should match rowData properties)...omit columnRegion
+  columnDefs: [ columnModel, columnTTR, columnTTFT, columnTPS, columnNumTokens, columnTotalTime]
 };
