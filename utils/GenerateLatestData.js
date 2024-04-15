@@ -1,17 +1,5 @@
-// import { Storage } from '@google-cloud/storage';
-// import * as fs from 'node:fs/promises';
-
 // Define the regions to search for files
 const regions = ['cdg', 'sea', 'iad'];
-const bucketName = 'thefastest-data'; // The name of your GCS bucket
-const destinationFileName = 'latest/text/latest.json'; // The destination file path in your GCS bucket
-
-// Initialize the Google Cloud Storage client
-// const storage = new Storage();
-// const bucket = storage.bucket(bucketName);
-
-// Where to save the merged data
-const filePath = './website/public/data/latest.json';
 
 // Function to fetch data from a given URL
 async function fetchData(url) {
@@ -24,24 +12,6 @@ async function fetchData(url) {
     } catch (error) {
         console.error(`Error fetching data from ${url}: ${error}`);
         return null;
-    }
-}
-
-// Function to upload data to Google Cloud Storage
-async function uploadToGCS() {
-    const file = bucket.file(destinationFileName);
-    await file.save(JSON.stringify(data, null, 2), {
-        contentType: 'application/json',
-    });
-    console.log(`"latest.json" has been uploaded successfully to ${destinationFileName}.`);
-}
-
-async function saveData(data) {
-    try {
-        await fs.writeFile(filePath, data, 'utf-8');
-        console.log(`File saved successfully at ${filePath}`);
-    } catch (error) {
-        console.error('Error saving file:', error);
     }
 }
 
@@ -65,12 +35,8 @@ async function fetchAndMergeFiles(date) {
         return;
     }
 
-    //@ts-ignore
+    // Output the merged data to the console
     process.stdout.write(JSON.stringify(validResults, null, 2));
-    // await saveData(JSON.stringify(validResults, null, 2));
-
-    // Upload the merged results to Google Cloud Storage
-    // await uploadToGCS(validResults);
 }
 
 // Example usage with the current date

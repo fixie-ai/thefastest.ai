@@ -27,10 +27,11 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
 <script>
   import { createGrid } from 'ag-grid-community';
   import { BenchmarkRegions, gridOptions, LatestDataUrl } from '@/utils/DataGridDefinitions.ts';
-  import { fetchLatestJsonFile } from '@/utils/FetchData.ts';
+  import { fetchLocalJsonFile } from '@/utils/FetchData.ts';
 
   let gridApi;
-  const gridData = await fetchLatestJsonFile(LatestDataUrl);
+  const localData = '../../data/latest.json';
+  let gridData = [];
 
   function setGridData(region, gridData) {
     gridData.forEach((regionData) => {
@@ -40,7 +41,9 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     });
   } 
 
-  function onDOMContentLoaded() {
+  async function onDOMContentLoaded() {
+    gridData = await fetchLocalJsonFile(localData);
+
     // setup the grid after the page has finished loading
     var gridDiv = document.querySelector("#myGrid");
     gridApi = createGrid(gridDiv, gridOptions);
