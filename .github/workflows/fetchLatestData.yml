@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        node-version: '20'
 
     - name: Use Node.js
       uses: actions/setup-node@v2
@@ -21,6 +23,10 @@ jobs:
 
     - name: Install dependencies
       run: yarn install
+      with:
+        node-version: '20'
 
     - name: Run TypeScript script
       run: yarn dlx tsx ./utils/GenerateLatestData.ts
+      with:
+        node-version: '20'
