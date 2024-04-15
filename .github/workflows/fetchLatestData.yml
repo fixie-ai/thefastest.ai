@@ -3,8 +3,8 @@ name: Generate Latest Data
 on:
   schedule:
     # Runs at 8 AM UTC every day
-    #- cron: '0 8 * * *'
-    - cron: '*/5 * * * *'
+    - cron: '0 8 * * *'
+  workflow_dispatch:
 
 jobs:
   execute-script:
