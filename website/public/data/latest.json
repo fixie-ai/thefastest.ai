@@ -1,0 +1,18 @@
+[
+  {
+    "time": "2024-04-15T08:08:29.625435",
+    "region": "cdg",
+    "cmd": "",
+    "results": [
+      {
+        "model": "gpt-4-turbo",
+        "ttr": 0.48959851264953613,
+        "ttft": 0.48969268798828125,
+        "tps": 27.526920913808937,
+        "num_tokens": 60,
+        "total_time": 2.6330490112304688,
+        "output": "Golden blaze dips low, kissing sea,\nHorizon swallows sun’s fierce glow,\nColors bleed—orange, pink, and red,\nShadows stretch, embracing night,\nWhispers of day’s soft farewell,\nCool breeze stirs under stars,\nNight’s curtain falls,\nPeace descends,\nDark."
+      }
+    ]
+  }
+]
