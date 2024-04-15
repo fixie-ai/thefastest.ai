@@ -1,23 +1,3 @@
-[94m➤[39m YN0000: · Yarn 4.1.1
-[94m➤[39m [90mYN0000[39m: ┌ Resolution step
-::group::Resolution step
-[94m➤[39m YN0085: │ [38;5;70m+[39m [38;5;173mtsx[39m[38;5;111m@[39m[38;5;111mnpm:4.7.2[39m, [38;5;166m@esbuild/[39m[38;5;173maix-ppc64[39m[38;5;111m@[39m[38;5;111mnpm:0.19.12[39m, [38;5;166m@esbuild/[39m[38;5;173mandroid-arm64[39m[38;5;111m@[39m[38;5;111mnpm:0.19.12[39m, [38;5;166m@esbuild/[39m[38;5;173mandroid-arm[39m[38;5;111m@[39m[38;5;111mnpm:0.19.12[39m, [38;5;166m@esbuild/[39m[38;5;173mandroid-x64[39m[38;5;111m@[39m[38;5;111mnpm:0.19.12[39m, and [38;5;220m115[39m more.
-::endgroup::
-[94m➤[39m [90mYN0000[39m: └ Completed in 0s 680ms
-[94m➤[39m [90mYN0000[39m: ┌ Fetch step
-::group::Fetch step
-[94m➤[39m YN0013: │ [38;5;220m97[39m packages were added to the project ([38;5;160m+ 16.86 MiB[39m).
-::endgroup::
-[94m➤[39m [90mYN0000[39m: └ Completed
-[94m➤[39m [90mYN0000[39m: ┌ Link step
-::group::Link step
-[93m➤[39m YN0000: │ ESM support for PnP uses the experimental loader API and is therefore experimental
-[94m➤[39m YN0007: │ [38;5;173mesbuild[39m[38;5;111m@[39m[38;5;111mnpm:0.19.12[39m must be built because it never has been before or the last one failed
-::endgroup::
-[94m➤[39m [90mYN0000[39m: └ Completed in 0s 415ms
-[93m➤[39m YN0000: · Done with warnings in 1s 180ms
-
-Fetching and merging files for date: 2024-04-15
 [
   {
     "time": "2024-04-15T08:08:29.625435",
