@@ -1,19 +1,15 @@
 ---
 import Section from './Section.astro';
-import { ModelDefinition, RegionDefinition, TTRDefinition, TTFTDefinition, TPSDefinition, TokensDefinition, TotalTimeDefinition } from '@/utils/DataGridDefinitions';
+import { ModelDefinition, TTFTDefinition, TPSDefinition, TotalTimeDefinition } from '@/utils/DataGridDefinitions';
 ---
 
 <Section>
-	<div class="text-sm">
-		<p class="text-xl font-bold">Definitions</p>
-		<br />
+	<div class="text-base">
+		<p id="definitions" class="text-xl font-bold mb-4">Definitions</p>
 		<ul class="list-none">
 			<li class="pb-2"><b>{ ModelDefinition.title } → </b>{ ModelDefinition.definition }</li>
-			<li class="pb-2"><b>{ RegionDefinition.title } → </b>{ RegionDefinition.definition }</li>
-			<li class="pb-2"><b>{ TTRDefinition.title } → </b>{ TTRDefinition.definition }</li>
 			<li class="pb-2"><b>{ TTFTDefinition.title } → </b>{ TTFTDefinition.definition }</li>
 			<li class="pb-2"><b>{ TPSDefinition.title } → </b>{ TPSDefinition.definition }</li>
-			<li class="pb-2"><b>{ TokensDefinition.title } → </b>{ TokensDefinition.definition }</li>
 			<li class="pb-2"><b>{ TotalTimeDefinition.title } → </b>{ TotalTimeDefinition.definition }</li>
 		</ul>
 	</div>

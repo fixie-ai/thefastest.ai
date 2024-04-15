@@ -20,26 +20,67 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     <label for="cdgRegionSelector">Europe (Paris)</label>
   </div>
   <br />
-  <div id="myGrid" class="ag-theme-quartz text-sm bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white " style="width: 1000px;"></div>
-  <div id="lastUpdated" class="text-base font-mono italic text-right"></div>
+  <div id="myGrid" class="ag-theme-quartz text-sm bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white " style="width: 800px;"></div>
 </form>
 
 <script>
   import { createGrid } from 'ag-grid-community';
-  import { BenchmarkRegions, gridOptions, LatestDataUrl } from '@/utils/DataGridDefinitions.ts';
+  import { BenchmarkRegions, gridOptions } from '@/utils/DataGridDefinitions.ts';
+  import { generateColor } from '@/utils/DataGridColors.js';
   import { fetchLocalJsonFile } from '@/utils/FetchData.ts';
 
   let gridApi;
   const localData = '../../data/latest.json';
   let gridData = [];
-
+  let selectedRegion = 'sea';
+  let selectedRegionData = [];
+  const startColor = '#FF7F00';  // #FF0000 red
+  const endColor = '#377EB8'; // #00FF00 green
+  
   function setGridData(region, gridData) {
+    selectedRegion = region;
     gridData.forEach((regionData) => {
       if (regionData.region === region) {
-        gridApi.setGridOption("rowData", regionData.results);
+        selectedRegionData = regionData.results;
+        gridApi.setGridOption("rowData", selectedRegionData);
       }
     });
-  } 
+  };
+
+  // Returns the background color for the cell based on the value
+  function colFunction(params) {
+    const currentColumnID = params.column.colId;
+    const totalCellCount = params.api.getDisplayedRowCount();
+    let allValuesInCurrentCol = [];
+
+    selectedRegionData.forEach((x) => {
+      allValuesInCurrentCol = allValuesInCurrentCol.concat(x[currentColumnID]);
+    });
+    
+    const valuesForTableOrdered = allValuesInCurrentCol.sort(function (a, b) {
+      // TTFT and Total Time: lower number is better
+      if (currentColumnID === 'ttft' || currentColumnID === 'total_time') {
+        return a - b;
+      } else {
+        return b - a;
+      }
+    });
+    const valueIndex = valuesForTableOrdered.indexOf(params.value);
+    const bgColour = generateColor(startColor, endColor, totalCellCount, valueIndex)
+
+    return { backgroundColor: '#' + bgColour };
+  };
+
+  function setCellFormatter() {
+    const columnDefs = gridApi.getColumnDefs();
+    columnDefs.forEach((colDef, index) => {
+      // Only apply the formatter for ttft, tps
+      if(colDef.colId == 'ttft' || colDef.colId == 'tps' || colDef.colId == 'total_time') {
+        colDef.cellStyle = colFunction;
+      }      
+    });
+    gridApi.setGridOption("columnDefs", columnDefs);
+  };
 
   async function onDOMContentLoaded() {
     gridData = await fetchLocalJsonFile(localData);
@@ -47,8 +88,14 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     // setup the grid after the page has finished loading
     var gridDiv = document.querySelector("#myGrid");
     gridApi = createGrid(gridDiv, gridOptions);
-    setGridData('sea', gridData);   // default to sea region on load
-    document.getElementById('lastUpdated').innerText = `Last Updated: ${gridData[0].time.split('T')[0]}`;
+    setGridData(selectedRegion, gridData);   // default to sea region on load
+    setCellFormatter();
+
+    // Add text for our last updated date
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('text-base', 'font-mono', 'italic', 'text-right');
+    newDiv.innerText = `Last Updated: ${gridData[0].time.split('T')[0]}`;
+    gridDiv.appendChild(newDiv);
 
     // Add an event listener to the radio buttons to filter the grid data
     document.getElementById('benchmarks').addEventListener('change', function(event) {

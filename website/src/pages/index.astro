@@ -6,6 +6,8 @@ import Section from '@/components/Section.astro';
 import DataGrid from '@/components/DataGrid.astro';
 import BenchmarkDefinitions from '@/components/BenchmarkDefinitions.astro';
 import HowToUse from '@/components/HowToUse.astro';
+import Methodology from '@/components/Methodology.astro';
+import Sources from '@/components/Sources.astro';
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -13,9 +15,12 @@ const { description } = AppConfig;
 ---
 <Base head={{ title, description }}>
 	<Hero />
+	<HowToUse />
 	<Section>
 		<DataGrid />
 	</Section>
-	<HowToUse />
+	
 	<BenchmarkDefinitions />
+	<Methodology />
+	<Sources />
 </Base>

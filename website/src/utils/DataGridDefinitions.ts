@@ -8,23 +8,18 @@ export const BenchmarkRegions = [
 		region: 'iad',
 		label: 'US East (Virginia)',
 		dateAdded: '2024-04-13',
-		latestData: 'https://storage.googleapis.com/thefastest-data/iad/text/2024-04-13.json',
 	},
 	{
 		region: 'cdg',
 		label: 'Europe (Paris)',
 		dateAdded: '2024-04-13',
-		latestData: 'https://storage.googleapis.com/thefastest-data/cdg/text/2024-04-13.json',
 	},
 	{
 		region: 'sea',
 		label: 'US West (Seattle)',
 		dateAdded: '2024-04-13',
-		latestData: 'https://storage.googleapis.com/thefastest-data/sea/text/2024-04-13.json',
 	},
 ];
-
-export const LatestDataUrl = 'https://storage.googleapis.com/thefastest-data/latest/text/latest.json';
 
 export const ModelDefinition = {
 	title: "Provider/Model",
@@ -71,7 +66,7 @@ const columnModel = {
 	headerTooltip: ModelDefinition.definition,
 	headerClass: headerClass,
 	minWidth: 400, 
-	tooltipField: "output"
+	// tooltipField: "output"
 };
 
 // Region column
@@ -119,7 +114,7 @@ const columnNumTokens = {
 	headerName: TokensDefinition.title,
 	headerTooltip: TokensDefinition.definition,
 	headerClass: headerClass,
-	minWidth: 100,
+	// minWidth: 100,
 	maxWidth: 100,
 	wrapHeaderText: true
 };
@@ -130,21 +125,23 @@ const columnTotalTime = {
 	headerName: TotalTimeDefinition.title,
 	headerTooltip: TotalTimeDefinition.definition,
 	headerClass: headerClass,
-	minWidth: 100,
+	// minWidth: 100,
 	maxWidth: 100,
 	wrapHeaderText: true,
-	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
+	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2),
 };
 
 export const gridOptions = {
-  alwaysShowVerticalScroll: true,
-  autoSizeStrategy: { type: 'fitCellContents' },
+  // alwaysShowVerticalScroll: true,
+  autoSizeStrategy: { type: 'fitGridWidth' },
+	enableCellTextSelection: true,
   defaultColDef: {
     filter: true,
-    minWidth: 80,
+		resizable: false,
+    // minWidth: 80,	
   },
 	domLayout: 'autoHeight',
   rowData: [],
-  // Columns to be displayed (Should match rowData properties)...omit columnRegion
-  columnDefs: [ columnModel, columnTTR, columnTTFT, columnTPS, columnNumTokens, columnTotalTime]
+  // Columns to be displayed (Should match rowData properties)...omit columnRegion, columnTTR, columnNumTokens
+  columnDefs: [ columnModel, columnTTFT, columnTPS, columnTotalTime]
 };
