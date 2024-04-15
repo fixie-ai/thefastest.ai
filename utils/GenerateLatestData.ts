@@ -1,5 +1,7 @@
 //@ts-ignore
 import { Storage } from '@google-cloud/storage';
+//@ts-ignore
+import * as fs from 'node:fs/promises';
 
 // Define the regions to search for files
 const regions = ['cdg', 'sea', 'iad'];
@@ -9,6 +11,9 @@ const destinationFileName = 'latest/text/latest.json'; // The destination file p
 // Initialize the Google Cloud Storage client
 const storage = new Storage();
 const bucket = storage.bucket(bucketName);
+
+// Where to save the merged data
+const filePath = './website/public/data/latest.json';
 
 // Function to fetch data from a given URL
 async function fetchData(url: string): Promise<any> {
@@ -33,6 +38,15 @@ async function uploadToGCS(data: any) {
     console.log(`"latest.json" has been uploaded successfully to ${destinationFileName}.`);
 }
 
+async function saveData(data: string) {
+    try {
+        await fs.writeFile(filePath, data, 'utf-8');
+        console.log(`File saved successfully at ${filePath}`);
+    } catch (error) {
+        console.error('Error saving file:', error);
+    }
+}
+
 // Main function to fetch files from all regions and merge them
 async function fetchAndMergeFiles(date: string | undefined) {
     if (!date) {
@@ -53,8 +67,10 @@ async function fetchAndMergeFiles(date: string | undefined) {
         return;
     }
 
+    await saveData(JSON.stringify(validResults, null, 2));
+
     // Upload the merged results to Google Cloud Storage
-    await uploadToGCS(validResults);
+    // await uploadToGCS(validResults);
 }
 
 // Example usage with the current date

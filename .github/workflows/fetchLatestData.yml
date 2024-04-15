@@ -1,0 +1,25 @@
+name: Generate Latest Data
+
+on:
+  schedule:
+    # Runs at 8 AM UTC every day
+    - cron: '0 8 * * *'
+
+jobs:
+  execute-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Run TypeScript script
+      run: yarn dlx tsx ./utils/GenerateLatestData.ts
