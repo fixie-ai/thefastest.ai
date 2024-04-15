@@ -33,17 +33,17 @@ export const RegionDefinition = {
 
 export const TTRDefinition = {
 	title: "TTR",
-	definition: "Time to (HTTP) Response. Indicates the overall speed of the serving infrastructure of the provider/model."
+	definition: "Time to (HTTP) Response. Indicates the overall speed of the serving infrastructure of the provider/model. Lower values = lower latency/faster performance."
 };
 
 export const TTFTDefinition = {
 	title: "TTFT",
-	definition: "Time to First Token. Time to get first text from the model. This translates directly into how quickly the UI starts to update when displaying the response and indicates the overall speed with which the model begins working on the request and processing the input tokens."
+	definition: "Time to First Token. Time to get first text from the model. This translates directly into how quickly the UI starts to update when displaying the response and indicates the overall speed with which the model begins working on the request and processing the input tokens. Lower values = lower latency/faster performance."
 };
 
 export const TPSDefinition = {
 	title: "TPS",
-	definition: "Tokens per Second. This is how quickly text is emitted from the model and translates directly into how quickly the UI finishes displaying the response. It also indicates how quickly the model can produce each output token."
+	definition: "Tokens per Second. This is how quickly text is emitted from the model and translates directly into how quickly the UI finishes displaying the response. It also indicates how quickly the model can produce each output token. Higher values = more throughput/faster performance."
 };
 
 export const TokensDefinition = {
@@ -53,7 +53,7 @@ export const TokensDefinition = {
 
 export const TotalTimeDefinition = {
 	title: "Total Time",
-	definition: "The total time from the start of the request until the response is complete, i.e., the last token has been generated. Total time = TTFT + TPS * Tokens."
+	definition: "The total time from the start of the request until the response is complete, i.e., the last token has been generated. Total time = TTFT + TPS * Tokens. Lower values = lower latency/faster performance."
 };
 
 // Set-up all of our column definitions that will be used in the Data Grid
