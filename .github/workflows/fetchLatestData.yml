@@ -13,8 +13,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        node-version: '20'
 
     - name: Use Node.js
       uses: actions/setup-node@v2
@@ -24,5 +22,12 @@ jobs:
     - name: Install dependencies
       run: yarn install
 
-    - name: Run TypeScript script
-      run: yarn dlx tsx ./utils/GenerateLatestData.ts
+    - name: Get data and update file
+      run: |
+        OUTPUT="$(yarn dlx tsx ./utils/GenerateLatestData.ts)"
+        echo "$OUTPUT" > ./website/public/data/latest.json
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ./website/public/data/latest.json
+        git commit -m "Update latest data"
+        git push

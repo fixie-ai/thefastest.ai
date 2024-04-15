@@ -67,7 +67,9 @@ async function fetchAndMergeFiles(date: string | undefined) {
         return;
     }
 
-    await saveData(JSON.stringify(validResults, null, 2));
+    //@ts-ignore
+    process.stdout.write(JSON.stringify(validResults, null, 2));
+    // await saveData(JSON.stringify(validResults, null, 2));
 
     // Upload the merged results to Google Cloud Storage
     // await uploadToGCS(validResults);
