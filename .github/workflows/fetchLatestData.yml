@@ -24,7 +24,7 @@ jobs:
 
     - name: Get data and update file
       run: |
-        OUTPUT="$(yarn dlx tsx ./utils/GenerateLatestData.ts)"
+        OUTPUT="$(node ./utils/GenerateLatestData.js)"
         echo "$OUTPUT" > ./website/public/data/latest.json
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
