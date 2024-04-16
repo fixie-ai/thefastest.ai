@@ -94,7 +94,8 @@ const columnTTFT = {
 	headerName: TTFTDefinition.title,
 	headerTooltip: TTFTDefinition.definition,
 	headerClass: headerClass,
-	maxWidth: 90,
+	// minWidth: 80,
+	// maxWidth: 90,
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
 };
 
@@ -104,7 +105,8 @@ const columnTPS = {
 	headerName: TPSDefinition.title,
 	headerTooltip: TPSDefinition.definition,
 	headerClass: headerClass,
-	maxWidth: 90,
+	// minWidth: 90,
+	// maxWidth: 90,
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
 };
 
@@ -114,8 +116,8 @@ const columnNumTokens = {
 	headerName: TokensDefinition.title,
 	headerTooltip: TokensDefinition.definition,
 	headerClass: headerClass,
-	// minWidth: 100,
-	maxWidth: 100,
+	minWidth: 100,
+	// maxWidth: 100,
 	wrapHeaderText: true
 };
 
@@ -126,9 +128,10 @@ const columnTotalTime = {
 	headerTooltip: TotalTimeDefinition.definition,
 	headerClass: headerClass,
 	// minWidth: 100,
-	maxWidth: 100,
+	// maxWidth: 100,
 	wrapHeaderText: true,
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2),
+	sort: 'asc',
 };
 
 export const gridOptions = {
