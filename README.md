@@ -1,7 +1,7 @@
-# fastest.ai
+# thefastest.ai
 Website with current metrics on the fastest AI models.
 
-## thefastest.ai website
+## Website
 Everything is in the `\website` folder. Pushing to main branch will trigger GitHub action to build and publish the site.
 
 ## Data
