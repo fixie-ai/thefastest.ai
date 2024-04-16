@@ -33,9 +33,20 @@ const {
 			) {
 				localStorage.setItem('dark-mode', 'true');
 				document.querySelector('html')?.classList.add('dark');
+
+				// Change the data grid
+				const myElement = document.getElementById('myGrid');
+				myElement.classList.remove('ag-theme-quartz');
+				myElement.classList.add('ag-theme-quartz-dark');
+
 			} else {
 				localStorage.setItem('dark-mode', 'false');
 				document.querySelector('html')?.classList.remove('dark');
+
+				// Change the data grid
+				const myElement = document.getElementById('myGrid');
+				myElement.classList.remove('ag-theme-quartz-dark');
+				myElement.classList.add('ag-theme-quartz');
 			}
 		</script>
 	</head>
