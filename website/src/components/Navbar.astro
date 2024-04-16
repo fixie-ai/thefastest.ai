@@ -10,8 +10,10 @@ const data = await fs.readFile(url, 'utf8');
 
 <Section>
 	<div class="flex justify-between">
-		<pre class="text-xs">{data}</pre>
-		<div class="flex items-center">
+		<div>
+			<pre class="" style="font-size: max(0.5vw, 0.25rem);">{data}</pre>
+		</div>
+		<div>
 			<!-- Light/Dark Mode Switch -->
 			<div class="ml-3 flex flex-col justify-center">
 				<input type="checkbox" id="light-switch" class="light-switch sr-only" />

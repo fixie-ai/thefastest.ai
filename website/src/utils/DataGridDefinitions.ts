@@ -3,6 +3,17 @@ interface ValueFormatterParam {
   value: number;
 }
 
+export const WorstColor = {
+	rgb: "239 68 68",
+	hex: "#EF4444",
+};
+
+export const BestColor = {
+	rgb: "34 197 94",
+	hex: "#22C55E",
+};
+
+
 export const BenchmarkRegions = [
 	{
 		region: 'iad',
@@ -38,12 +49,16 @@ export const TTRDefinition = {
 
 export const TTFTDefinition = {
 	title: "TTFT",
-	definition: "Time to First Token. Time to get first text from the model. This translates directly into how quickly the UI starts to update when displaying the response and indicates the overall speed with which the model begins working on the request and processing the input tokens. Lower values = lower latency/faster performance."
+	definition: "Time to First Token. Time to get first text from the model. This translates directly into how quickly the UI starts to update when displaying the response and indicates the overall speed with which the model begins working on the request and processing the input tokens. Lower values = lower latency/faster performance.",
+	bestPerformance: 0.20,
+	worstPerformance: 0.50,
 };
 
 export const TPSDefinition = {
 	title: "TPS",
-	definition: "Tokens per Second. This is how quickly text is emitted from the model and translates directly into how quickly the UI finishes displaying the response. It also indicates how quickly the model can produce each output token. Higher values = more throughput/faster performance."
+	definition: "Tokens per Second. This is how quickly text is emitted from the model and translates directly into how quickly the UI finishes displaying the response. It also indicates how quickly the model can produce each output token. Higher values = more throughput/faster performance.",
+	bestPerformance: 100,
+	worstPerformance: 30,
 };
 
 export const TokensDefinition = {
@@ -53,7 +68,9 @@ export const TokensDefinition = {
 
 export const TotalTimeDefinition = {
 	title: "Total",
-	definition: "The total time from the start of the request until the response is complete, i.e., the last token has been generated. Total time = TTFT + TPS * Tokens. Lower values = lower latency/faster performance."
+	definition: "The total time from the start of the request until the response is complete, i.e., the last token has been generated. Total time = TTFT + TPS * Tokens. Lower values = lower latency/faster performance.",
+	bestPerformance: 0.40,
+	worstPerformance: 1.00,
 };
 
 // Set-up all of our column definitions that will be used in the Data Grid
@@ -64,6 +81,7 @@ const columnModel = {
 	field: "model",
 	headerName: ModelDefinition.title,
 	headerTooltip: ModelDefinition.definition,
+	headerClass: headerClass,
 	//TODO: Make this ~200 on mobile screen size by default
 	minWidth: 300,
 	// tooltipField: "output"
@@ -95,7 +113,7 @@ const columnTTFT = {
 	minWidth: 100,
 	// minWidth: 80,
 	// maxWidth: 90,
-	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
+	valueFormatter: (p: ValueFormatterParam) => (p.value.toFixed(2) < 1.0 ? p.value.toFixed(2)*1000 + "ms" : p.value.toFixed(2) + "s"),
 };
 
 // TPS column
@@ -130,7 +148,8 @@ const columnTotalTime = {
 	// minWidth: 100,
 	// maxWidth: 100,
 	wrapHeaderText: true,
-	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2),
+	// valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2) + "s",
+	valueFormatter: (p: ValueFormatterParam) => (p.value.toFixed(2) < 1 ? p.value.toFixed(2)*1000 + "ms" : p.value.toFixed(2) + "s"),
 	sort: 'asc',
 };
 

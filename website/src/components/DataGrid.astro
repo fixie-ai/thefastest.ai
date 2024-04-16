@@ -18,22 +18,47 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
 </style>
 
 <form id="benchmarks" class="text-sm">
-  <label for="regionSelector" class="text-xl font-bold" >Select a Region</label>
-  <div id="regionSelector" class="my-4">
-    <input type="radio" id="seaRegionSelector" name="selectedRegion" value="sea" checked />
-    <label for="seaRegionSelector">US West (Seattle)</label>
-    <input type="radio" id="iadRegionSelector" name="selectedRegion" value="iad" />
-    <label for="iadRegionSelector">US East (Virginia)</label>
-    <input type="radio" id="cdgRegionSelector" name="selectedRegion" value="cdg" />
-    <label for="cdgRegionSelector">Europe (Paris)</label>
+  <div class="flex flex-row justify-between">
+    <div class="flex flex-col">
+      <label for="regionSelector" class="text-xl font-bold" >Select a Region</label>
+      <div id="regionSelector" class="my-4 flex flex-col">
+        <div>
+          <input type="radio" id="seaRegionSelector" name="selectedRegion" value="sea" checked />
+          <label for="seaRegionSelector">US West (Seattle)</label>
+        </div>
+        <div>
+          <input type="radio" id="iadRegionSelector" name="selectedRegion" value="iad" />
+          <label for="iadRegionSelector">US East (Virginia)</label>
+        </div>
+        <div>
+          <input type="radio" id="cdgRegionSelector" name="selectedRegion" value="cdg" />
+          <label for="cdgRegionSelector">Europe (Paris)</label>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 mb-4 text-left flex flex-col">
+      <div>TTFT = Time to First Token.</div>
+      <div>TPS = Tokens per Second.</div>
+      <div>Total Time = Time from start to finish.</div>
+    </div>
   </div>
-  <br />
+  
+  
   <div id="myGrid" class="ag-theme-quartz text-sm bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white w-full"></div>
+  <div class="mt-4 flex flex-row justify-between text-sm items-center">
+    <div>
+      <p class="inline-flex">
+        <div class="inline-flex items-center"><span class="text-center rounded-md bg-green-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= best.</span></div>
+        <div class="inline-flex items-center"><span class="text-center rounded-md bg-red-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= worst.</span></div>
+      </p>
+    </div>
+    <div id="lastUpdated" class=" font-mono italic text-right"></div>
+  </div>
 </form>
 
 <script>
   import { createGrid } from 'ag-grid-community';
-  import { BenchmarkRegions, gridOptions } from '@/utils/DataGridDefinitions.ts';
+  import { BenchmarkRegions, gridOptions, WorstColor, BestColor, TTFTDefinition, TPSDefinition, TotalTimeDefinition } from '@/utils/DataGridDefinitions.ts';
   import { generateColor } from '@/utils/DataGridColors.js';
   import { fetchLocalJsonFile } from '@/utils/FetchData.ts';
 
@@ -42,8 +67,6 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   let gridData = [];
   let selectedRegion = 'sea';
   let selectedRegionData = [];
-  const startColor = '#FF7F00';  // #FF0000 red
-  const endColor = '#377EB8'; // #00FF00 green
   
   function setGridData(region, gridData) {
     selectedRegion = region;
@@ -58,25 +81,36 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   // Returns the background color for the cell based on the value
   function colFunction(params) {
     const currentColumnID = params.column.colId;
-    const totalCellCount = params.api.getDisplayedRowCount();
-    let allValuesInCurrentCol = [];
+    TTFTDefinition.bestPerformance;
+    TPSDefinition.bestPerformance;
+    TotalTimeDefinition.bestPerformance;
 
-    selectedRegionData.forEach((x) => {
-      allValuesInCurrentCol = allValuesInCurrentCol.concat(x[currentColumnID]);
-    });
-    
-    const valuesForTableOrdered = allValuesInCurrentCol.sort(function (a, b) {
-      // TTFT and Total Time: lower number is better
-      if (currentColumnID === 'ttft' || currentColumnID === 'total_time') {
-        return a - b;
-      } else {
-        return b - a;
+    // TTFT (Lower is better)
+    if (currentColumnID == 'ttft') {
+      if (params.value <= TTFTDefinition.bestPerformance) {
+        return { backgroundColor: BestColor.hex };
+      } else if (params.value >= TTFTDefinition.worstPerformance) {
+        return { backgroundColor: WorstColor.hex };
       }
-    });
-    const valueIndex = valuesForTableOrdered.indexOf(params.value);
-    const bgColour = generateColor(startColor, endColor, totalCellCount, valueIndex)
+    }
+    // TPS (Higher is better)
+    else if (currentColumnID == 'tps') {
+      if (params.value >= TPSDefinition.bestPerformance) {
+        return { backgroundColor: BestColor.hex };
+      } else if (params.value <= TPSDefinition.worstPerformance) {
+        return { backgroundColor: WorstColor.hex };
+      }
+    }
+    // Total Time (Lower is better)
+    else if (currentColumnID == 'total_time') {
+      if (params.value <= TotalTimeDefinition.bestPerformance) {
+        return { backgroundColor: BestColor.hex };
+      } else if (params.value >= TotalTimeDefinition.worstPerformance) {
+        return { backgroundColor: WorstColor.hex };
+      }
+    }
 
-    return { backgroundColor: '#' + bgColour };
+    return { };
   };
 
   function setCellFormatter() {
@@ -100,10 +134,9 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     setCellFormatter();
 
     // Add text for our last updated date
-    const newDiv = document.createElement('div');
-    newDiv.classList.add('text-base', 'font-mono', 'italic', 'text-right');
-    newDiv.innerText = `Last Updated: ${gridData[0].time.split('T')[0]}`;
-    gridDiv.appendChild(newDiv);
+    const ourDiv = document.getElementById('lastUpdated');
+    // ourDiv.classList.add('text-base', 'font-mono', 'italic', 'text-right');
+    ourDiv.innerText = `Last Updated: ${gridData[0].time.split('T')[0]}`;
 
     // Add an event listener to the radio buttons to filter the grid data
     document.getElementById('benchmarks').addEventListener('change', function(event) {
