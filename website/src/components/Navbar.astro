@@ -55,12 +55,23 @@ const data = await fs.readFile(url, 'utf8');
 						el.checked = checked;
 					}
 				});
-				if (lightSwitch.checked) {
+				if (lightSwitch.checked) {	// Dark mode
 					document.documentElement.classList.add('dark');
 					localStorage.setItem('dark-mode', 'true');
+
+					// Change the data grid
+					const myElement = document.getElementById('myGrid');
+					myElement.classList.remove('ag-theme-quartz');
+					myElement.classList.add('ag-theme-quartz-dark');
+
 				} else {
 					document.documentElement.classList.remove('dark');
 					localStorage.setItem('dark-mode', 'false');
+
+					// Change the data grid
+					const myElement = document.getElementById('myGrid');
+					myElement.classList.remove('ag-theme-quartz-dark');
+					myElement.classList.add('ag-theme-quartz');
 				}
 			});
 		});
