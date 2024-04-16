@@ -52,7 +52,7 @@ export const TokensDefinition = {
 };
 
 export const TotalTimeDefinition = {
-	title: "Total Time",
+	title: "Total",
 	definition: "The total time from the start of the request until the response is complete, i.e., the last token has been generated. Total time = TTFT + TPS * Tokens. Lower values = lower latency/faster performance."
 };
 
@@ -64,8 +64,8 @@ const columnModel = {
 	field: "model",
 	headerName: ModelDefinition.title,
 	headerTooltip: ModelDefinition.definition,
-	headerClass: headerClass,
-	minWidth: 400, 
+	//TODO: Make this ~200 on mobile screen size by default
+	minWidth: 300,
 	// tooltipField: "output"
 };
 
@@ -75,7 +75,6 @@ const columnRegion = {
 	headerName: RegionDefinition.title,
 	headerTooltip: RegionDefinition.definition,
 	headerClass: headerClass,
-	maxWidth: 100
 };
 
 // TTR column
@@ -84,7 +83,6 @@ const columnTTR = {
 	headerName: TTRDefinition.title,
 	headerTooltip: TTRDefinition.definition,
 	headerClass: headerClass,
-	maxWidth: 90,
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
 };
 
@@ -94,6 +92,7 @@ const columnTTFT = {
 	headerName: TTFTDefinition.title,
 	headerTooltip: TTFTDefinition.definition,
 	headerClass: headerClass,
+	minWidth: 100,
 	// minWidth: 80,
 	// maxWidth: 90,
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
@@ -105,6 +104,7 @@ const columnTPS = {
 	headerName: TPSDefinition.title,
 	headerTooltip: TPSDefinition.definition,
 	headerClass: headerClass,
+	minWidth: 100,
 	// minWidth: 90,
 	// maxWidth: 90,
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
@@ -116,7 +116,6 @@ const columnNumTokens = {
 	headerName: TokensDefinition.title,
 	headerTooltip: TokensDefinition.definition,
 	headerClass: headerClass,
-	minWidth: 100,
 	// maxWidth: 100,
 	wrapHeaderText: true
 };
@@ -127,6 +126,7 @@ const columnTotalTime = {
 	headerName: TotalTimeDefinition.title,
 	headerTooltip: TotalTimeDefinition.definition,
 	headerClass: headerClass,
+	minWidth: 100,
 	// minWidth: 100,
 	// maxWidth: 100,
 	wrapHeaderText: true,
@@ -140,7 +140,6 @@ export const gridOptions = {
 	enableCellTextSelection: true,
   defaultColDef: {
     filter: true,
-		resizable: false,
     // minWidth: 80,	
   },
 	domLayout: 'autoHeight',
