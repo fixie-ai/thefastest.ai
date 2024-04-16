@@ -3,8 +3,9 @@ import Section from './Section.astro';
 ---
 
 <Section>
-	<div class="text-base">
-		<p id="methodology" class="text-xl font-bold mb-4">Methodology</p>
+	<div>
+		<p id="methodology" class="text-base font-bold">Methodology</p>
+		<p class="text-base font-bold mb-4">===========</p>
 		<p class="py-2"><b>Distributed Footprint: </b>We run our tools daily in multiple data centers using <a class="underline hover:text-orange-600"  href="https://fly.io/docs/reference/regions/" target="_blank">Fly.io</a>. Currently we run in cdg, iad, and sea.</p>
 		<p class="py-2"><b>Short Requests: </b>Input requests are a short, single message (~20 tokens) and ask for a brief output response.</p>
 		<p class="py-2"><b>Max Output: </b>Max output tokens is set to 100 to avoid distortion of TPS values from long outputs.</p>
