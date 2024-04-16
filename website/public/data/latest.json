@@ -1,1129 +1,1156 @@
 [
   {
-    "time": "2024-04-15T08:08:29.625435",
+    "time": "2024-04-16T04:57:24.736349",
     "region": "cdg",
-    "cmd": "",
+    "cmd": "--max-tokens=20",
     "results": [
       {
         "model": "gpt-4-turbo",
-        "ttr": 0.48959851264953613,
-        "ttft": 0.48969268798828125,
-        "tps": 27.526920913808937,
-        "num_tokens": 60,
-        "total_time": 2.6330490112304688,
-        "output": "Golden blaze dips low, kissing sea,\nHorizon swallows sun’s fierce glow,\nColors bleed—orange, pink, and red,\nShadows stretch, embracing night,\nWhispers of day’s soft farewell,\nCool breeze stirs under stars,\nNight’s curtain falls,\nPeace descends,\nDark."
+        "ttr": 0.4609520435333252,
+        "ttft": 0.4611546993255615,
+        "tps": 18.159870292786916,
+        "num_tokens": 20,
+        "total_time": 1.5074176788330078,
+        "output": "Amber hues paint the evening sky,\nHorizon blushes as the sun dips low,\nClouds"
       },
       {
         "model": "gpt-4-0125-preview",
-        "ttr": 0.5833027362823486,
-        "ttft": 0.6289660930633545,
-        "tps": 27.209436084334055,
-        "num_tokens": 90,
-        "total_time": 3.899890184402466,
-        "output": "Beneath the vast, expansive evening sky,\nThe sun dips low, in splendid grace it sighs.\nA canvas brushed with strokes of gold and pink,\nWhere clouds like ships on fiery seas do sink.\nThe horizon blurs, a line of molten light,\nAs day concedes the throne to creeping night.\nIn silence, hearts and skies in awe unite,\nWhile darkness cloaks the world, snuffing the light.\nGoodnight."
+        "ttr": 0.6317014694213867,
+        "ttft": 0.6782166957855225,
+        "tps": 49.44554224462496,
+        "num_tokens": 20,
+        "total_time": 1.0624778270721436,
+        "output": "Beneath the vast, expansive evening sky,\nThe sun dips low, bidding the day goodbye.\n"
       },
       {
         "model": "fixie-scentralus.azure/gpt-4-0125-preview",
-        "ttr": 0.6687986850738525,
-        "ttft": 0.6689915657043457,
-        "tps": 9.403919809580586,
-        "num_tokens": 95,
-        "total_time": 10.664823293685913,
-        "output": "Beneath the vast, expansive evening sky,\nThe sun dips low, bidding the day goodbye.\nA canvas painted with a fiery hue,\nOranges, pinks, and purples blend and stew.\nLight fades to dark as stars begin to peek,\nWhispers of night, a calm that many seek.\nThe world now hushed, in twilight's gentle grip,\nAs day to night, we seamlessly slip.\nSunset's end, a peaceful, silent sigh."
+        "ttr": 0.6627480983734131,
+        "ttft": 0.6628382205963135,
+        "tps": 12.809200687685568,
+        "num_tokens": 20,
+        "total_time": 2.1461470127105713,
+        "output": "Beneath the vast, expansive evening sky,\nThe sun dips low, bidding the day goodbye.\n"
       },
       {
         "model": "gpt-4-1106-preview",
-        "ttr": 0.6383652687072754,
-        "ttft": 0.7313346862792969,
-        "tps": 19.768674919354424,
-        "num_tokens": 70,
-        "total_time": 4.221705198287964,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\nA canvas of light, evening's soft bliss,\nNature's masterpiece makes one think,\nHow day's end can be so quaint,\nColors fade to twilight's hue,\nNight whispers, day's restraint,\nSunset's last view,\nPeace ensues."
+        "ttr": 0.5477793216705322,
+        "ttft": 0.6308839321136475,
+        "tps": 25.905595080744728,
+        "num_tokens": 20,
+        "total_time": 1.3643162250518799,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "fixie-westus.azure/gpt-4-1106-preview",
-        "ttr": 0.7749817371368408,
-        "ttft": 0.7751038074493408,
-        "tps": 11.82816877303378,
-        "num_tokens": 91,
-        "total_time": 8.384058475494385,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink,\nA canvas brushed by nature's artful hand,\nWhispers of clouds in purple twilight sink.\nOrange glow fades to twilight's gentle band,\nStars peek out, night's curtain, soft and brisk.\nCool breeze carries day's last light away,\nAs dusk enfolds the world in its mystique,\nNightfall's embrace, the end of day."
+        "ttr": 0.47920870780944824,
+        "ttft": 0.4793205261230469,
+        "tps": 4.82384058497373,
+        "num_tokens": 20,
+        "total_time": 4.4180908203125,
+        "output": "Amber hues dance across the evening sky,\nHorizon ablaze with the day's last kiss,\n"
       },
       {
         "model": "fixie-eastus2.azure/gpt-4-1106-preview",
-        "ttr": 2.2928483486175537,
-        "ttft": 2.2930142879486084,
-        "tps": 3.253049826496014,
-        "num_tokens": 70,
-        "total_time": 23.503879070281982,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber bliss,\nClouds ablaze with evening's glow,\nNature's canvas, a vivid show,\nCrimson streaks on blue canvas,\nWhispers of night, hush, hush,\nDay's last sigh, soft,\nSunset's gift,\nPeace."
+        "ttr": 0.5210728645324707,
+        "ttft": 0.5212116241455078,
+        "tps": 17.922803892596015,
+        "num_tokens": 20,
+        "total_time": 1.5813136100769043,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "fixie-frcentral.azure/gpt-4-1106-preview",
-        "ttr": 0.2717311382293701,
-        "ttft": 0.27193355560302734,
-        "tps": 6.551023362912091,
-        "num_tokens": 77,
-        "total_time": 11.87317442893982,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\nA canvas of light, evening's soft bliss,\nNature's finale, day's last golden link,\nShadows stretch, as colors slowly sink,\nDay whispers goodbye, night's curtain drawn,\nOrange hues fade to a twilight ink,\nDusk settles in, another day gone,\nPeace."
+        "ttr": 0.23514866828918457,
+        "ttft": 0.2360363006591797,
+        "tps": 20.1898692134031,
+        "num_tokens": 20,
+        "total_time": 1.1771023273468018,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "fixie-secentral.azure/gpt-4-1106-preview",
-        "ttr": 0.43222570419311523,
-        "ttft": 0.4324939250946045,
-        "tps": 4.0089333708362584,
-        "num_tokens": 55,
-        "total_time": 13.902410984039307,
-        "output": "Golden sun dips low, kissing the sea,\nCasting hues of pink and ruby,\nDay surrenders to night's reign,\nStars begin their quiet song,\nMoon ascends her throne,\nPeace descends, soft,\nAs night's cloak,\nUnfurls,\nStill."
+        "ttr": 0.3398571014404297,
+        "ttft": 0.340451717376709,
+        "tps": 11.138885627481699,
+        "num_tokens": 20,
+        "total_time": 2.0461878776550293,
+        "output": "Golden sun dips low, kissing the sea,\nCasting hues of pink and ruby,\nSilhouettes"
       },
       {
         "model": "fixie-uksouth.azure/gpt-4-1106-preview",
-        "ttr": 29.644853591918945,
-        "ttft": 29.64517092704773,
-        "tps": 1.5916944219672748,
-        "num_tokens": 83,
-        "total_time": 81.16259717941284,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\nA canvas of light, evening's soft bliss,\nNature's finale, day's last golden link,\nShadows stretch, as colors slowly sink,\nDay whispers goodbye, night's curtain nears,\nCrimson hues fade to a gentle wink,\nIn twilight's hush, the first star appears,\nNightfall."
+        "ttr": 0.2902696132659912,
+        "ttft": 0.290546178817749,
+        "tps": 8.545361411191719,
+        "num_tokens": 20,
+        "total_time": 2.513974666595459,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "gpt-3.5-turbo-0125",
-        "ttr": 0.39693164825439453,
-        "ttft": 0.4135425090789795,
-        "tps": 84.08444773542348,
-        "num_tokens": 48,
-        "total_time": 0.9725043773651123,
-        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink, and purple blend\nA masterpiece to send\nDay into night\nA sight so grand\nSunset's light\nFading\nSlowly"
+        "ttr": 0.3420603275299072,
+        "ttft": 0.3663058280944824,
+        "tps": 67.87154006792964,
+        "num_tokens": 20,
+        "total_time": 0.6462464332580566,
+        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink,"
       },
       {
         "model": "gpt-3.5-turbo-1106",
-        "ttr": 0.4838540554046631,
-        "ttft": 0.6758489608764648,
-        "tps": 201.4674963181029,
-        "num_tokens": 60,
-        "total_time": 0.9687001705169678,
-        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow fills the evening sky\nCasting long shadows on the earth\nThe world is bathed in warm light\nA peaceful calm descends\nAs the day ends\nIn a stunning\nSunset."
+        "ttr": 0.3183479309082031,
+        "ttft": 0.3232896327972412,
+        "tps": 67.60765190597749,
+        "num_tokens": 20,
+        "total_time": 0.6043229103088379,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
       },
       {
         "model": "fixie-westus.azure/gpt-3.5-turbo-1106",
-        "ttr": 0.20978665351867676,
-        "ttft": 0.21012187004089355,
-        "tps": 81.1421363037007,
-        "num_tokens": 64,
-        "total_time": 0.9865372180938721,
-        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nCasting a warm glow over the land\nA breathtaking sight to behold\nNature's masterpiece unfolds\nA tranquil, peaceful scene\nAs the day's end nears\nThe world slows\nUnderneath\nThe sun's\nSpell."
+        "ttr": 0.20470285415649414,
+        "ttft": 0.20496320724487305,
+        "tps": 73.4760002802887,
+        "num_tokens": 20,
+        "total_time": 0.46355104446411133,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
       },
       {
         "model": "fixie-eastus2.azure/gpt-3.5-turbo",
-        "ttr": 0.17988181114196777,
-        "ttft": 0.18814587593078613,
-        "tps": 72.68228714267457,
-        "num_tokens": 57,
-        "total_time": 0.9586224555969238,
-        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, a fiery ball.\nSilhouettes dance against the light,\nNature's beauty on display.\nColors blend and merge,\nA breathtaking sight,\nSunset's embrace,\nDay's farewell,\nPeaceful,\nGone."
+        "ttr": 0.1268327236175537,
+        "ttft": 0.12693238258361816,
+        "tps": 94.59739254609576,
+        "num_tokens": 20,
+        "total_time": 0.32778358459472656,
+        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, a fiery ball.\nSil"
       },
       {
         "model": "claude-3-opus-20240229",
-        "ttr": 0.8733932971954346,
-        "ttft": 0.8735475540161133,
-        "tps": 23.54451091981127,
-        "num_tokens": 74,
-        "total_time": 3.974057912826538,
-        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,\nPainting skies in vibrant hues,\nOrange, pink, and purple,\nBlending in harmony,\nAs daylight fades,\nTwilight glows,\nSerene,\nCalm,\nRest."
+        "ttr": 1.006911277770996,
+        "ttft": 1.0074162483215332,
+        "tps": 21.587204103563177,
+        "num_tokens": 20,
+        "total_time": 1.8875672817230225,
+        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,"
       },
       {
         "model": "claude-3-sonnet-20240229",
-        "ttr": 0.4277162551879883,
-        "ttft": 0.4330027103424072,
-        "tps": 34.804051312667404,
-        "num_tokens": 96,
-        "total_time": 3.162569999694824,
-        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,\nFiery colors bid farewell to day,\nRadiant sun sinks below the line,\nDazzling display fades into night,\nTwilight's tranquil embrace descends,\nDarkness cloaks the earth's stage,\nNature's grand finale,\nAwe-inspiring sight,\nSunset."
+        "ttr": 0.38752222061157227,
+        "ttft": 0.3879055976867676,
+        "tps": 44.70465851540535,
+        "num_tokens": 20,
+        "total_time": 0.8129172325134277,
+        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,"
       },
       {
         "model": "claude-3-haiku-20240307",
-        "ttr": 0.38214659690856934,
-        "ttft": 0.40308713912963867,
-        "tps": 64.7720052025244,
-        "num_tokens": 82,
-        "total_time": 1.6536273956298828,
-        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,\nFiery orb sinks low,\nBrilliant shades of red and gold,\nWarm glow fades away,\nTwilight's gentle embrace,\nShadows lengthen,\nDay's end nears,\nDarkness falls,\nNight comes."
+        "ttr": 0.3354146480560303,
+        "ttft": 0.3373253345489502,
+        "tps": 112.54787803465759,
+        "num_tokens": 20,
+        "total_time": 0.5061423778533936,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,"
       },
       {
         "model": "claude-2.1",
-        "ttr": 0.4502439498901367,
-        "ttft": 0.4517643451690674,
-        "tps": 21.834586622729958,
-        "num_tokens": 55,
-        "total_time": 2.9249048233032227,
-        "output": "Here is a nonet poem about a sunset:\n\nSun descending\nGolden horizon glowing\nClouds turn pink and purple\nDaylight starts to fade\nTwilight emerges softly  \nThe sky darkens\nNight falls gently\nStars appear\nDark"
+        "ttr": 0.48729634284973145,
+        "ttft": 0.4893035888671875,
+        "tps": 25.949611529719768,
+        "num_tokens": 20,
+        "total_time": 1.221491813659668,
+        "output": "Here is a nonet poem about a sunset:\n\nSun descending\nGolden horizon glowing\nCl"
       },
       {
         "model": "claude-instant-1.2",
-        "ttr": 0.5025482177734375,
-        "ttft": 0.5029711723327637,
-        "tps": 57.05926763540813,
-        "num_tokens": 100,
-        "total_time": 2.238009214401245,
-        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe setting sun sinks low in the sky\nPainting the clouds in hues of rose and gold  \nAs daylight begins her farewell goodbye\nThe world in warm colors is told\nThe bright orb slips behind the horizon line  \nLeaving the heavens in shades of red and pink\nAs darkness creeps in with night's design\nThe day's last light does sink\nNature's beauty on display at sunset"
+        "ttr": 0.587285041809082,
+        "ttft": 0.5881876945495605,
+        "tps": 118.25986614628934,
+        "num_tokens": 20,
+        "total_time": 0.7488508224487305,
+        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe setting sun sinks"
       },
       {
         "model": "command-r-plus",
-        "ttr": 0.1175224781036377,
-        "ttft": 0.23732662200927734,
-        "tps": 33.56289418002939,
-        "num_tokens": 63,
-        "total_time": 2.0846047401428223,
-        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and pink, so serene\nSun's descent, a daily scene\nSoftly, light fades, night preps\nHorizon's warm embrace\nDay's end, a peaceful sight\nCalm, the world rests\nDarkness falls, a new light\nNight.\""
+        "ttr": 0.11929130554199219,
+        "ttft": 0.25196218490600586,
+        "tps": 27.11407903497941,
+        "num_tokens": 17,
+        "total_time": 0.8420615196228027,
+        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and"
       },
       {
         "model": "command-r",
-        "ttr": 0.14103317260742188,
-        "ttft": 0.1916368007659912,
-        "tps": 91.50298560512414,
-        "num_tokens": 66,
-        "total_time": 0.9019961357116699,
-        "output": "The horizon's fiery blaze,\nThe sky's vibrant tapestry,\nOrange and pink clouds amaze,\nGlowing in the evening sky.\n\nSoftly the light does fade,\nThe day's final breath, a sigh,\nAs the sun slowly dips, it's a\nCalm, peaceful, tranquil time.\n\nNight's embrace begins to rise."
+        "ttr": 0.13283944129943848,
+        "ttft": 0.1864326000213623,
+        "tps": 69.74131133270409,
+        "num_tokens": 18,
+        "total_time": 0.4301905632019043,
+        "output": "The horizon's fiery blaze,\nThe sky a canvas of amber and red,\nThe sun melts"
       },
       {
         "model": "command-light",
-        "ttr": 0.21262693405151367,
-        "ttft": 0.2343425750732422,
-        "tps": 94.07660482986614,
-        "num_tokens": 65,
-        "total_time": 0.9146392345428467,
-        "output": "Here is a non-technical sentence about a sunset: \n\n\"As day turns into night, the sky glows with a warm orange and pink hue. The sun slowly sinks below the unique and beautiful, and the day's light reflects off in waves, almost like a lullaby, before the stars come out one by one."
+        "ttr": 0.14941859245300293,
+        "ttft": 0.20136666297912598,
+        "tps": 83.76184795392938,
+        "num_tokens": 20,
+        "total_time": 0.42820024490356445,
+        "output": "Sure! A beautiful sunset! The sky is painted with vibrant oranges and pinks, the sun slowly"
       },
       {
         "model": "fixie-mistral.eastus2.azure",
-        "ttr": 2.399665117263794,
-        "ttft": 2.3997628688812256,
-        "tps": 114.72540435669978,
-        "num_tokens": 100,
-        "total_time": 3.262692928314209,
-        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink kiss earth goodbye.\nCrimson clouds drift slowly, without a sigh,\nDusk's symphony plays as day passes by.\n\nShadows grow long, whispers of night draw nigh,\nTwilight's embrace softens the world below.\nStars awaken, one by one, in the sky,\nDay surrenders, its fiery"
+        "ttr": 0.7753186225891113,
+        "ttft": 0.7757298946380615,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.7760317325592041,
+        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink kiss"
       },
       {
         "model": "api.fireworks.ai/mixtral-8x7b-instruct",
-        "ttr": 0.1575157642364502,
-        "ttft": 0.16202783584594727,
-        "tps": 199.04145138073002,
-        "num_tokens": 100,
-        "total_time": 0.6594116687774658,
-        "output": "Radiant orb descends, a fiery sight,\nA blazing path of red and gold,\nIn twilight's tender, soothing light,\nA final burst of stories told.\n\nThe sky now bathed in crimson hues,\nAs day surrenders to the night,\nA tranquil whisper in the breeze,\nA sunset's beauty, pure and bright.\n\nIn fleeting moments, day concludes,\n"
+        "ttr": 0.1543569564819336,
+        "ttft": 0.15874886512756348,
+        "tps": 133.64241848983576,
+        "num_tokens": 20,
+        "total_time": 0.3009192943572998,
+        "output": "Radiant orb descends, a fiery sight,\nA blazing path of red and"
       },
       {
         "model": "api.groq.com/mixtral-8x7b-32768",
-        "ttr": 0.17966580390930176,
-        "ttft": 0.29863548278808594,
-        "tps": 558.1480515471052,
-        "num_tokens": 101,
-        "total_time": 0.4777994155883789,
-        "output": "Sunset's Farewell\n\nSky's canvas blooms, a final blaze of light,\nAs day surrenders to the encroaching night.\nRadiant hues of orange and pink ignite,\nA breathtaking sight.\n\nYet, as the sun descends, so too does cheer,\nFor each day's end brings a subtle, quiet fear.\n\nBut in the hush, a promise gleams,\n\n"
+        "ttr": 0.16421175003051758,
+        "ttft": 2.4718518257141113,
+        "tps": 531.3954136576714,
+        "num_tokens": 20,
+        "total_time": 2.5076067447662354,
+        "output": "Radiant sun, your day retreats,\nSinking low, fiery orb of gold,"
       },
       {
         "model": "text.octoai.run/mixtral-8x7b-instruct",
-        "ttr": 0.34436964988708496,
-        "ttft": 0.37169575691223145,
-        "tps": 83.49802503717571,
-        "num_tokens": 100,
-        "total_time": 1.5573525428771973,
-        "output": " Radiant sun, in fiery decline,\nSinking low, the day is done,\nSky adorned with crimson shrine,\nSilhouettes in twilight's run.\n\nOrange hues and pinks entwine,\nDaylight's dance till day is spent,\nCelestial bodies align,\nNightfall's breath is heaven-sent.\n\nWhispered goodbye to sunshine,\n"
+        "ttr": 0.10278725624084473,
+        "ttft": 0.11774301528930664,
+        "tps": 72.11840584680904,
+        "num_tokens": 20,
+        "total_time": 0.3811986446380615,
+        "output": " Radiant sun, in fiery decline,\nDay's last light, a brief reprieve"
       },
       {
         "model": "api.perplexity.ai/sonar-medium-chat",
-        "ttr": 0.21293282508850098,
-        "ttft": 0.21370553970336914,
-        "tps": 71.31633775037123,
-        "num_tokens": 100,
-        "total_time": 1.6018867492675781,
-        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\nSilhouettes in twilight glow,\nSoon to be darkened bed.\n\nReflections dance on the sea,\nGentle whispers of goodbye.\nDay surrenders to night, peacefully.\nIn the west, the sunset sky.\n\nA nonet: nine lines, with syllable count 9, 8, 7"
+        "ttr": 0.13872289657592773,
+        "ttft": 0.1388237476348877,
+        "tps": 79.92387493280486,
+        "num_tokens": 20,
+        "total_time": 0.37654995918273926,
+        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\n"
       },
       {
         "model": "fixie-llama-2-70b.westus3.azure",
-        "ttr": 1.4822959899902344,
-        "ttft": 1.4823956489562988,
-        "tps": 19.888223531097147,
-        "num_tokens": 100,
-        "total_time": 6.46021580696106,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 1.2535691261291504,
+        "ttft": 1.253716230392456,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.2540714740753174,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "fixie-llama-2-70b.eastus2.azure",
-        "ttr": 4.62568473815918,
-        "ttft": 4.625817775726318,
-        "tps": 11.66309101725979,
-        "num_tokens": 100,
-        "total_time": 13.114133596420288,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 1.240950107574463,
+        "ttft": 1.241053819656372,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.241379976272583,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "api.fireworks.ai/llama-v2-70b-chat",
-        "ttr": 0.14948391914367676,
-        "ttft": 0.23705577850341797,
-        "tps": 158.79319099531196,
-        "num_tokens": 100,
-        "total_time": 0.8605082035064697,
-        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is painted with hues of gold\n2. As the sun begins to set in the west\n3. The clouds are tinted with shades of pink and red\n4. A peaceful scene, the world is quiet and still\n5. The sun sinks lower, the colors deepen\n6. The stars start to twinkle, one by one\n7. The"
+        "ttr": 0.1498575210571289,
+        "ttft": 0.1632983684539795,
+        "tps": 139.65406379186769,
+        "num_tokens": 20,
+        "total_time": 0.2993488311767578,
+        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is"
       },
       {
         "model": "api.groq.com/llama2-70b-4096",
-        "ttr": 0.1578044891357422,
-        "ttft": 0.5023031234741211,
-        "tps": 355.0857987627034,
-        "num_tokens": 94,
-        "total_time": 0.7642116546630859,
-        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange and red\nAs the sun begins to descend\nThe stars start to twinkle in the sky\nAs night begins to descend\nThe world is quiet, still and wide\nThe moon is full, casting its tide\nThe wind blows softly through the trees\nAs the sun dips below the breeze.\n\nDoes this meet your requirements?"
+        "ttr": 0.16956138610839844,
+        "ttft": 0.3579063415527344,
+        "tps": 250.6126838828408,
+        "num_tokens": 21,
+        "total_time": 0.4377107620239258,
+        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange and and"
       },
       {
         "model": "text.octoai.run/llama-2-70b-chat-fp16",
-        "ttr": 0.09296917915344238,
-        "ttft": 0.19207406044006348,
-        "tps": 29.06986045159659,
-        "num_tokens": 100,
-        "total_time": 3.597663164138794,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 0.08817028999328613,
+        "ttft": 0.13173794746398926,
+        "tps": 23.06954317880162,
+        "num_tokens": 20,
+        "total_time": 0.9553346633911133,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "api.perplexity.ai/pplx-70b-chat",
-        "ttr": 0.16347646713256836,
-        "ttft": 0.17024898529052734,
-        "tps": 54.41116642315681,
-        "num_tokens": 100,
-        "total_time": 1.9897284507751465,
-        "output": "Golden orb descends,\nA fiery ball in twilight's dance,\nCrimson hues and amber glow,\n\nSilent whispers of day's retreat,\nAs shadows lengthen, warmth recedes,\nNature's canvas painted with grace,\n\nSunset's symphony, a gentle lullaby,\nIn the fading light, we find peace,\nA moment of tranquility,"
+        "ttr": 0.16191601753234863,
+        "ttft": 0.16199445724487305,
+        "tps": 47.17555379278501,
+        "num_tokens": 20,
+        "total_time": 0.5647454261779785,
+        "output": "Golden orb descends,\nA fiery ball in twilight's dance,\nC"
+      },
+      {
+        "model": "togethercomputer/llama-2-70b-chat",
+        "ttr": 0.27355360984802246,
+        "ttft": 0.27368807792663574,
+        "tps": 70.60542291431143,
+        "num_tokens": 20,
+        "total_time": 0.5427892208099365,
+        "output": "\nSunset's fiery hues\nGolden rays upon the sea\n"
       },
       {
         "model": "api.fireworks.ai/llama-v2-13b-chat",
-        "ttr": 0.22383546829223633,
-        "ttft": 0.24482965469360352,
-        "tps": 142.56857116959242,
-        "num_tokens": 100,
-        "total_time": 0.939232349395752,
-        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with hues of gold\nAs the sun sinks low, its fiery glow\nFades into the horizon's embrace\nLeaving behind a peaceful grace\n\nThe clouds are tinted with shades of pink\nAnd the sea reflects the colors blink\nA tranquil scene, a moment's reprieve\nFrom the day's chaos"
+        "ttr": 0.19825482368469238,
+        "ttft": 0.20992183685302734,
+        "tps": 148.63459533459292,
+        "num_tokens": 20,
+        "total_time": 0.337752103805542,
+        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with"
       },
       {
         "model": "text.octoai.run/llama-2-13b-chat-fp16",
-        "ttr": 0.16971611976623535,
-        "ttft": 0.19130873680114746,
-        "tps": 59.827126736467555,
-        "num_tokens": 100,
-        "total_time": 1.846076488494873,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and paints the sky,\nA fiery hue that makes me sigh.\nGolden light, a peaceful glow,\nThe day's last breath, a gentle flow.\nThe clouds are tinted with a grace,\nAs the sun dips below the place.\nThe colors blend, a harmonious sight,\nA sunset's"
+        "ttr": 0.0910189151763916,
+        "ttft": 0.11356115341186523,
+        "tps": 53.30649851201326,
+        "num_tokens": 20,
+        "total_time": 0.46999049186706543,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
       },
       {
         "model": "togethercomputer/llama-2-13b-chat",
-        "ttr": 0.297116756439209,
-        "ttft": 0.29735469818115234,
-        "tps": 57.78499476960445,
-        "num_tokens": 100,
-        "total_time": 2.0106022357940674,
-        "output": "\n\nHere's a nonet about a sunset:\n\nThe sky is painted with hues of gold\nAs the sun sinks slowly in the west\nThe clouds are tinted with shades of red\nAnd the world is bathed in a warm glow\nThe stars begin to twinkle one by one\nAs the night takes over from the day\nThe sunset fades, but the beauty remains\nA reminder of the beauty of nature."
+        "ttr": 0.2905569076538086,
+        "ttft": 0.2906217575073242,
+        "tps": 51.818972512952826,
+        "num_tokens": 20,
+        "total_time": 0.657282829284668,
+        "output": "\n\nHere's a nonet about a sunset:\n\nThe sky is painted with"
       },
       {
         "model": "api.fireworks.ai/llama-v2-7b-chat",
-        "ttr": 0.23200345039367676,
-        "ttft": 0.24313807487487793,
-        "tps": 154.48886415165381,
-        "num_tokens": 100,
-        "total_time": 0.8839609622955322,
-        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nA fiery sky that slowly takes its leave\nPainting the landscape with a gentle hand\nA soothing sight that calms the soul's reprieve\n\nAs day succumbs to night's gentle embrace\nThe sunset's beauty leaves a lasting grace\nA fleeting moment, yet etched in time\nA"
+        "ttr": 0.20020461082458496,
+        "ttft": 0.20099377632141113,
+        "tps": 183.80625697705528,
+        "num_tokens": 20,
+        "total_time": 0.304363489151001,
+        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "api.perplexity.ai/pplx-7b-chat",
-        "ttr": 0.14438724517822266,
-        "ttft": 0.15270423889160156,
-        "tps": 114.84226491741036,
-        "num_tokens": 100,
-        "total_time": 1.014756202697754,
-        "output": "A sunset's fiery hues,\nA canvas painted with the evening's blues.\nThe sky ablaze with colors so bright,\nA sight that brings peace to the soul, a delight.\n\nThe sun slowly descends,\nA peaceful end to the day's trends.\nThe world bathed in a warm glow,\nA sunset's beauty, a sight to behold.\n\nAs darkness takes over,\nThe sunset'"
+        "ttr": 0.16499829292297363,
+        "ttft": 0.16723966598510742,
+        "tps": 127.6007557562366,
+        "num_tokens": 20,
+        "total_time": 0.31614160537719727,
+        "output": "A sunset's fiery hues,\nA canvas painted with the evening's blues"
       },
       {
         "model": "togethercomputer/llama-2-7b-chat",
-        "ttr": 0.2956383228302002,
-        "ttft": 0.3039560317993164,
-        "tps": 176.74885966032434,
-        "num_tokens": 100,
-        "total_time": 0.8640727996826172,
-        "output": "\n\n  1. Write a haiku about a sunset.\n\n  2. Write a limerick about a sunset.\n\n  3. Write a free verse poem about a sunset.\n\n  4. Write a sonnet about a sunset.\n\n  5. Write a villanelle about a sunset.\n\n  6. Write a sestina about a sunset.\n\n  7. Write a ballad about a sun"
+        "ttr": 0.2677438259124756,
+        "ttft": 0.26781582832336426,
+        "tps": 110.73054408072353,
+        "num_tokens": 20,
+        "total_time": 0.4394035339355469,
+        "output": "\n\n  1. Write a haiku about a sunset.\n\n  2. Write"
       },
       {
         "model": "@cf/meta/llama-2-7b-chat-fp16",
-        "ttr": 0.47896790504455566,
-        "ttft": 0.48134899139404297,
-        "tps": 18.55514637507204,
-        "num_tokens": 101,
-        "total_time": 5.870689392089844,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nAs day succumbs to night's gentle hand\nThe sun sinks low, a fiery blaze\nPainting skies with shades of grace\nA gentle glow, a peaceful sight\nNature's canvas, pure delight\nAs stars begin to twinkle bright\nA sunset's beauty, pure delight"
+        "ttr": 0.3565049171447754,
+        "ttft": 0.3565959930419922,
+        "tps": 19.715666543589784,
+        "num_tokens": 21,
+        "total_time": 1.3710176944732666,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "@cf/meta/llama-2-7b-chat-int8",
-        "ttr": 0.5085890293121338,
-        "ttft": 0.5087447166442871,
-        "tps": 34.00258608459496,
-        "num_tokens": 101,
-        "total_time": 3.449697494506836,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nAs day succumbs to night's gentle hand\nThe sun sinks low, a fiery blaze\nPainting skies with shades of grace\nA gentle glow, a peaceful sight\nNature's canvas, pure delight\nThe colors dance, a wondrous sight\nAs day's last rays"
+        "ttr": 0.29211878776550293,
+        "ttft": 0.2922506332397461,
+        "tps": 31.03300069364162,
+        "num_tokens": 21,
+        "total_time": 0.9367258548736572,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "Neets-7B",
-        "ttr": 0.5410892963409424,
-        "ttft": 0.5552988052368164,
-        "tps": 83.20539265143037,
-        "num_tokens": 100,
-        "total_time": 1.7451255321502686,
-        "output": " A golden light descends, as day surrenders,\nBathing the sky in hues so tender.\nCrimson and lavender blend,\nIn a dance that has no end.\n\nThe sun dips low, a sight to render,\nAs clouds bask in the fading splendor.\nReflections shimmer on the tranquil sea,\nIn this peaceful, serene harmony.\n\nA final burst of light, then darkness renders"
+        "ttr": 0.5485725402832031,
+        "ttft": 0.5615448951721191,
+        "tps": 78.16474945465389,
+        "num_tokens": 20,
+        "total_time": 0.8046212196350098,
+        "output": " A golden light descends, as day surrenders,\nBathing the sky in h"
       }
     ]
   },
   {
-    "time": "2024-04-15T08:04:59.267946",
+    "time": "2024-04-16T04:56:42.698432",
     "region": "sea",
-    "cmd": "",
+    "cmd": "--max-tokens=20",
     "results": [
       {
         "model": "gpt-4-turbo",
-        "ttr": 0.3653287887573242,
-        "ttft": 0.36547088623046875,
-        "tps": 26.33257566221408,
-        "num_tokens": 61,
-        "total_time": 2.644017457962036,
-        "output": "Sunset paints the sky with grace,\nHorizon blushes in embrace,\nColors blend in soft ballet,\nOranges, pinks in vast array,\nClouds like strokes from artist's brush,\nIn the quiet, world hush,\nDay whispers soft goodbye,\nNight's curtain, nigh,\nPeace."
+        "ttr": 0.4462709426879883,
+        "ttft": 0.4463462829589844,
+        "tps": 16.022199369299546,
+        "num_tokens": 20,
+        "total_time": 1.6322009563446045,
+        "output": "Amber hues paint the evening sky,\nHorizon swallows the sun's last sigh,\nColors blend"
       },
       {
         "model": "gpt-4-0125-preview",
-        "ttr": 0.3181750774383545,
-        "ttft": 0.38707518577575684,
-        "tps": 31.881816917399025,
-        "num_tokens": 95,
-        "total_time": 3.3354642391204834,
-        "output": "Beneath the vast, expansive sky at dusk,\nThe sun dips low, in shades of gold and rust,\nHorizon kissed by light's last tender touch,\nA canvas painted with nature's own brush.\nColors blend in a silent, graceful rush,\nAs day surrenders to the night's soft hush.\nShadows lengthen, and cool breezes gust,\nLeaving behind night's tranquil, peaceful blush.\nSunset fades, in silence, without fuss."
+        "ttr": 0.32734131813049316,
+        "ttft": 0.38222646713256836,
+        "tps": 47.70277327171838,
+        "num_tokens": 20,
+        "total_time": 0.7805261611938477,
+        "output": "Amidst the tranquil evening sky,\nA canvas painted with goodbye,\nThe sun dips low, in"
       },
       {
         "model": "fixie-scentralus.azure/gpt-4-0125-preview",
-        "ttr": 0.47620296478271484,
-        "ttft": 0.47626638412475586,
-        "tps": 9.229263637638377,
-        "num_tokens": 70,
-        "total_time": 7.952485799789429,
-        "output": "Amidst the tranquil evening sky,\nA canvas painted with goodbye,\nThe sun dips low, in grace it sets,\nA symphony of silhouettes.\nColors blend in soft caress,\nIn hues of love and tenderness.\nDay's last breath, a gentle sigh,\nAs night whispers, \"It's time to fly.\"\nSunset."
+        "ttr": 0.4520888328552246,
+        "ttft": 0.45223355293273926,
+        "tps": 7.979821884411616,
+        "num_tokens": 20,
+        "total_time": 2.8332390785217285,
+        "output": "Beneath the vast, ever-changing sky,\nColors blend where the sun bids goodbye,\nOranges"
       },
       {
         "model": "gpt-4-1106-preview",
-        "ttr": 0.5260169506072998,
-        "ttft": 0.6250452995300293,
-        "tps": 19.071704366546687,
-        "num_tokens": 87,
-        "total_time": 5.134343385696411,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink,\nA canvas brushed by nature's artful hand,\nWhispers of clouds in lavender and blush,\nThe day's last light fades into twilight's hush,\nWarm hues give way to evening's cooler band,\nStars peek out, as night begins to sink,\nDarkness cloaks the world in gentle bliss,\nDay ends in peace."
+        "ttr": 0.3836708068847656,
+        "ttft": 0.45206356048583984,
+        "tps": 23.360849214927043,
+        "num_tokens": 20,
+        "total_time": 1.265390157699585,
+        "output": "The sun dips low, horizon kissed,\nPainting skies with amethyst,\nCrimson streaks"
       },
       {
         "model": "fixie-westus.azure/gpt-4-1106-preview",
-        "ttr": 0.34844064712524414,
-        "ttft": 0.3486058712005615,
-        "tps": 12.281704863012553,
-        "num_tokens": 67,
-        "total_time": 5.722452640533447,
-        "output": "Amber hues dance across the evening sky,\nHorizon ablaze with the day's last kiss,\nShadows stretch as the sun starts to die,\nNature's canvas, a fleeting bliss,\nColors meld in a silent cry,\nDay's farewell, a tranquil sigh,\nNight's embrace, nears,\nAs light disappears,\nGoodnight."
+        "ttr": 0.42563605308532715,
+        "ttft": 0.42572689056396484,
+        "tps": 17.479984996808533,
+        "num_tokens": 20,
+        "total_time": 1.5126843452453613,
+        "output": "Amber hues dance across the evening sky,\nHorizon ablaze with the day's last sigh,\n"
       },
       {
         "model": "fixie-eastus2.azure/gpt-4-1106-preview",
-        "ttr": 2.852602958679199,
-        "ttft": 2.8527722358703613,
-        "tps": 6.317044252829127,
-        "num_tokens": 87,
-        "total_time": 16.466734170913696,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink,\nA canvas brushed with light's fading bliss,\nWhere day and dusk in fleeting moments link.\nShadows stretch, as colors start to sink,\nWarm hues give way to twilight's gentle gray,\nStars peek out, as night begins to think,\nDarkness hugs the world in soft array,\nNightfall's embrace ends the vibrant day."
+        "ttr": 0.5372118949890137,
+        "ttft": 0.5373051166534424,
+        "tps": 8.24051126636536,
+        "num_tokens": 20,
+        "total_time": 2.842987298965454,
+        "output": "The sun dips low, horizon kissed,\nPainting skies with amethyst,\nCrimson streaks"
       },
       {
         "model": "fixie-frcentral.azure/gpt-4-1106-preview",
-        "ttr": 10.946949005126953,
-        "ttft": 10.94712233543396,
-        "tps": 3.719829379787622,
-        "num_tokens": 92,
-        "total_time": 35.41060996055603,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\nA canvas of light, evening's soft bliss,\nNature's finale, day's last golden link,\nShadows stretch, as colors start to sink,\nWarm hues fade to twilight's gentle gray,\nStars peek out, night whispers, \"Come what may,\"\nDarkness cradles the world in gentle rest,\nDay ends, in silence, sun slips away."
+        "ttr": 0.45490121841430664,
+        "ttft": 0.45502519607543945,
+        "tps": 18.624987262652976,
+        "num_tokens": 20,
+        "total_time": 1.4751601219177246,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "fixie-secentral.azure/gpt-4-1106-preview",
-        "ttr": 0.8499665260314941,
-        "ttft": 0.8560481071472168,
-        "tps": 13.471505453054075,
-        "num_tokens": 53,
-        "total_time": 4.716047286987305,
-        "output": "Golden sun dips low, kissing the sea,\nCasting hues of pink and ruby,\nSilhouettes of trees stand tall,\nNight's curtain begins to fall,\nStars peek through the veil,\nDaylight grows pale,\nNighttime's song,\nSoft and\nLong."
+        "ttr": 0.46106505393981934,
+        "ttft": 0.46561431884765625,
+        "tps": 13.778522236714888,
+        "num_tokens": 20,
+        "total_time": 1.8445720672607422,
+        "output": "Golden sun dips beneath the horizon,\nPainting the sky with hues of passion,\nCrimson,"
       },
       {
         "model": "fixie-uksouth.azure/gpt-4-1106-preview",
-        "ttr": 0.9351818561553955,
-        "ttft": 0.9353561401367188,
-        "tps": 10.891330455906163,
-        "num_tokens": 85,
-        "total_time": 8.647912502288818,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\nA canvas of light, evening's soft bliss,\nNature's finale, day's last golden link,\nWhispers of nightfall, in silence we think,\nColors fade out, as stars begin to wink,\nDay's curtain falls, with a tranquil hiss,\nNight's embrace comes, in a gentle blink,\nGoodnight."
+        "ttr": 0.9667389392852783,
+        "ttft": 0.9668068885803223,
+        "tps": 10.544441202719609,
+        "num_tokens": 20,
+        "total_time": 2.7687041759490967,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "gpt-3.5-turbo-0125",
-        "ttr": 0.2439422607421875,
-        "ttft": 0.27568483352661133,
-        "tps": 60.844723900769004,
-        "num_tokens": 46,
-        "total_time": 1.0152723789215088,
-        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink, and purple blend\nA masterpiece to send\nDay into night\nA sight so grand\nSunset's glow\nFades slow"
+        "ttr": 0.17551755905151367,
+        "ttft": 0.1987154483795166,
+        "tps": 89.75693970459373,
+        "num_tokens": 20,
+        "total_time": 0.4103982448577881,
+        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink,"
       },
       {
         "model": "gpt-3.5-turbo-1106",
-        "ttr": 0.195786714553833,
-        "ttft": 0.2130897045135498,
-        "tps": 82.19894662061193,
-        "num_tokens": 57,
-        "total_time": 0.8943636417388916,
-        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow lights up the clouds\nCasting a warm and gentle light\nThe world is bathed in beauty\nA peaceful, serene scene\nA perfect end\nTo the day\nSunset"
+        "ttr": 0.22384142875671387,
+        "ttft": 0.25949597358703613,
+        "tps": 103.46759455213513,
+        "num_tokens": 20,
+        "total_time": 0.4431283473968506,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
       },
       {
         "model": "fixie-westus.azure/gpt-3.5-turbo-1106",
-        "ttr": 0.0758509635925293,
-        "ttft": 0.07599949836730957,
-        "tps": 88.13197463453089,
-        "num_tokens": 59,
-        "total_time": 0.7341034412384033,
-        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nCasting a warm glow over the land\nSilhouettes of trees against the sky\nA peaceful calm settles in\nNature's beauty on display\nA breathtaking sight\nAs the day ends\nIn a sunset"
+        "ttr": 0.05959272384643555,
+        "ttft": 0.06026959419250488,
+        "tps": 158.62974345908245,
+        "num_tokens": 20,
+        "total_time": 0.18004536628723145,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
       },
       {
         "model": "fixie-eastus2.azure/gpt-3.5-turbo",
-        "ttr": 0.16662168502807617,
-        "ttft": 0.16677331924438477,
-        "tps": 33.30647891467651,
-        "num_tokens": 62,
-        "total_time": 1.998248815536499,
-        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, bidding farewell.\nCrimson and orange blend with grace,\nA masterpiece in the making.\nSilhouettes dance in awe,\nNature's final bow,\nDaylight's last breath,\nSunset's charm,\nPeaceful,\nGone."
+        "ttr": 0.12332963943481445,
+        "ttft": 0.12349653244018555,
+        "tps": 81.25230782406906,
+        "num_tokens": 20,
+        "total_time": 0.35733604431152344,
+        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, a fiery ball.\nSil"
       },
       {
         "model": "claude-3-opus-20240229",
-        "ttr": 1.1874775886535645,
-        "ttft": 1.1877150535583496,
-        "tps": 25.158643791989558,
-        "num_tokens": 74,
-        "total_time": 4.08930230140686,
-        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,\nPainting skies in vibrant hues,\nOrange, pink, and purple,\nBlending in harmony,\nAs daylight fades,\nTwilight glows,\nSerene,\nCalm,\nRest."
+        "ttr": 0.929265022277832,
+        "ttft": 0.9300761222839355,
+        "tps": 38.90157179545132,
+        "num_tokens": 20,
+        "total_time": 1.4184882640838623,
+        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,"
       },
       {
         "model": "claude-3-sonnet-20240229",
-        "ttr": 0.2994661331176758,
-        "ttft": 0.2996952533721924,
-        "tps": 42.40523474012274,
-        "num_tokens": 96,
-        "total_time": 2.539984703063965,
-        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,\nFiery colors bid farewell to day,\nRadiant sun sinks below the line,\nDazzling display fades into night,\nTwilight's tranquil embrace descends,\nDarkness cloaks the earth's stage,\nNature's grand finale,\nAwe-inspiring sight,\nSunset."
+        "ttr": 0.3059730529785156,
+        "ttft": 0.31522417068481445,
+        "tps": 56.27803228305475,
+        "num_tokens": 20,
+        "total_time": 0.6528337001800537,
+        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,"
       },
       {
         "model": "claude-3-haiku-20240307",
-        "ttr": 0.2815685272216797,
-        "ttft": 0.2816808223724365,
-        "tps": 79.78115255982202,
-        "num_tokens": 82,
-        "total_time": 1.2969582080841064,
-        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,\nFiery orb sinks low,\nBrilliant shades of red and gold,\nWarm glow fades away,\nTwilight's gentle embrace,\nShadows lengthen,\nDay's end nears,\nDarkness falls,\nNight comes."
+        "ttr": 0.27723217010498047,
+        "ttft": 0.2774176597595215,
+        "tps": 111.76355851503213,
+        "num_tokens": 20,
+        "total_time": 0.4474194049835205,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,"
       },
       {
         "model": "claude-2.1",
-        "ttr": 0.3730473518371582,
-        "ttft": 0.3731412887573242,
-        "tps": 25.393882076675087,
-        "num_tokens": 59,
-        "total_time": 2.657155990600586,
-        "output": "Here is a nonet poem about a sunset:\n\nRadiant, glowing\nColors fill the evening sky\nPink and orange hues\nSlowly fading into night\nThe bright sun descends\nGolden light dims\nSky darkens \nTwilight\nFades"
+        "ttr": 0.3517303466796875,
+        "ttft": 0.35201168060302734,
+        "tps": 1.2143272057219638,
+        "num_tokens": 20,
+        "total_time": 15.998535871505737,
+        "output": "Here is a nonet poem about a sunset:\n\nRadiant, glowing\nColors fill the"
       },
       {
         "model": "claude-instant-1.2",
-        "ttr": 0.427142858505249,
-        "ttft": 0.44081974029541016,
-        "tps": 61.30879895252569,
-        "num_tokens": 100,
-        "total_time": 2.055596113204956,
-        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe setting sun sinks low in the sky\nPainting the clouds in hues of rose and gold  \nAs daylight begins her farewell goodbye\nThe world in warm colors is told\nThe bright orb slips behind the horizon line  \nLeaving the heavens in shades of red and pink\nAs darkness creeps in with night's design\nThe day's last light does sink\nNature's beauty on display at sunset"
+        "ttr": 0.5635273456573486,
+        "ttft": 0.56463623046875,
+        "tps": 107.72361512882208,
+        "num_tokens": 20,
+        "total_time": 0.7410135269165039,
+        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe Setting Sun"
       },
       {
         "model": "command-r-plus",
-        "ttr": 0.06214737892150879,
-        "ttft": 0.13591957092285156,
-        "tps": 32.96628790154896,
-        "num_tokens": 63,
-        "total_time": 2.0166287422180176,
-        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and pink, so serene\nSun's descent, a daily scene\nSoftly, light fades, night preps\nHorizon's warm embrace\nDay's end, a peaceful sight\nCalm, the world rests\nDarkness falls, a new light\nNight.\""
+        "ttr": 0.06295466423034668,
+        "ttft": 0.2717244625091553,
+        "tps": 28.079457297037653,
+        "num_tokens": 17,
+        "total_time": 0.8415360450744629,
+        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and"
       },
       {
         "model": "command-r",
-        "ttr": 0.07097291946411133,
-        "ttft": 0.12482047080993652,
-        "tps": 90.67718591560279,
-        "num_tokens": 57,
-        "total_time": 0.7423958778381348,
-        "output": "Orange and pink skies,\nThe sun melts away,\nLike butter on a hot plate.\nThe birds sing goodnight,\nAs the stars begin to shine.\nCrimson and gold, the clouds float by.\nThe horizon's aglow.\nPeaceful and serene,\nThe day gently dies."
+        "ttr": 0.07741260528564453,
+        "ttft": 0.12492251396179199,
+        "tps": 96.74350707596734,
+        "num_tokens": 19,
+        "total_time": 0.31098151206970215,
+        "output": "Vibrant skies alight, a golden hue,\nThe sun slowly sinks, a fiery view"
       },
       {
         "model": "command-light",
-        "ttr": 0.07255101203918457,
-        "ttft": 0.12956476211547852,
-        "tps": 90.53328867974099,
-        "num_tokens": 65,
-        "total_time": 0.8364870548248291,
-        "output": "Here is a non-technical sentence about a sunset: \n\n\"As day turns into night, the sky glows with a warm orange and pink hue. The sun slowly sinks below the unique and beautiful, and the day's light reflects off in waves, almost like a lullaby, before the stars come out one by one."
+        "ttr": 0.07877254486083984,
+        "ttft": 0.13549447059631348,
+        "tps": 88.7999910856557,
+        "num_tokens": 20,
+        "total_time": 0.3494584560394287,
+        "output": "Sure! A beautiful sunset! The sky is painted with vibrant oranges and pinks, the sun slowly"
       },
       {
         "model": "fixie-mistral.eastus2.azure",
-        "ttr": 2.4675822257995605,
-        "ttft": 2.467656135559082,
-        "tps": 110.24967202777243,
-        "num_tokens": 100,
-        "total_time": 3.3656179904937744,
-        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink kiss earth goodbye.\nCrimson clouds drift slowly, without a sigh,\nDusk's symphony plays as day passes by.\n\nShadows grow long, whispers of night draw nigh,\nTwilight's embrace softens the world below.\nStars awaken, one by one, in the sky,\nDay surrenders, its fiery"
+        "ttr": 0.8308727741241455,
+        "ttft": 0.8309359550476074,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8311216831207275,
+        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink kiss"
       },
       {
         "model": "api.fireworks.ai/mixtral-8x7b-instruct",
-        "ttr": 0.12688350677490234,
-        "ttft": 0.13164973258972168,
-        "tps": 235.04138395189543,
-        "num_tokens": 100,
-        "total_time": 0.5528521537780762,
-        "output": "Radiant orb descends, a fiery sight,\nA blazing path of red and gold,\nIn twilight's tender, soothing light,\nA final burst of stories told.\n\nThe sky now bathed in crimson hues,\nAs day surrenders to the night,\nA tranquil whisper in the breeze,\nA sunset's beauty, pure and bright.\n\nIn fleeting moments, day concludes,\n"
+        "ttr": 0.11505985260009766,
+        "ttft": 0.11927056312561035,
+        "tps": 157.97160182290685,
+        "num_tokens": 20,
+        "total_time": 0.23954534530639648,
+        "output": "Radiant orb descends, a fiery sight,\nA blazing path of red and"
       },
       {
         "model": "api.groq.com/mixtral-8x7b-32768",
-        "ttr": 0.044029951095581055,
-        "ttft": 6.137603759765625,
-        "tps": 533.7567915675814,
-        "num_tokens": 100,
-        "total_time": 6.3230814933776855,
-        "output": "Radiant sun, your day retreats,\nSinking low, fiery orb of gold,\nIn the sky, a path of reds and pinks you beat,\nA final, glowing gift to the world so bold.\n\nA twilight hush, as day is done,\nNight's cool breath, the day's heat undone.\nA nonet's end, like sunset's run,\nIn silence fades the"
+        "ttr": 0.03620791435241699,
+        "ttft": 0.125046968460083,
+        "tps": 867.1009074489152,
+        "num_tokens": 20,
+        "total_time": 0.1469590663909912,
+        "output": "Radiant sun, your day retreats,\nSinking low, fiery orb of gold,"
       },
       {
         "model": "text.octoai.run/mixtral-8x7b-instruct",
-        "ttr": 0.2597649097442627,
-        "ttft": 0.28735876083374023,
-        "tps": 87.47754674922123,
-        "num_tokens": 93,
-        "total_time": 1.339057207107544,
-        "output": " Radiant sun, in fiery decline,\nSinking low, the day is done,\nSky adorned with colors nine,\nCrimson hues and gold have won.\nSilhouettes of trees stand still,\nAs the world is bathed in hue,\nNight's embrace begins to thrill,\nBidding day a fond adieu,\nIn the west, the sunset's shrine."
+        "ttr": 0.13321828842163086,
+        "ttft": 0.1585228443145752,
+        "tps": 58.66016946220666,
+        "num_tokens": 20,
+        "total_time": 0.4824223518371582,
+        "output": " Radiant sun descends, a fiery sphere,\nIts brilliant hues of red and"
       },
       {
         "model": "api.perplexity.ai/sonar-medium-chat",
-        "ttr": 0.14369678497314453,
-        "ttft": 0.14377903938293457,
-        "tps": 65.61831287100675,
-        "num_tokens": 100,
-        "total_time": 1.6525042057037354,
-        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\nSilhouettes in twilight glow,\nSoon to be darkened bed.\n\nReflections dance on the sea,\nGentle whispers of goodbye.\nDay surrenders to night, peacefully.\nIn the west, the sunset sky.\n\nA nonet: nine lines, with syllable count 9, 8, 7"
+        "ttr": 0.13510537147521973,
+        "ttft": 0.13515138626098633,
+        "tps": 79.89286634458934,
+        "num_tokens": 20,
+        "total_time": 0.3729698657989502,
+        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\n"
       },
       {
         "model": "fixie-llama-2-70b.westus3.azure",
-        "ttr": 1.386122226715088,
-        "ttft": 1.386214256286621,
-        "tps": 9.429131949911682,
-        "num_tokens": 100,
-        "total_time": 11.885590076446533,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 1.3108644485473633,
+        "ttft": 1.3109774589538574,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.3113071918487549,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "fixie-llama-2-70b.eastus2.azure",
-        "ttr": 4.42998194694519,
-        "ttft": 4.430205345153809,
-        "tps": 59.05887453128227,
-        "num_tokens": 100,
-        "total_time": 6.106498718261719,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 1.4449660778045654,
+        "ttft": 1.445044994354248,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.4453108310699463,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "api.fireworks.ai/llama-v2-70b-chat",
-        "ttr": 0.12495040893554688,
-        "ttft": 0.13837814331054688,
-        "tps": 131.72902345315129,
-        "num_tokens": 100,
-        "total_time": 0.8899209499359131,
-        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is painted with hues of gold\n2. As the sun begins to set in the west\n3. The clouds are tinted with shades of pink and red\n4. A peaceful scene, the world is quiet and still\n5. The sun sinks lower, the colors deepen\n6. The stars start to twinkle, one by one\n7. The"
+        "ttr": 0.1273949146270752,
+        "ttft": 0.1420736312866211,
+        "tps": 132.64541901635852,
+        "num_tokens": 20,
+        "total_time": 0.2853126525878906,
+        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is"
       },
       {
         "model": "api.groq.com/llama2-70b-4096",
-        "ttr": 0.03174185752868652,
-        "ttft": 0.5113725662231445,
-        "tps": 413.6767348756807,
-        "num_tokens": 94,
-        "total_time": 0.7361857891082764,
-        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange and red\nAs the sun begins to descend\nThe stars start to twinkle in the sky\nAs night begins to descend\nThe world is quiet, still and wide\nThe moon is full, casting its tide\nThe wind blows softly through the trees\nAs the sun dips below the breeze.\n\nDoes this meet your requirements?"
+        "ttr": 0.026694059371948242,
+        "ttft": 0.1436748504638672,
+        "tps": 279.5019441769651,
+        "num_tokens": 21,
+        "total_time": 0.21523070335388184,
+        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange and and"
       },
       {
         "model": "text.octoai.run/llama-2-70b-chat-fp16",
-        "ttr": 0.2045764923095703,
-        "ttft": 0.2475130558013916,
-        "tps": 29.145648119493508,
-        "num_tokens": 100,
-        "total_time": 3.6442465782165527,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 0.07877230644226074,
+        "ttft": 0.12572669982910156,
+        "tps": 25.42785131627439,
+        "num_tokens": 20,
+        "total_time": 0.872938871383667,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "api.perplexity.ai/pplx-70b-chat",
-        "ttr": 0.13810372352600098,
-        "ttft": 0.1385490894317627,
-        "tps": 52.261234118786305,
-        "num_tokens": 100,
-        "total_time": 2.0328786373138428,
-        "output": "Golden orb descends,\nA fiery ball in twilight's dance,\nCrimson hues and amber glow,\n\nSilent whispers of day's retreat,\nAs shadows lengthen, warmth recedes,\nNature's canvas painted with grace,\n\nSunset's symphony, a gentle lullaby,\nIn the fading light, we find peace,\nA moment of tranquility,"
+        "ttr": 0.13084959983825684,
+        "ttft": 0.13089609146118164,
+        "tps": 53.808964539811605,
+        "num_tokens": 20,
+        "total_time": 0.483997106552124,
+        "output": "Golden orb descends,\nA fiery ball in twilight's dance,\nC"
+      },
+      {
+        "model": "togethercomputer/llama-2-70b-chat",
+        "ttr": 0.15289020538330078,
+        "ttft": 0.15293002128601074,
+        "tps": 47.38872816816231,
+        "num_tokens": 20,
+        "total_time": 0.5538692474365234,
+        "output": "\n\nA sunset's colors dance and play\nAcross the sky, a fiery"
       },
       {
         "model": "api.fireworks.ai/llama-v2-13b-chat",
-        "ttr": 0.15000319480895996,
-        "ttft": 0.16454648971557617,
-        "tps": 163.52699910327888,
-        "num_tokens": 100,
-        "total_time": 0.7699511051177979,
-        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with hues of gold\nAs the sun sinks low, its fiery glow\nFades into the horizon's embrace\nLeaving behind a peaceful grace\n\nThe clouds are tinted with shades of pink\nAnd the sea reflects the colors blink\nA tranquil scene, a moment's reprieve\nFrom the day's chaos"
+        "ttr": 0.14156126976013184,
+        "ttft": 0.15162181854248047,
+        "tps": 224.39032741279692,
+        "num_tokens": 20,
+        "total_time": 0.2362957000732422,
+        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with"
       },
       {
         "model": "text.octoai.run/llama-2-13b-chat-fp16",
-        "ttr": 0.07327699661254883,
-        "ttft": 0.09469223022460938,
-        "tps": 58.87730735167881,
-        "num_tokens": 100,
-        "total_time": 1.7761549949645996,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and paints the sky,\nA fiery hue that makes me sigh.\nGolden light, a peaceful glow,\nThe day's last breath, a gentle flow.\nThe clouds are tinted with a grace,\nAs the sun dips below the place.\nThe colors blend, a harmonious sight,\nA sunset's"
+        "ttr": 0.07776904106140137,
+        "ttft": 0.10103869438171387,
+        "tps": 55.90467304667715,
+        "num_tokens": 20,
+        "total_time": 0.4409029483795166,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
       },
       {
         "model": "togethercomputer/llama-2-13b-chat",
-        "ttr": 0.14538049697875977,
-        "ttft": 0.14583325386047363,
-        "tps": 69.89802979430691,
-        "num_tokens": 100,
-        "total_time": 1.5621821880340576,
-        "output": "\n\nHere's a nonet about a sunset:\n\nThe sky is painted with hues of gold\nAs the sun sinks slowly in the west\nThe clouds are tinted with shades of red\nAnd the world is bathed in a warm glow\nThe stars begin to twinkle one by one\nAs the night takes over from the day\nThe sunset fades, but the beauty remains\nA reminder of the beauty of nature."
+        "ttr": 0.16937565803527832,
+        "ttft": 0.16970062255859375,
+        "tps": 47.09982647508002,
+        "num_tokens": 20,
+        "total_time": 0.5730991363525391,
+        "output": "\n\nHere's a nonet about a sunset:\n\nThe sky is painted with"
       },
       {
         "model": "api.fireworks.ai/llama-v2-7b-chat",
-        "ttr": 0.1464073657989502,
-        "ttft": 0.1535780429840088,
-        "tps": 185.0591522781422,
-        "num_tokens": 100,
-        "total_time": 0.6885421276092529,
-        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nA fiery sky that slowly takes its leave\nPainting the landscape with a gentle hand\nA soothing sight that calms the soul's reprieve\n\nAs day succumbs to night's gentle embrace\nThe sunset's beauty leaves a lasting grace\nA fleeting moment, yet etched in time\nA"
+        "ttr": 0.13898491859436035,
+        "ttft": 0.14458250999450684,
+        "tps": 216.88673098643298,
+        "num_tokens": 20,
+        "total_time": 0.23218584060668945,
+        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "api.perplexity.ai/pplx-7b-chat",
-        "ttr": 0.15108466148376465,
-        "ttft": 0.15156912803649902,
-        "tps": 102.5078154180373,
-        "num_tokens": 100,
-        "total_time": 1.1173491477966309,
-        "output": "A sunset's fiery hues,\nA canvas painted with the evening's blues.\nThe sky ablaze with colors so bright,\nA sight that brings peace to the soul, a delight.\n\nThe sun slowly descends,\nA peaceful end to the day's trends.\nThe world bathed in a warm glow,\nA sunset's beauty, a sight to behold.\n\nAs darkness takes over,\nThe sunset'"
+        "ttr": 0.128739595413208,
+        "ttft": 0.1288440227508545,
+        "tps": 92.76042061938229,
+        "num_tokens": 20,
+        "total_time": 0.33367276191711426,
+        "output": "A sunset's fiery hues,\nA canvas painted with the evening's blues"
       },
       {
         "model": "togethercomputer/llama-2-7b-chat",
-        "ttr": 0.13669085502624512,
-        "ttft": 0.13743829727172852,
-        "tps": 165.3382473917292,
-        "num_tokens": 100,
-        "total_time": 0.736210823059082,
-        "output": "\n\n  1. Write a haiku about a sunset.\n\n  2. Write a limerick about a sunset.\n\n  3. Write a free verse poem about a sunset.\n\n  4. Write a sonnet about a sunset.\n\n  5. Write a villanelle about a sunset.\n\n  6. Write a sestina about a sunset.\n\n  7. Write a ballad about a sun"
+        "ttr": 0.12575531005859375,
+        "ttft": 0.12623906135559082,
+        "tps": 88.77051400869752,
+        "num_tokens": 20,
+        "total_time": 0.3402740955352783,
+        "output": "\n\n  1. Write a haiku about a sunset.\n\n  2. Write"
       },
       {
         "model": "@cf/meta/llama-2-7b-chat-fp16",
-        "ttr": 0.7286245822906494,
-        "ttft": 0.7286760807037354,
-        "tps": 18.63127283459245,
-        "num_tokens": 101,
-        "total_time": 6.095995903015137,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nAs day succumbs to night's gentle hand\nThe sun sinks low, a fiery blaze\nPainting skies with shades of grace\nA gentle glow, a peaceful sight\nNature's canvas, pure delight\nAs stars begin to twinkle bright\nA sunset's beauty, pure delight"
+        "ttr": 0.5778281688690186,
+        "ttft": 0.5778722763061523,
+        "tps": 19.805739328802204,
+        "num_tokens": 21,
+        "total_time": 1.5876805782318115,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "@cf/meta/llama-2-7b-chat-int8",
-        "ttr": 1.12943696975708,
-        "ttft": 1.1296262741088867,
-        "tps": 31.85485083683934,
-        "num_tokens": 101,
-        "total_time": 4.268865585327148,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nAs day succumbs to night's gentle hand\nThe sun sinks low, a fiery blaze\nPainting skies with shades of grace\nA gentle glow, a peaceful sight\nNature's canvas, pure delight\nThe colors dance, a wondrous sight\nAs day's last rays"
+        "ttr": 0.2783358097076416,
+        "ttft": 0.2792387008666992,
+        "tps": 37.39250323059758,
+        "num_tokens": 21,
+        "total_time": 0.8141052722930908,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "Neets-7B",
-        "ttr": 0.5194721221923828,
-        "ttft": 0.5350217819213867,
-        "tps": 80.73826626145491,
-        "num_tokens": 100,
-        "total_time": 1.7612061500549316,
-        "output": " A golden light descends, as day surrenders,\nBathing the sky in hues so tender,\nCrimson and lavender blend,\nA breathtaking sight to transcend.\n\nThe sun dips low, a fiery orb,\nIts radiance fading, yet still warm,\nA final burst of light,\nThen fades into the peaceful night.\n\nThe stars awaken, one by one,\nTheir brilliance"
+        "ttr": 0.5175881385803223,
+        "ttft": 0.5325384140014648,
+        "tps": 78.3702189970527,
+        "num_tokens": 20,
+        "total_time": 0.774977445602417,
+        "output": " A golden light descends, as day surrenders,\nBathing the sky in h"
       }
     ]
   },
   {
-    "time": "2024-04-15T08:06:44.461547",
+    "time": "2024-04-16T04:57:03.663929",
     "region": "iad",
-    "cmd": "",
+    "cmd": "--max-tokens=20",
     "results": [
       {
         "model": "gpt-4-turbo",
-        "ttr": 0.35376715660095215,
-        "ttft": 0.35441064834594727,
-        "tps": 22.908310128527134,
-        "num_tokens": 66,
-        "total_time": 3.1918089389801025,
-        "output": "Sunset paints the sky with grace,\nHorizon blushes in embrace,\nColors blend in soft ballet,\nOranges, pinks in vast array,\nClouds like floating, gilded crests,\nWhispering day's last requests,\nNight's curtain draws, gently near,\nStars twinkle, sky's frontier,\nPeace."
+        "ttr": 0.4280548095703125,
+        "ttft": 0.42816758155822754,
+        "tps": 12.222261995961789,
+        "num_tokens": 20,
+        "total_time": 1.9827079772949219,
+        "output": "Golden blaze dips low, kissing sea,\nHorizon melts in fiery hues,\nCrimson, orange"
       },
       {
         "model": "gpt-4-0125-preview",
-        "ttr": 0.45998358726501465,
-        "ttft": 0.5574624538421631,
-        "tps": 27.911420026052763,
-        "num_tokens": 93,
-        "total_time": 3.853604316711426,
-        "output": "Beneath the vast, expansive evening sky,\nThe sun dips low, bidding the day goodbye.\nA canvas painted with a fiery hue,\nOranges, pinks, and purples blend and stew.\nLight fades to dark as stars begin to peek,\nWhispers of night, a calm that many seek.\nThe world now hushed, in twilight's gentle grip,\nAs day to night, we seamlessly slip.\nSunset, a daily, fleeting masterpiece."
+        "ttr": 0.39739537239074707,
+        "ttft": 0.5106387138366699,
+        "tps": 50.70619061132398,
+        "num_tokens": 20,
+        "total_time": 0.8853464126586914,
+        "output": "Beneath the vast, expansive evening sky,\nThe sun dips low, bidding the day goodbye,\n"
       },
       {
         "model": "fixie-scentralus.azure/gpt-4-0125-preview",
-        "ttr": 0.3698418140411377,
-        "ttft": 0.3699347972869873,
-        "tps": 14.537188673514136,
-        "num_tokens": 73,
-        "total_time": 5.322749376296997,
-        "output": "Beneath the vast, ever-changing sky,\nColors blend where the sun bids goodbye,\nOranges, pinks, and purples collide,\nA masterpiece nature can't hide,\nHorizon's line, the sun kisses,\nDay's end brings nocturnal wishes,\nShadows stretch, night's curtain falls,\nIn darkness, the wild night calls,\nPeace."
+        "ttr": 0.40120863914489746,
+        "ttft": 0.4013683795928955,
+        "tps": 20.40916688968821,
+        "num_tokens": 20,
+        "total_time": 1.332322597503662,
+        "output": "Beneath the vast, ever-changing sky,\nColors blend where the sun bids goodbye,\nOranges"
       },
       {
         "model": "gpt-4-1106-preview",
-        "ttr": 0.3947899341583252,
-        "ttft": 0.4988696575164795,
-        "tps": 24.336193106838987,
-        "num_tokens": 88,
-        "total_time": 4.073791980743408,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink,\nA canvas brushed with evening's tender bliss,\nWhere daylight fades and stars begin to wink.\nSilhouettes of trees stand black and still,\nAs twilight whispers the night's soft decree.\nCool air caresses, a gentle chill,\nUnder the fading light's last plea.\nDay's end, in silence, we watch, hush."
+        "ttr": 0.3922412395477295,
+        "ttft": 0.4704887866973877,
+        "tps": 29.80091012471678,
+        "num_tokens": 20,
+        "total_time": 1.108053207397461,
+        "output": "The sun dips low, horizon kissed,\nA fiery orb on evening's wrist,\nPainting skies with"
       },
       {
         "model": "fixie-westus.azure/gpt-4-1106-preview",
-        "ttr": 0.8351924419403076,
-        "ttft": 0.835355281829834,
-        "tps": 9.035515869876315,
-        "num_tokens": 85,
-        "total_time": 10.132002115249634,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\nA canvas of light, evening's soft bliss,\nNature's finale, day's last golden link,\nWhispers of nightfall, in silence we think,\nColors fade out, as stars begin to wink,\nDay's curtain falls, with a tranquil hush,\nDarkness enfolds, in a gentle rush,\nGoodnight."
+        "ttr": 0.5050840377807617,
+        "ttft": 0.5053122043609619,
+        "tps": 25.139424957539326,
+        "num_tokens": 20,
+        "total_time": 1.2610971927642822,
+        "output": "Amber hues dance across the evening sky,\nHorizon ablaze with the day's last sigh,\n"
       },
       {
         "model": "fixie-eastus2.azure/gpt-4-1106-preview",
-        "ttr": 5.584686279296875,
-        "ttft": 5.584882020950317,
-        "tps": 6.6234954565494,
-        "num_tokens": 74,
-        "total_time": 16.606252908706665,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber bliss,\nClouds ablaze with evening's glow,\nNature's canvas, a vivid show,\nCrimson streaks on blue canvas,\nWhispers of night, hush, hush,\nDay's last sigh, a pause,\nDusk's soft gauze,\nPeace."
+        "ttr": 0.32174015045166016,
+        "ttft": 0.32193970680236816,
+        "tps": 10.20975799992108,
+        "num_tokens": 20,
+        "total_time": 2.1829044818878174,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "fixie-frcentral.azure/gpt-4-1106-preview",
-        "ttr": 2.6611294746398926,
-        "ttft": 2.6612932682037354,
-        "tps": 2.7425586508693818,
-        "num_tokens": 90,
-        "total_time": 35.112741470336914,
-        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\nA canvas of light, evening's soft bliss,\nNature's finale, day's last golden link,\nWhispers of clouds, in twilight they sink,\nOranges meld with the purpling hue,\nSilhouettes dance as night's curtain drew,\nDay's end whispers in colors so bright,\nNightfall's embrace, in the cool dusk's dew."
+        "ttr": 0.6151809692382812,
+        "ttft": 0.6153168678283691,
+        "tps": 19.50706794178216,
+        "num_tokens": 20,
+        "total_time": 1.589322805404663,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "fixie-secentral.azure/gpt-4-1106-preview",
-        "ttr": 0.7531492710113525,
-        "ttft": 0.7533531188964844,
-        "tps": 9.351248660164979,
-        "num_tokens": 56,
-        "total_time": 6.634920597076416,
-        "output": "Golden sun dips beneath the horizon,\nPainting the sky with hues of passion,\nCrimson, orange, and deepest blue,\nDay's vibrant energy fades,\nNight's calm begins to bloom,\nStars twinkle softly,\nDay bids adieu,\nIn twilight's\nEmbrace."
+        "ttr": 0.5808489322662354,
+        "ttft": 0.5809786319732666,
+        "tps": 19.083627000874536,
+        "num_tokens": 20,
+        "total_time": 1.5765964984893799,
+        "output": "Golden sun dips beneath the horizon,\nPainting the sky with hues of passion,\nCrimson,"
       },
       {
         "model": "fixie-uksouth.azure/gpt-4-1106-preview",
-        "ttr": 1.439276933670044,
-        "ttft": 1.4393947124481201,
-        "tps": 6.550820264126652,
-        "num_tokens": 62,
-        "total_time": 10.751205682754517,
-        "output": "The sun dips low, horizon kissed,\nPainting skies with amethyst,\nCrimson streaks and tangerine,\nNature's canvas, so serene,\nWhispers of the coming night,\nShadows dance in fading light,\nDay's last breath, a silent plea,\nNight enfolds the\nSea."
+        "ttr": 0.5987555980682373,
+        "ttft": 0.5989675521850586,
+        "tps": 4.377617661165003,
+        "num_tokens": 20,
+        "total_time": 4.939227819442749,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
       },
       {
         "model": "gpt-3.5-turbo-0125",
-        "ttr": 0.2272937297821045,
-        "ttft": 0.25100040435791016,
-        "tps": 63.19455135911548,
-        "num_tokens": 49,
-        "total_time": 1.0105595588684082,
-        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink, and purple blend\nA masterpiece to send\nDay into night\nA sight so grand\nSunset's light\nFades out\nSlowly"
+        "ttr": 0.26213765144348145,
+        "ttft": 0.2888157367706299,
+        "tps": 92.83768503924166,
+        "num_tokens": 20,
+        "total_time": 0.49347400665283203,
+        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink,"
       },
       {
         "model": "gpt-3.5-turbo-1106",
-        "ttr": 0.19102072715759277,
-        "ttft": 0.21004104614257812,
-        "tps": 77.5143965995195,
-        "num_tokens": 60,
-        "total_time": 0.9711899757385254,
-        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow lights up the clouds\nCasting a warm and gentle light\nThe world is bathed in beauty\nA peaceful, serene scene\nAs day turns to night\nIn the sunset\nNature's art"
+        "ttr": 0.18483281135559082,
+        "ttft": 0.1991593837738037,
+        "tps": 90.7835255894703,
+        "num_tokens": 20,
+        "total_time": 0.4084484577178955,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
       },
       {
         "model": "fixie-westus.azure/gpt-3.5-turbo-1106",
-        "ttr": 0.11996579170227051,
-        "ttft": 0.1202237606048584,
-        "tps": 110.192592426698,
-        "num_tokens": 62,
-        "total_time": 0.673799991607666,
-        "output": "The sun dips low, painting the sky in gold\nA fiery ball sinking into the horizon\nColors of orange, pink, and purple\nMeld together in a stunning display\nThe world is bathed in warm light\nAs the day comes to an end\nA breathtaking sight\nA beautiful\nSunset"
+        "ttr": 0.10698533058166504,
+        "ttft": 0.10762190818786621,
+        "tps": 141.15606883175542,
+        "num_tokens": 20,
+        "total_time": 0.24222469329833984,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
       },
       {
         "model": "fixie-eastus2.azure/gpt-3.5-turbo",
-        "ttr": 0.08602523803710938,
-        "ttft": 0.09539413452148438,
-        "tps": 64.20254327119935,
-        "num_tokens": 57,
-        "total_time": 0.9676337242126465,
-        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, a fiery ball.\nSilhouettes dance against the light,\nNature's beauty on display.\nColors blend and merge,\nA breathtaking sight,\nSunset's embrace,\nDay's farewell,\nPeaceful,\nGone."
+        "ttr": 0.07441210746765137,
+        "ttft": 0.08054327964782715,
+        "tps": 70.4681940772312,
+        "num_tokens": 20,
+        "total_time": 0.35016846656799316,
+        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, bidding farewell.\nCrim"
       },
       {
         "model": "claude-3-opus-20240229",
-        "ttr": 1.0287692546844482,
-        "ttft": 1.0301251411437988,
-        "tps": 21.352755906500228,
-        "num_tokens": 74,
-        "total_time": 4.448887586593628,
-        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,\nPainting skies in vibrant hues,\nOrange, pink, and purple,\nBlending in harmony,\nAs daylight fades,\nTwilight glows,\nSerene,\nCalm,\nRest."
+        "ttr": 1.026245355606079,
+        "ttft": 1.0264081954956055,
+        "tps": 36.739236528747384,
+        "num_tokens": 20,
+        "total_time": 1.5435664653778076,
+        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,"
       },
       {
         "model": "claude-3-sonnet-20240229",
-        "ttr": 0.34519505500793457,
-        "ttft": 0.3477938175201416,
-        "tps": 46.31420598381243,
-        "num_tokens": 90,
-        "total_time": 2.2694504261016846,
-        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,\nFiery colors bid farewell to day,\nRadiant sun sinks below the line,\nDazzling display fades into night,\nTwilight's embrace settles in,\nDarkness descends, yet\nMemories linger,\nSunset's beauty,\nCaptivating."
+        "ttr": 0.28498268127441406,
+        "ttft": 0.2861933708190918,
+        "tps": 50.104290551883096,
+        "num_tokens": 20,
+        "total_time": 0.6654024124145508,
+        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,"
       },
       {
         "model": "claude-3-haiku-20240307",
-        "ttr": 0.26037073135375977,
-        "ttft": 0.2612316608428955,
-        "tps": 49.11737196851814,
-        "num_tokens": 82,
-        "total_time": 1.9103426933288574,
-        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,\nFiery orb sinks low,\nBrilliant shades of red and gold,\nWarm glow fades away,\nTwilight settles in,\nShadows lengthen,\nDay turns to night,\nDarkness falls,\nSunset ends."
+        "ttr": 0.29703593254089355,
+        "ttft": 0.29736924171447754,
+        "tps": 122.834606249027,
+        "num_tokens": 20,
+        "total_time": 0.45204877853393555,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,"
       },
       {
         "model": "claude-2.1",
-        "ttr": 0.359360933303833,
-        "ttft": 0.3634638786315918,
-        "tps": 25.09069381076718,
-        "num_tokens": 59,
-        "total_time": 2.6750779151916504,
-        "output": "Here is a nonet poem about a sunset:\n\nRadiant, glowing\nColors fill the evening sky\nPink and orange hues\nSlowly fading into night\nThe bright sun descends\nGolden light dims\nSky darkens \nTwilight\nFades"
+        "ttr": 0.4316232204437256,
+        "ttft": 0.4318416118621826,
+        "tps": 28.919306445642786,
+        "num_tokens": 20,
+        "total_time": 1.0888421535491943,
+        "output": "Here is a nonet poem about a sunset:\n\nSun descending\nGolden horizon glowing\nCl"
       },
       {
         "model": "claude-instant-1.2",
-        "ttr": 0.3929121494293213,
-        "ttft": 0.39504528045654297,
-        "tps": 73.5181104938511,
-        "num_tokens": 100,
-        "total_time": 1.741652250289917,
-        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe Setting Sun\n\nThe orange sun sinks low in the sky,  \nPainting the clouds in hues of rose and gold.\nNature prepares for night as daylight dies,  \nDarkness will soon its velvet blanket unfold.\nOne last glimpse of radiant light remains,  \nDancing on rippling water its fiery glow.  \nQuiet descends as twilight now reigns,"
+        "ttr": 0.40778660774230957,
+        "ttft": 0.4120504856109619,
+        "tps": 177.26497954680434,
+        "num_tokens": 20,
+        "total_time": 0.5192346572875977,
+        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe Setting Sun"
       },
       {
         "model": "command-r-plus",
-        "ttr": 0.050704240798950195,
-        "ttft": 0.127549409866333,
-        "tps": 33.65062937985946,
-        "num_tokens": 63,
-        "total_time": 1.9700112342834473,
-        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and pink, so serene\nSun's descent, a daily scene\nSoftly, light fades, night preps\nHorizon's warm embrace\nDay's end, a peaceful sight\nCalm, the world rests\nDarkness falls, a new light\nNight.\""
+        "ttr": 0.05386924743652344,
+        "ttft": 0.378662109375,
+        "tps": 28.09619771751686,
+        "num_tokens": 17,
+        "total_time": 0.948134183883667,
+        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and"
       },
       {
         "model": "command-r",
-        "ttr": 0.057282447814941406,
-        "ttft": 0.11585545539855957,
-        "tps": 84.18886055984456,
-        "num_tokens": 46,
-        "total_time": 0.6503679752349854,
-        "output": "Orange and pink skies,\nThe sun melts into the sea,\nPeacefully quiet,\nThe horizon aglow,\nSoftly the light fades,\nNight's embrace begins.\nShadows lengthen,\nDarkness creeps in,\nStars twinkle."
+        "ttr": 0.0722959041595459,
+        "ttft": 0.13568973541259766,
+        "tps": 102.52028819429967,
+        "num_tokens": 18,
+        "total_time": 0.3015105724334717,
+        "output": "The sky's fiery blaze dies out,\nOrange and pink clouds float in blue,\nPeaceful"
       },
       {
         "model": "command-light",
-        "ttr": 0.060822248458862305,
-        "ttft": 0.10823440551757812,
-        "tps": 94.83016232397887,
-        "num_tokens": 65,
-        "total_time": 0.7831251621246338,
-        "output": "Here is a non-technical sentence about a sunset: \n\n\"As day turns into night, the sky glows with a warm orange and pink hue. The sun slowly sinks below the unique and beautiful, and the day's light reflects off in waves, almost like a lullaby, before the stars come out one by one."
+        "ttr": 0.07723212242126465,
+        "ttft": 0.11410379409790039,
+        "tps": 100.0407686233748,
+        "num_tokens": 20,
+        "total_time": 0.30402636528015137,
+        "output": "Sure! A beautiful sunset! The sky is painted with vibrant oranges and pinks, the sun slowly"
       },
       {
         "model": "fixie-mistral.eastus2.azure",
-        "ttr": 2.448801279067993,
-        "ttft": 2.4491851329803467,
-        "tps": 106.73228795163536,
-        "num_tokens": 100,
-        "total_time": 3.376739501953125,
-        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink, whispering goodbye.\nCrimson clouds drift, like ships sailing away,\nTwilight's symphony begins to play.\n\nSilhouettes dance, as day turns to night,\nBeneath the fading, warm and gentle light.\nStars awaken, one by one, they gleam,\nIn the sunset's final, tranqu"
+        "ttr": 0.7072224617004395,
+        "ttft": 0.707343339920044,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.7076408863067627,
+        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink kiss"
       },
       {
         "model": "api.fireworks.ai/mixtral-8x7b-instruct",
-        "ttr": 0.08217573165893555,
-        "ttft": 0.0859532356262207,
-        "tps": 195.29209008804781,
-        "num_tokens": 100,
-        "total_time": 0.592886209487915,
-        "output": "Radiant orb descends, a fiery sight,\nA blazing path of red and gold,\nIn twilight's tender, soothing light,\nA final burst of stories told.\n\nThe sky now bathed in crimson hues,\nAs day surrenders to the night,\nA tranquil whisper in the breeze,\nA sunset's beauty, pure and bright.\n\nIn fleeting moments, day concludes,\n"
+        "ttr": 0.10213494300842285,
+        "ttft": 0.10815048217773438,
+        "tps": 198.5746401241905,
+        "num_tokens": 20,
+        "total_time": 0.20383238792419434,
+        "output": "Radiant orb descends, a fiery sight,\nA blazing path of red and"
       },
       {
         "model": "api.groq.com/mixtral-8x7b-32768",
-        "ttr": 0.11426258087158203,
-        "ttft": 0.20235037803649902,
-        "tps": 625.2307178601188,
-        "num_tokens": 101,
-        "total_time": 0.3622913360595703,
-        "output": "Sunset's Farewell\n\nSky's canvas smolders, auburn hues bleed,\nDay's light wanes, surrenders to night's approach.\nOrange whispers adieu, as shadows tread,\nMountains embrace twilight's tender touch.\n\nWinds carry the day's last breath, a lullaby,\nAs sunset's curtain calls, stars peek through through"
+        "ttr": 0.13679862022399902,
+        "ttft": 0.18730902671813965,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.19968509674072266,
+        "output": "Radiant sun, your day retreats,\nSinking low, fiery orb of gold,"
       },
       {
         "model": "text.octoai.run/mixtral-8x7b-instruct",
-        "ttr": 0.04042983055114746,
-        "ttft": 0.04570150375366211,
-        "tps": 91.9026456675277,
-        "num_tokens": 100,
-        "total_time": 1.1229283809661865,
-        "output": " Radiant sun, your daylong work is done,\nDescending now, your journey's only begun.\nSky ablaze with hues of red and gold,\nA sight to behold, a story untold.\n\nOrange glow, fading fast,\nA fleeting moment, a memory that's vast.\nSilhouettes emerge as day turns to night,\nUnder the watchful stars' gentle light.\n\nIn the quiet, a"
+        "ttr": 0.08433103561401367,
+        "ttft": 0.15818047523498535,
+        "tps": 84.37617233573536,
+        "num_tokens": 20,
+        "total_time": 0.3833625316619873,
+        "output": " Radiant sun, in fiery decline,\nDay's last light, a stunning sign."
       },
       {
         "model": "api.perplexity.ai/sonar-medium-chat",
-        "ttr": 0.0792229175567627,
-        "ttft": 0.0801382064819336,
-        "tps": 66.92692012550607,
-        "num_tokens": 100,
-        "total_time": 1.559363603591919,
-        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\nSilhouettes in twilight glow,\nSoon to be darkened bed.\n\nReflections dance on the sea,\nGentle whispers of goodbye.\nDay surrenders to night, peacefully.\nIn the west, the sunset sky.\n\nA nonet: nine lines, with syllable count 9, 8, 7"
+        "ttr": 0.08914566040039062,
+        "ttft": 0.09828615188598633,
+        "tps": 64.86162050327069,
+        "num_tokens": 20,
+        "total_time": 0.3912174701690674,
+        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\n"
       },
       {
         "model": "fixie-llama-2-70b.westus3.azure",
-        "ttr": 1.4975717067718506,
-        "ttft": 1.4976985454559326,
-        "tps": 20.95736213757817,
-        "num_tokens": 100,
-        "total_time": 6.221575498580933,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 1.2074263095855713,
+        "ttft": 1.2075445652008057,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.2078502178192139,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "fixie-llama-2-70b.eastus2.azure",
-        "ttr": 4.412045001983643,
-        "ttft": 4.412203311920166,
-        "tps": 85.79096880616501,
-        "num_tokens": 100,
-        "total_time": 5.566170930862427,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 1.146080493927002,
+        "ttft": 1.1464896202087402,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.1468653678894043,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "api.fireworks.ai/llama-v2-70b-chat",
-        "ttr": 0.07017350196838379,
-        "ttft": 0.08251237869262695,
-        "tps": 116.42932216097815,
-        "num_tokens": 100,
-        "total_time": 0.9328136444091797,
-        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is painted with hues of gold\n2. As the sun begins to set in the west\n3. The clouds are tinted with shades of pink and red\n4. A peaceful scene, the world is quiet and still\n5. The sun sinks lower, the colors deepen\n6. The stars start to twinkle, one by one\n7. The"
+        "ttr": 0.08075952529907227,
+        "ttft": 0.14226126670837402,
+        "tps": 396.65015529186905,
+        "num_tokens": 20,
+        "total_time": 0.19016242027282715,
+        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is"
       },
       {
         "model": "api.groq.com/llama2-70b-4096",
-        "ttr": 0.07535767555236816,
-        "ttft": 0.32643890380859375,
-        "tps": 335.5119954034536,
-        "num_tokens": 94,
-        "total_time": 0.6036272048950195,
-        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange and red\nAs the sun begins to descend\nThe stars start to twinkle in the sky\nAs night begins to descend\nThe world is quiet, still and wide\nThe moon is full, casting its tide\nThe wind blows softly through the trees\nAs the sun dips below the breeze.\n\nDoes this meet your requirements?"
+        "ttr": 0.13484549522399902,
+        "ttft": 0.3564448356628418,
+        "tps": 336.483782721358,
+        "num_tokens": 21,
+        "total_time": 0.41588306427001953,
+        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange and and"
       },
       {
         "model": "text.octoai.run/llama-2-70b-chat-fp16",
-        "ttr": 0.016601085662841797,
-        "ttft": 0.0664205551147461,
-        "tps": 28.830738560982404,
-        "num_tokens": 100,
-        "total_time": 3.500255584716797,
-        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky is painted orange and red\n2. As the sun begins to descend\n3. The clouds are tinted with hues of gold\n4. And the world is bathed in a warm glow\n5. The sun sinks lower and lower\n6. The colors in the sky grow bold\n7. The stars start to twinkle and shine\n8. As the"
+        "ttr": 0.03344559669494629,
+        "ttft": 0.06515097618103027,
+        "tps": 27.616471927922234,
+        "num_tokens": 20,
+        "total_time": 0.7531461715698242,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
       },
       {
         "model": "api.perplexity.ai/pplx-70b-chat",
-        "ttr": 0.07631897926330566,
-        "ttft": 0.07683110237121582,
-        "tps": 54.35940302540335,
-        "num_tokens": 100,
-        "total_time": 1.898043155670166,
-        "output": "Golden orb descends,\nA fiery ball in twilight's dance,\nCrimson hues and amber glow,\n\nSilent whispers of day's retreat,\nAs shadows lengthen, warmth recedes,\nNature's canvas painted with grace,\n\nSunset's symphony, a gentle lullaby,\nIn the fading light, we find peace,\nA moment of tranquility,"
+        "ttr": 0.07571148872375488,
+        "ttft": 0.07790517807006836,
+        "tps": 56.10674476893182,
+        "num_tokens": 20,
+        "total_time": 0.41654539108276367,
+        "output": "Golden orb descends,\nA fiery ball in twilight's dance,\nC"
+      },
+      {
+        "model": "togethercomputer/llama-2-70b-chat",
+        "ttr": 0.19951152801513672,
+        "ttft": 0.20214462280273438,
+        "tps": 49.6662767326563,
+        "num_tokens": 20,
+        "total_time": 0.584697961807251,
+        "output": "\n\nA sunset's colors dance and play\nAcross the sky, a fiery"
       },
       {
         "model": "api.fireworks.ai/llama-v2-13b-chat",
-        "ttr": 0.1308729648590088,
-        "ttft": 0.14948797225952148,
-        "tps": 147.86362262159497,
-        "num_tokens": 100,
-        "total_time": 0.819023847579956,
-        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with hues of gold\nAs the sun sinks low, its fiery glow\nFades into the horizon's embrace\nLeaving behind a peaceful grace\n\nThe clouds are tinted with shades of pink\nAnd the sea reflects the colors blink\nA tranquil scene, a moment's reprieve\nFrom the day's chaos"
+        "ttr": 0.1326615810394287,
+        "ttft": 0.14807724952697754,
+        "tps": 260.4212789736317,
+        "num_tokens": 20,
+        "total_time": 0.22103595733642578,
+        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with"
       },
       {
         "model": "text.octoai.run/llama-2-13b-chat-fp16",
-        "ttr": 0.027268409729003906,
-        "ttft": 0.05545687675476074,
-        "tps": 59.09869178655101,
-        "num_tokens": 100,
-        "total_time": 1.7306208610534668,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and paints the sky,\nA fiery hue that makes me sigh.\nGolden light, a peaceful glow,\nThe day's last breath, a gentle flow.\nThe clouds are tinted with a grace,\nAs the sun dips below the place.\nThe colors blend, a harmonious sight,\nA sunset's"
+        "ttr": 0.028381824493408203,
+        "ttft": 0.054553985595703125,
+        "tps": 54.337549416816785,
+        "num_tokens": 20,
+        "total_time": 0.4042201042175293,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
       },
       {
         "model": "togethercomputer/llama-2-13b-chat",
-        "ttr": 0.23816347122192383,
-        "ttft": 0.23822951316833496,
-        "tps": 60.02645965313447,
-        "num_tokens": 100,
-        "total_time": 1.8875021934509277,
-        "output": "\n\nHere's a nonet about a sunset:\n\nThe sky is painted with hues of gold\nAs the sun sinks slowly in the west\nThe clouds are tinted with shades of red\nAnd the world is bathed in a warm glow\nThe stars begin to twinkle one by one\nAs the night takes over from the day\nThe sunset fades, but the beauty remains\nA reminder of the beauty of nature."
+        "ttr": 0.30322933197021484,
+        "ttft": 0.3033621311187744,
+        "tps": 45.98314315966222,
+        "num_tokens": 20,
+        "total_time": 0.7165570259094238,
+        "output": "\n\nHere's a nonet about a sunset:\n\nThe sky is painted with"
       },
       {
         "model": "api.fireworks.ai/llama-v2-7b-chat",
-        "ttr": 0.12812376022338867,
-        "ttft": 0.13290166854858398,
-        "tps": 190.01027119411899,
-        "num_tokens": 100,
-        "total_time": 0.6539261341094971,
-        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nA fiery sky that slowly takes its leave\nPainting the landscape with a gentle hand\nA soothing sight that calms the soul's reprieve\n\nAs day succumbs to night's gentle embrace\nThe sunset's beauty leaves a lasting grace\nA fleeting moment, yet etched in time\nA"
+        "ttr": 0.1367182731628418,
+        "ttft": 0.13960599899291992,
+        "tps": 218.22601456815818,
+        "num_tokens": 20,
+        "total_time": 0.22667169570922852,
+        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "api.perplexity.ai/pplx-7b-chat",
-        "ttr": 0.07757925987243652,
-        "ttft": 0.07801389694213867,
-        "tps": 110.5369081851428,
-        "num_tokens": 100,
-        "total_time": 0.9736423492431641,
-        "output": "A sunset's fiery hues,\nA canvas painted with the evening's blues.\nThe sky ablaze with colors so bright,\nA sight that brings peace to the soul, a delight.\n\nThe sun slowly descends,\nA peaceful end to the day's trends.\nThe world bathed in a warm glow,\nA sunset's beauty, a sight to behold.\n\nAs darkness takes over,\nThe sunset'"
+        "ttr": 0.1259911060333252,
+        "ttft": 0.1317734718322754,
+        "tps": 113.41522653364738,
+        "num_tokens": 20,
+        "total_time": 0.2992994785308838,
+        "output": "A sunset's fiery hues,\nA canvas painted with the evening's blues"
       },
       {
         "model": "togethercomputer/llama-2-7b-chat",
-        "ttr": 0.24025273323059082,
-        "ttft": 0.24042463302612305,
-        "tps": 157.48205952850512,
-        "num_tokens": 100,
-        "total_time": 0.8690676689147949,
-        "output": "\n\n  1. Write a haiku about a sunset.\n\n  2. Write a limerick about a sunset.\n\n  3. Write a free verse poem about a sunset.\n\n  4. Write a sonnet about a sunset.\n\n  5. Write a villanelle about a sunset.\n\n  6. Write a sestina about a sunset.\n\n  7. Write a ballad about a sun"
+        "ttr": 0.28707265853881836,
+        "ttft": 0.28714704513549805,
+        "tps": 84.70963599797611,
+        "num_tokens": 20,
+        "total_time": 0.5114426612854004,
+        "output": "\n\n  1. Write a haiku about a sunset.\n\n  2. Write"
       },
       {
         "model": "@cf/meta/llama-2-7b-chat-fp16",
-        "ttr": 0.745262861251831,
-        "ttft": 0.745335578918457,
-        "tps": 18.60905241267468,
-        "num_tokens": 101,
-        "total_time": 6.1190643310546875,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nAs day succumbs to night's gentle hand\nThe sun sinks low, a fiery blaze\nPainting skies with shades of grace\nA gentle glow, a peaceful sight\nNature's canvas, pure delight\nAs stars begin to twinkle bright\nA sunset's beauty, pure delight"
+        "ttr": 0.6954677104949951,
+        "ttft": 0.6958699226379395,
+        "tps": 19.830905791585383,
+        "num_tokens": 21,
+        "total_time": 1.7043967247009277,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "@cf/meta/llama-2-7b-chat-int8",
-        "ttr": 0.47552061080932617,
-        "ttft": 0.47567248344421387,
-        "tps": 34.95768085183877,
-        "num_tokens": 101,
-        "total_time": 3.3362741470336914,
-        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues upon the horizon's bend\nAs day succumbs to night's gentle hand\nThe sun sinks low, a fiery blaze\nPainting skies with shades of grace\nA gentle glow, a peaceful sight\nNature's canvas, pure delight\nThe colors dance, a wondrous sight\nAs day's last rays"
+        "ttr": 0.38550376892089844,
+        "ttft": 0.3856074810028076,
+        "tps": 36.776091135666675,
+        "num_tokens": 21,
+        "total_time": 0.9294390678405762,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
       },
       {
         "model": "Neets-7B",
-        "ttr": 0.4631221294403076,
-        "ttft": 0.47764039039611816,
-        "tps": 82.8925417171558,
-        "num_tokens": 100,
-        "total_time": 1.6719577312469482,
-        "output": " A golden light descends, as day surrenders,\nBathing the sky in hues so tender,\nCrimson and lavender blend,\nA breathtaking sight to transcend.\n\nThe sun dips low, a fiery orb,\nIts radiance fading, yet still warm,\nA final burst of light,\nThen fades into the peaceful night.\n\nThe stars awaken, one by one,\nTheir brilliance"
+        "ttr": 0.46127939224243164,
+        "ttft": 0.48275113105773926,
+        "tps": 79.71202285380487,
+        "num_tokens": 20,
+        "total_time": 0.72110915184021,
+        "output": " A golden light descends, as day surrenders,\nBathing the sky in h"
       }
     ]
   }
