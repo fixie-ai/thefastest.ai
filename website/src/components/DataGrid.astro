@@ -2,6 +2,9 @@
 // Import the necessary CSS for AG Grid
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
+
+// Set cache headers to prevent caching
+Astro.response.headers.set('Cache-Control', 'no-cache');
 ---
 <style>
   .ag-theme-quartz {
