@@ -7,11 +7,10 @@ import Section from './Section.astro';
 		<p id="methodology" class="text-base font-bold">Methodology</p>
 		<p class="text-base font-bold mb-4">===========</p>
 		<p class="py-2"><b>Distributed Footprint: </b>We run our tools daily in multiple data centers using <a class="underline hover:text-orange-600"  href="https://fly.io/docs/reference/regions/" target="_blank">Fly.io</a>. Currently we run in cdg, iad, and sea.</p>
-		<p class="py-2"><b>Short Requests: </b>Input requests are a short, single message (~20 tokens) and ask for a brief output response.</p>
-		<p class="py-2"><b>Max Output: </b>Max output tokens is set to 100 to avoid distortion of TPS values from long outputs.</p>
-		<p class="py-2"><b>Warmup for Consistent Setup: </b>A warmup connection is made to remove any connection setup latency.</p>
-		<p class="py-2"><b>TTFT Roundtrip: </b>The TTFT clock starts when the HTTP request is made and stops when the first token result is received in the response stream.</p>
-		<p class="py-2"><b>Try 3, Keep 1: </b>For each provider, three separate inferences are done, and the best result is kept (to remove any outliers due to queuing etc).</p>
+		<p class="py-2"><b>Connection Warmup: </b>A warmup connection is made to remove any HTTP connection setup latency.</p>
+		<p class="py-2"><b>TTFT Measurement: </b>The TTFT clock starts when the HTTP request is made and stops when the first token is received in the response stream.</p>
+		<p class="py-2"><b>Max Tokens: </b>The number of output tokens is set to 20 (~100 chars), the length of a typical conversational sentence.</p>		
+		<p class="py-2"><b>Try 3, Keep 1: </b>For each provider, three separate inferences are performed, and the best result is kept (to remove any outliers due to queuing etc).</p>
 	</div>
 </Section>
 

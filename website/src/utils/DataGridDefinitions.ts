@@ -49,14 +49,14 @@ export const TTRDefinition = {
 
 export const TTFTDefinition = {
 	title: "TTFT",
-	definition: "Time to First Token. Time to get first text from the model. This translates directly into how quickly the UI starts to update when displaying the response and indicates the overall speed with which the model begins working on the request and processing the input tokens. Lower values = lower latency/faster performance.",
+	definition: "Time To First Token. This is how quickly the model can process the incoming request and begin to output text, and translates directly into how quickly the UI starts to update. Lower values = lower latency/faster performance.",
 	bestPerformance: 0.20,
 	worstPerformance: 0.50,
 };
 
 export const TPSDefinition = {
 	title: "TPS",
-	definition: "Tokens per Second. This is how quickly text is emitted from the model and translates directly into how quickly the UI finishes displaying the response. It also indicates how quickly the model can produce each output token. Higher values = more throughput/faster performance.",
+	definition: "Tokens Per Second. This is how quickly the model can produce text and controls how quickly the full response shows up in the UI. Higher values = more throughput/faster performance.",
 	bestPerformance: 100,
 	worstPerformance: 30,
 };
