@@ -11,12 +11,14 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
     font-family: monospace;
     --ag-background-color: rgb(245 245 244);
     --ag-header-background-color: rgb(245 245 244);
+    --ag-odd-row-background-color: #E04F00;
   }
 
   .ag-theme-quartz-dark {
     font-family: monospace;
     --ag-background-color: rgb(28 25 23);
     --ag-header-background-color: rgb(28 25 23);
+    --ag-odd-row-background-color: #000000;
   }
 </style>
 
@@ -46,14 +48,14 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
       <div><span class="font-bold">Total Time: </span>From request to final token</div>
     </div>
   </div>
-  
+
   
   <div id="myGrid" class="ag-theme-quartz text-sm bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white w-full"></div>
   <div class="mt-4 flex flex-row justify-between text-sm items-center">
     <div>
       <p class="inline-flex">
-        <div class="inline-flex items-center"><span class="text-center rounded-md bg-green-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= fastest,</span></div>
-        <div class="inline-flex items-center"><span class="text-center rounded-md bg-red-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= slowest.</span></div>
+        <div class="inline-flex items-center"><span class="text-center rounded-md bg-[#B9F6CE] px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= fastest,</span></div>
+        <div class="inline-flex items-center"><span class="text-center rounded-md bg-[#FDC9C9] px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= slowest.</span></div>
       </p>
     </div>
     <div id="lastUpdated" class=" font-mono italic text-right"></div>
