@@ -41,9 +41,9 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
       </div>
     </div>
     <div class="mt-10 mb-4 text-left flex flex-col">
-      <div>TTFT: Time To First Token</div>
-      <div>TPS: Tokens Per Second</div>
-      <div>Total Time: From request to final token</div>
+      <div><span class="font-bold">TTFT:</span> Time To First Token</div>
+      <div><span class="font-bold">TPS: </span>Tokens Per Second</div>
+      <div><span class="font-bold">Total Time: </span>From request to final token</div>
     </div>
   </div>
   
@@ -52,8 +52,8 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
   <div class="mt-4 flex flex-row justify-between text-sm items-center">
     <div>
       <p class="inline-flex">
-        <div class="inline-flex items-center"><span class="text-center rounded-md bg-green-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= best.</span></div>
-        <div class="inline-flex items-center"><span class="text-center rounded-md bg-red-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= worst.</span></div>
+        <div class="inline-flex items-center"><span class="text-center rounded-md bg-green-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= fastest,</span></div>
+        <div class="inline-flex items-center"><span class="text-center rounded-md bg-red-500 px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= slowest.</span></div>
       </p>
     </div>
     <div id="lastUpdated" class=" font-mono italic text-right"></div>
