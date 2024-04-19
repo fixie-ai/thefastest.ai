@@ -4,13 +4,13 @@ interface ValueFormatterParam {
 }
 
 export const WorstColor = {
-	rgb: "239 68 68",
-	hex: "#EF4444",
+	rgb: "185 246 206",
+	hex: "#B9F6CE",
 };
 
 export const BestColor = {
-	rgb: "34 197 94",
-	hex: "#22C55E",
+	rgb: "253 201 201",
+	hex: "#FDC9C9",
 };
 
 
