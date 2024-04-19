@@ -3,12 +3,12 @@ interface ValueFormatterParam {
   value: number;
 }
 
-export const WorstColor = {
+export const BestColor = {
 	rgb: "185 246 206",
 	hex: "#B9F6CE",
 };
 
-export const BestColor = {
+export const WorstColor = {
 	rgb: "253 201 201",
 	hex: "#FDC9C9",
 };
