@@ -29,6 +29,12 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   .bad {
     background-color: var(--bad-color);
   }
+
+  @media (max-width: 640px) {
+  #legend {
+    display: none;
+  }
+}
 </style>
 
 <form id="benchmarks" class="text-sm">
@@ -51,7 +57,7 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
         </div>
       </div>
     </div>
-    <div class="mt-10 mb-4 text-left flex flex-col">
+    <div id="legend" class="mt-10 mb-4 text-left flex flex-col">
       <div><span class="font-bold">TTFT:</span> Time To First Token</div>
       <div><span class="font-bold">TPS: </span>Tokens Per Second</div>
       <div><span class="font-bold">Total Time: </span>From request to final token</div>
