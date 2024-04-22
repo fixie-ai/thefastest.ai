@@ -9,16 +9,27 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
 <style>
   .ag-theme-quartz {
     font-family: monospace;
-    --ag-background-color: rgb(245 245 244);
-    --ag-header-background-color: rgb(245 245 244);
-    --ag-odd-row-background-color: #F1F1F1;
+    --ag-background-color: #f5f5f4;
+    --ag-header-background-color: white;
+    --ag-odd-row-background-color: white;
+    --good-color: #B9F6CE;    
+    --bad-color: #FDC9C9;
   }
 
   .ag-theme-quartz-dark {
     font-family: monospace;
-    --ag-background-color: rgb(28 25 23);
-    --ag-header-background-color: rgb(28 25 23);
-    --ag-odd-row-background-color: #000000;
+    --ag-background-color: rgb(30 41 59);
+    --ag-header-background-color: rgb(55 65 81);
+    --ag-odd-row-background-color: rgb(55 65 81);   
+    --good-color: rgb(22 101 52);
+    --bad-color: rgb(101 22 22);
+  }
+
+  .good {
+    background-color: var(--good-color);
+  }
+  .bad {
+    background-color: var(--bad-color);
   }
 </style>
 
@@ -51,11 +62,11 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
 
   
   <div id="myGrid" class="ag-theme-quartz text-sm bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white w-full"></div>
-  <div class="mt-4 flex flex-row justify-between text-sm items-center">
+  <div id="myFooter" class="ag-theme-quartz mt-4 flex flex-row justify-between text-sm items-center">
     <div>
       <p class="inline-flex">
-        <div class="inline-flex items-center"><span class="text-center rounded-md bg-[#B9F6CE] px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= fastest,</span></div>
-        <div class="inline-flex items-center"><span class="text-center rounded-md bg-[#FDC9C9] px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= slowest.</span></div>
+        <div class="inline-flex items-center"><span class="good text-center rounded-md px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= fastest,</span></div>
+        <div class="inline-flex items-center"><span class="bad text-center rounded-md px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= slowest.</span></div>
       </p>
     </div>
     <div id="lastUpdated" class=" font-mono italic text-right"></div>
@@ -64,17 +75,16 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
 
 <script>
   import { createGrid } from 'ag-grid-community';
-  import { BenchmarkRegions, gridOptions, WorstColor, BestColor, TTFTDefinition, TPSDefinition, TotalTimeDefinition } from '@/utils/DataGridDefinitions.ts';
-  import { generateColor } from '@/utils/DataGridColors.js';
+  import { BenchmarkRegions, gridOptionsBase, TTFTDefinition, TPSDefinition, TotalTimeDefinition } from '@/utils/DataGridDefinitions.ts';
   import { fetchLocalJsonFile } from '@/utils/FetchData.ts';
 
   let gridApi;
   const localData = '../../data/latest.json';
-  let gridData = [];
+  const gridData = await fetchLocalJsonFile(localData);
   let selectedRegion = 'sea';
   let selectedRegionData = [];
   
-  function setGridData(region, gridData) {
+  function updateRegion(region: string) {
     selectedRegion = region;
     gridData.forEach((regionData) => {
       if (regionData.region === region) {
@@ -87,68 +97,44 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
   // Returns the background color for the cell based on the value
   function colFunction(params) {
     const currentColumnID = params.column.colId;
-    TTFTDefinition.bestPerformance;
-    TPSDefinition.bestPerformance;
-    TotalTimeDefinition.bestPerformance;
-
-    // TTFT (Lower is better)
-    if (currentColumnID == 'ttft') {
-      if (params.value <= TTFTDefinition.bestPerformance) {
-        return { backgroundColor: BestColor.hex };
-      } else if (params.value >= TTFTDefinition.worstPerformance) {
-        return { backgroundColor: WorstColor.hex };
+    const style = getComputedStyle(myGrid);
+    const map = {
+      "ttft": TTFTDefinition,
+      "tps": TPSDefinition,
+      "total_time": TotalTimeDefinition
+    };
+    const def = map[currentColumnID];
+    if (def) {
+      if (params.value <= def.bestPerformance) {
+        return {backgroundColor: style.getPropertyValue('--good-color')};
+      } else if (params.value >= def.worstPerformance) {
+        return {backgroundColor: style.getPropertyValue('--bad-color')};
       }
     }
-    // TPS (Higher is better)
-    else if (currentColumnID == 'tps') {
-      if (params.value >= TPSDefinition.bestPerformance) {
-        return { backgroundColor: BestColor.hex };
-      } else if (params.value <= TPSDefinition.worstPerformance) {
-        return { backgroundColor: WorstColor.hex };
-      }
-    }
-    // Total Time (Lower is better)
-    else if (currentColumnID == 'total_time') {
-      if (params.value <= TotalTimeDefinition.bestPerformance) {
-        return { backgroundColor: BestColor.hex };
-      } else if (params.value >= TotalTimeDefinition.worstPerformance) {
-        return { backgroundColor: WorstColor.hex };
-      }
-    }
-
-    return { };
-  };
-
-  function setCellFormatter() {
-    const columnDefs = gridApi.getColumnDefs();
-    columnDefs.forEach((colDef, index) => {
-      // Only apply the formatter for ttft, tps
-      if(colDef.colId == 'ttft' || colDef.colId == 'tps' || colDef.colId == 'total_time') {
-        colDef.cellStyle = colFunction;
-      }      
-    });
-    gridApi.setGridOption("columnDefs", columnDefs);
-  };
+    return {};
+  }
 
   async function onDOMContentLoaded() {
-    gridData = await fetchLocalJsonFile(localData);
-
     // setup the grid after the page has finished loading
-    var gridDiv = document.querySelector("#myGrid");
+    const gridDiv = document.querySelector("#myGrid") as HTMLElement;
+    const gridOptions = gridOptionsBase;
+    gridOptions.columnDefs.forEach((columnDef) => {
+      columnDef.cellStyle = colFunction;
+    });
+    
     gridApi = createGrid(gridDiv, gridOptions);
-    setGridData(selectedRegion, gridData);   // default to sea region on load
-    setCellFormatter();
+    updateRegion(selectedRegion);   // default to sea region on load
 
     // Add text for our last updated date
     const ourDiv = document.getElementById('lastUpdated');
     // ourDiv.classList.add('text-base', 'font-mono', 'italic', 'text-right');
-    ourDiv.innerText = `Last Updated: ${gridData[0].time.split('T')[0]}`;
+    ourDiv!.innerText = `Last Updated: ${gridData[0].time.split('T')[0]}`;
 
     // Add an event listener to the radio buttons to filter the grid data
-    document.getElementById('benchmarks').addEventListener('change', function(event) {
+    document.getElementById('benchmarks')!.addEventListener('change', function(event) {
       // Filter the grid data based on the selected region
       if (event.target.name === 'selectedRegion') {
-        setGridData(event.target.value, gridData);
+        updateRegion(event.target.value);
       }
     });
   }
@@ -161,7 +147,13 @@ Astro.response.headers.set('Cache-Control', 'no-cache');
       onDOMContentLoaded();
   }
 
+  // Watch for dark mode changes and refresh the grid accordingly
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'class') {        
+        gridApi.refreshCells({ force: true });      
+      }
+    });
+  });
+  observer.observe(document.documentElement, { attributes: true });
 </script>
-
-
-

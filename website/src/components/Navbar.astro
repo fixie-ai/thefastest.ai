@@ -44,6 +44,15 @@ const data = await fs.readFile(url, 'utf8');
 </Section>
 
 <script>
+	function setDarkMode(isDarkMode: boolean) {
+		localStorage.setItem('dark-mode', isDarkMode.toString());
+		document.documentElement.classList.toggle('dark', isDarkMode);
+		const elements = [document.getElementById('myGrid'), document.getElementById('myFooter')];			
+		elements.forEach((el) => {
+			el.classList.toggle('ag-theme-quartz-dark', isDarkMode);
+			el.classList.toggle('ag-theme-quartz', !isDarkMode);
+		});
+	}
 	const lightSwitches = document.querySelectorAll('.light-switch');
 	if (lightSwitches.length > 0) {
 		lightSwitches.forEach((lightSwitch: any, i) => {
@@ -57,24 +66,7 @@ const data = await fs.readFile(url, 'utf8');
 						el.checked = checked;
 					}
 				});
-				if (lightSwitch.checked) {	// Dark mode
-					document.documentElement.classList.add('dark');
-					localStorage.setItem('dark-mode', 'true');
-
-					// Change the data grid
-					const myElement = document.getElementById('myGrid');
-					myElement.classList.remove('ag-theme-quartz');
-					myElement.classList.add('ag-theme-quartz-dark');
-
-				} else {
-					document.documentElement.classList.remove('dark');
-					localStorage.setItem('dark-mode', 'false');
-
-					// Change the data grid
-					const myElement = document.getElementById('myGrid');
-					myElement.classList.remove('ag-theme-quartz-dark');
-					myElement.classList.add('ag-theme-quartz');
-				}
+				setDarkMode(checked);				
 			});
 		});
 	}

@@ -23,35 +23,23 @@ const {
 		<meta name="description" content={description} />
 		<meta name="author" content={AppConfig.author} />
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
 
-		<script>
-			if (
-				localStorage.getItem('dark-mode') === 'true' ||
-				(!('dark-mode' in localStorage) &&
-					window.matchMedia('(prefers-color-scheme: dark)').matches)
-			) {
-				localStorage.setItem('dark-mode', 'true');
-				document.querySelector('html')?.classList.add('dark');
-
-				// Change the data grid
-				const myElement = document.getElementById('myGrid');
-				myElement.classList.remove('ag-theme-quartz');
-				myElement.classList.add('ag-theme-quartz-dark');
-
-			} else {
-				localStorage.setItem('dark-mode', 'false');
-				document.querySelector('html')?.classList.remove('dark');
-
-				// Change the data grid
-				const myElement = document.getElementById('myGrid');
-				myElement.classList.remove('ag-theme-quartz-dark');
-				myElement.classList.add('ag-theme-quartz');
-			}
-		</script>
+	<script>		
+		const isDarkMode = localStorage.getItem('dark-mode') === 'true' || 
+			(!('dark-mode' in localStorage) && 
+				window.matchMedia('(prefers-color-scheme: dark)').matches);
+		localStorage.setItem('dark-mode', isDarkMode.toString());
+		document.querySelector('html')?.classList.toggle('dark', isDarkMode);
+		const elements = [document.getElementById('myGrid'), document.getElementById('myFooter')];
+		elements.forEach((el) => {
+			el.classList.toggle('ag-theme-quartz', !isDarkMode);
+			el.classList.toggle('ag-theme-quartz-dark', isDarkMode);
+		});
+	</script>
 	</head>
-	<body
-		class="flex min-h-screen flex-col bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white"
+	<body"
+		class="flex min-h-screen flex-col bg-stone-100 font-mono text-gray-950 dark:bg-gray-800 dark:text-slate-50"
 	>
 		<Navbar />
 		<div class="flex-1 text-sm">

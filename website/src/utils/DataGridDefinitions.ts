@@ -3,16 +3,6 @@ interface ValueFormatterParam {
   value: number;
 }
 
-export const BestColor = {
-	rgb: "185 246 206",
-	hex: "#B9F6CE",
-};
-
-export const WorstColor = {
-	rgb: "253 201 201",
-	hex: "#FDC9C9",
-};
-
 
 export const BenchmarkRegions = [
 	{
@@ -33,19 +23,15 @@ export const BenchmarkRegions = [
 ];
 
 export const ModelDefinition = {
-	title: "Provider/Model",
-	definition: "The LLM and host provider used."
+	title: "Model",
+	definition: "The LLM used."
 };
 
-export const RegionDefinition = {
-	title: "Region",
-	definition: "The region where the benchmark was run."
+export const ProviderDefinition = {
+	title: "Provider",
+	definition: "The cloud provider that is hosting the model."
 };
 
-export const TTRDefinition = {
-	title: "TTR",
-	definition: "Time to (HTTP) Response. Indicates the overall speed of the serving infrastructure of the provider/model. Lower values = lower latency/faster performance."
-};
 
 export const TTFTDefinition = {
 	title: "TTFT",
@@ -59,11 +45,6 @@ export const TPSDefinition = {
 	definition: "Tokens Per Second. This is how quickly the model can produce text and controls how quickly the full response shows up in the UI. Higher values = more throughput/faster performance.",
 	bestPerformance: 100,
 	worstPerformance: 30,
-};
-
-export const TokensDefinition = {
-	title: "Num Tokens",
-	definition: "The total number of output tokens. Longer responses take longer to produce."
 };
 
 export const TotalTimeDefinition = {
@@ -83,25 +64,16 @@ const columnModel = {
 	headerTooltip: ModelDefinition.definition,
 	headerClass: headerClass,
 	//TODO: Make this ~200 on mobile screen size by default
-	minWidth: 300,
+	minWidth: 200,
 	// tooltipField: "output"
 };
 
-// Region column
-const columnRegion = {
-	field: "region",
-	headerName: RegionDefinition.title,
-	headerTooltip: RegionDefinition.definition,
+const columnProvider = {
+	field: "provider",
+	headerName: ProviderDefinition.title,
+	headerTooltip: ProviderDefinition.definition,
 	headerClass: headerClass,
-};
-
-// TTR column
-const columnTTR = {
-	field: "ttr",
-	headerName: TTRDefinition.title,
-	headerTooltip: TTRDefinition.definition,
-	headerClass: headerClass,
-	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
+	minWidth: 100,
 };
 
 // TTFT column
@@ -128,16 +100,6 @@ const columnTPS = {
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
 };
 
-// Tokens column
-const columnNumTokens = {
-	field: "num_tokens",
-	headerName: TokensDefinition.title,
-	headerTooltip: TokensDefinition.definition,
-	headerClass: headerClass,
-	// maxWidth: 100,
-	wrapHeaderText: true
-};
-
 // Total Time column
 const columnTotalTime = {
 	field: "total_time",
@@ -153,7 +115,7 @@ const columnTotalTime = {
 	sort: 'asc',
 };
 
-export const gridOptions = {
+export const gridOptionsBase = {
   // alwaysShowVerticalScroll: true,
   autoSizeStrategy: { type: 'fitGridWidth' },
 	enableCellTextSelection: true,
@@ -164,5 +126,5 @@ export const gridOptions = {
 	domLayout: 'autoHeight',
   rowData: [],
   // Columns to be displayed (Should match rowData properties)...omit columnRegion, columnTTR, columnNumTokens
-  columnDefs: [ columnModel, columnTTFT, columnTPS, columnTotalTime]
+  columnDefs: [ columnModel, columnProvider, columnTTFT, columnTPS, columnTotalTime]
 };
