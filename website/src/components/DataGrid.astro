@@ -128,7 +128,9 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     const gridDiv = document.querySelector("#myGrid") as HTMLElement;
     const gridOptions = gridOptionsBase;
     const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    const providerFilter = urlParams.get('pf');
     const modelFilter = urlParams.get('mf');
+    
     // remove TTFT and TPS columns on mobile
     if (isMobile) {
       gridOptions.columnDefs.splice(2, 2);
@@ -139,10 +141,14 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     });
     // create the grid and set the filter if needed
     gridApi = createGrid(gridDiv, gridOptions);
+    let filter = {};
+    if (providerFilter) {
+      filter.provider = { filterType: 'text', type: 'contains', filter: providerFilter };   
+    }
     if (modelFilter) {
-      const filter = { model: { filterType: 'text', type: 'contains', filter: modelFilter }}
-      gridApi.setFilterModel(filter);
-    }        
+      filter.model = { filterType: 'text', type: 'contains', filter: modelFilter };
+    }
+    gridApi.setFilterModel(filter);
     // set the selected region and populate the grid
     const selectedRegionRadio = document.querySelector(`input[name=selectedRegion][value=${selectedRegion}]`) as HTMLInputElement;
     selectedRegionRadio.checked = true;
