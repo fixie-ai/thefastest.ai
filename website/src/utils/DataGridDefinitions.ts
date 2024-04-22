@@ -126,5 +126,5 @@ export const gridOptionsBase = {
 	domLayout: 'autoHeight',
   rowData: [],
   // Columns to be displayed (Should match rowData properties)...omit columnRegion, columnTTR, columnNumTokens
-  columnDefs: [ columnModel, columnProvider, columnTTFT, columnTPS, columnTotalTime]
+  columnDefs: [ columnProvider, columnModel, columnTTFT, columnTPS, columnTotalTime]
 };
