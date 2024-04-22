@@ -1,6 +1,6 @@
 export async function fetchLocalJsonFile(url: string) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
