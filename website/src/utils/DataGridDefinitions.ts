@@ -64,7 +64,7 @@ const columnModel = {
 	headerTooltip: ModelDefinition.definition,
 	headerClass: headerClass,
 	//TODO: Make this ~200 on mobile screen size by default
-	minWidth: 200,
+	minWidth: 160,
 	// tooltipField: "output"
 };
 
@@ -73,7 +73,8 @@ const columnProvider = {
 	headerName: ProviderDefinition.title,
 	headerTooltip: ProviderDefinition.definition,
 	headerClass: headerClass,
-	minWidth: 100,
+	minWidth: 130,
+	maxWidth: 200,
 };
 
 // TTFT column
@@ -82,9 +83,8 @@ const columnTTFT = {
 	headerName: TTFTDefinition.title,
 	headerTooltip: TTFTDefinition.definition,
 	headerClass: headerClass,
-	minWidth: 100,
-	// minWidth: 80,
-	// maxWidth: 90,
+	minWidth: 0,
+	maxWidth: 120,
 	valueFormatter: (p: ValueFormatterParam) => (p.value.toFixed(2) < 1.0 ? p.value.toFixed(2)*1000 + "ms" : p.value.toFixed(2) + "s"),
 };
 
@@ -94,9 +94,8 @@ const columnTPS = {
 	headerName: TPSDefinition.title,
 	headerTooltip: TPSDefinition.definition,
 	headerClass: headerClass,
-	minWidth: 100,
-	// minWidth: 90,
-	// maxWidth: 90,
+	minWidth: 0,
+	maxWidth: 120,
 	valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2)
 };
 
@@ -106,7 +105,8 @@ const columnTotalTime = {
 	headerName: TotalTimeDefinition.title,
 	headerTooltip: TotalTimeDefinition.definition,
 	headerClass: headerClass,
-	minWidth: 100,
+	minWidth: 80,
+	maxWidth: 120,
 	// minWidth: 100,
 	// maxWidth: 100,
 	wrapHeaderText: true,

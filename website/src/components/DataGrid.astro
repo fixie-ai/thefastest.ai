@@ -95,7 +95,8 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   // Returns the background color for the cell based on the value
   function colFunction(params) {
     const currentColumnID = params.column.colId;
-    const style = getComputedStyle(myGrid);
+    const myGrid = document.getElementById('myGrid');
+    const style = getComputedStyle(myGrid!);
     const map = {
       "ttft": TTFTDefinition,
       "tps": TPSDefinition,
@@ -120,6 +121,11 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     // setup the grid after the page has finished loading
     const gridDiv = document.querySelector("#myGrid") as HTMLElement;
     const gridOptions = gridOptionsBase;
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    // remove TTFT and TPS columns on mobile
+    if (isMobile) {
+      gridOptions.columnDefs.splice(2, 2);
+    }
     gridOptions.columnDefs.forEach((columnDef) => {
       columnDef.cellStyle = colFunction;
     });
