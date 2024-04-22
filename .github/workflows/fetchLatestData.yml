@@ -3,7 +3,7 @@ name: Generate Latest Data
 on:
   schedule:
     # Runs at 9 AM UTC every day
-    - cron: '0 9 * * *'
+    - cron: "0 9 * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,23 +11,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Use Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20"
 
-    - name: Install dependencies
-      run: yarn install
-
-    - name: Get data and update file
-      run: |
-        OUTPUT="$(node ./utils/GenerateLatestData.js)"
-        echo "$OUTPUT" > ./website/public/data/latest.json
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add ./website/public/data/latest.json
-        git commit -m "Update latest data"
-        git push
+      - name: Get data and update file
+        run: |
+          OUTPUT="$(node ./utils/GenerateLatestData.js)"
+          echo "$OUTPUT" > ./website/public/data/latest.json
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ./website/public/data/latest.json
+          git commit -m "Update latest data"
+          git push
