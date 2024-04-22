@@ -57,7 +57,7 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
         </div>
       </div>
     </div>
-    <div id="legend" class="mt-10 mb-4 text-left flex flex-col">
+    <div id="legend" class="mt-10 mb-4 text-left flex flex-col justify-end">
       <div><span class="font-bold">TTFT:</span> Time To First Token</div>
       <div><span class="font-bold">TPS: </span>Tokens Per Second</div>
       <div><span class="font-bold">Total Time: </span>From request to final token</div>
@@ -85,9 +85,10 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   let gridApi;
   const localData = '../../data/latest.json';
   const gridData = await fetchLocalJsonFile(localData);
-  let selectedRegion = 'sea';
+  const urlParams = new URLSearchParams(window.location.search);
+  let selectedRegion = urlParams.get('r') ?? 'sea';
   let selectedRegionData = [];
-  
+    
   function updateRegion(region: string) {
     selectedRegion = region;
     gridData.forEach((regionData) => {
@@ -123,21 +124,29 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     return {};
   }
 
-  async function onDOMContentLoaded() {
-    // setup the grid after the page has finished loading
+  async function onDOMContentLoaded() {    
     const gridDiv = document.querySelector("#myGrid") as HTMLElement;
     const gridOptions = gridOptionsBase;
     const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    const modelFilter = urlParams.get('mf');
     // remove TTFT and TPS columns on mobile
     if (isMobile) {
       gridOptions.columnDefs.splice(2, 2);
     }
+    // set the style proc for each column
     gridOptions.columnDefs.forEach((columnDef) => {
       columnDef.cellStyle = colFunction;
     });
-    
+    // create the grid and set the filter if needed
     gridApi = createGrid(gridDiv, gridOptions);
-    updateRegion(selectedRegion);   // default to sea region on load
+    if (modelFilter) {
+      const filter = { model: { filterType: 'text', type: 'contains', filter: modelFilter }}
+      gridApi.setFilterModel(filter);
+    }        
+    // set the selected region and populate the grid
+    const selectedRegionRadio = document.querySelector(`input[name=selectedRegion][value=${selectedRegion}]`) as HTMLInputElement;
+    selectedRegionRadio.checked = true;
+    updateRegion(selectedRegion);
 
     // Add text for our last updated date
     const ourDiv = document.getElementById('lastUpdated');

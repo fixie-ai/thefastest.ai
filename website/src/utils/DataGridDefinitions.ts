@@ -120,6 +120,7 @@ export const gridOptionsBase = {
   autoSizeStrategy: { type: 'fitGridWidth' },
 	enableCellTextSelection: true,
   defaultColDef: {
+	suppressMovable: true,
     filter: true,
     // minWidth: 80,	
   },
