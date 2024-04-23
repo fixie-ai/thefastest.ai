@@ -122,6 +122,10 @@ export const gridOptionsBase = {
   defaultColDef: {
 	suppressMovable: true,
     filter: true,
+	filterParams: {
+		filterOptions: ["contains"],
+		maxNumConditions: 4
+	}
     // minWidth: 80,	
   },
 	domLayout: 'autoHeight',
