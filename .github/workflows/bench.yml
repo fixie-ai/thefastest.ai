@@ -18,3 +18,28 @@ jobs:
         do
           curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&max_tokens=20&store=true' -H "fly-prefer-region: $region"          
         done
+
+  generate-latest-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20"
+
+      - name: Get data and update file
+        run: |
+          OUTPUT="$(node ./utils/GenerateLatestData.js)"
+          echo "$OUTPUT" > ./website/public/data/latest.json
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ./website/public/data/latest.json
+          git commit -m "Update latest data"
+          git push
+
+  build-and-deploy-site:
+    uses: ./.github/workflows/astro.yml
