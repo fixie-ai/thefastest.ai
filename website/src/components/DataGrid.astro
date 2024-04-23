@@ -89,7 +89,13 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   let selectedRegion = urlParams.get('r') ?? 'sea';
   let selectedRegionData = [];
     
-  function updateRegion(region: string) {
+  function setUrlParam(key: string, value: string) {
+    const url = new URL(window.location.href);
+    url.searchParams.set(key, value);
+    window.history.replaceState({}, '', url);
+  }
+
+  function updateRegion(region: string, updateUrl: boolean = true) {
     selectedRegion = region;
     gridData.forEach((regionData) => {
       if (regionData.region === region) {
@@ -97,6 +103,9 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
         gridApi.setGridOption("rowData", selectedRegionData);
       }
     });
+    if (updateUrl) {
+      setUrlParam('r', region);
+    }
   };
 
   // Returns the background color for the cell based on the value
@@ -152,7 +161,7 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     // set the selected region and populate the grid
     const selectedRegionRadio = document.querySelector(`input[name=selectedRegion][value=${selectedRegion}]`) as HTMLInputElement;
     selectedRegionRadio.checked = true;
-    updateRegion(selectedRegion);
+    updateRegion(selectedRegion, false);
 
     // Add text for our last updated date
     const ourDiv = document.getElementById('lastUpdated');
