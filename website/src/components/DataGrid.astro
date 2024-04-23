@@ -1,17 +1,17 @@
 ---
 // Import the necessary CSS for AG Grid
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-quartz.css';
-
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-quartz.css";
 ---
+
 <style>
   .ag-theme-quartz {
     font-family: monospace;
     --ag-background-color: #f5f5f4;
     --ag-header-background-color: white;
     --ag-odd-row-background-color: white;
-    --good-color: #B9F6CE;    
-    --bad-color: #FDC9C9;
+    --good-color: #b9f6ce;
+    --bad-color: #fdc9c9;
   }
 
   .ag-theme-quartz-dark {
@@ -31,64 +31,106 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
   }
 
   @media (max-width: 640px) {
-  #legend {
-    display: none;
+    #legend {
+      display: none;
+    }
   }
-}
 </style>
 
 <form id="benchmarks" class="text-sm">
   <div class="flex flex-row justify-between">
     <div class="flex flex-col">
-      <label for="regionSelector" class="text-base font-bold" >Select a Region</label>
-      <label class="text-base font-bold" >===============</label>
+      <label for="regionSelector" class="text-base font-bold"
+        >Select a Region</label
+      >
+      <label class="text-base font-bold">===============</label>
       <div id="regionSelector" class="my-4 flex flex-col">
         <div>
-          <input type="radio" id="seaRegionSelector" name="selectedRegion" value="sea" checked />
+          <input
+            type="radio"
+            id="seaRegionSelector"
+            name="selectedRegion"
+            value="sea"
+            checked
+          />
           <label for="seaRegionSelector">US West (Seattle)</label>
         </div>
         <div>
-          <input type="radio" id="iadRegionSelector" name="selectedRegion" value="iad" />
+          <input
+            type="radio"
+            id="iadRegionSelector"
+            name="selectedRegion"
+            value="iad"
+          />
           <label for="iadRegionSelector">US East (Virginia)</label>
         </div>
         <div>
-          <input type="radio" id="cdgRegionSelector" name="selectedRegion" value="cdg" />
+          <input
+            type="radio"
+            id="cdgRegionSelector"
+            name="selectedRegion"
+            value="cdg"
+          />
           <label for="cdgRegionSelector">Europe (Paris)</label>
         </div>
       </div>
     </div>
-    <div id="legend" class="mt-10 mb-4 text-left flex flex-col justify-end">
+    <div id="legend" class="mb-4 mt-10 flex flex-col justify-end text-left">
       <div><span class="font-bold">TTFT:</span> Time To First Token</div>
       <div><span class="font-bold">TPS: </span>Tokens Per Second</div>
-      <div><span class="font-bold">Total Time: </span>From request to final token</div>
+      <div>
+        <span class="font-bold">Total Time: </span>From request to final token
+      </div>
     </div>
   </div>
 
-  
-  <div id="myGrid" class="ag-theme-quartz text-sm bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white w-full"></div>
-  <div id="myFooter" class="ag-theme-quartz mt-4 flex flex-row justify-between text-sm items-center">
+  <div
+    id="myGrid"
+    class="ag-theme-quartz w-full bg-stone-100 font-mono text-sm text-gray-950 dark:bg-stone-900 dark:text-white"
+  >
+  </div>
+  <div
+    id="myFooter"
+    class="ag-theme-quartz mt-4 flex flex-row items-center justify-between text-sm"
+  >
     <div>
       <p class="inline-flex">
-        <div class="inline-flex items-center"><span class="good text-center rounded-md px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Green</span><span>&nbsp;= fastest,</span></div>
-        <div class="inline-flex items-center"><span class="bad text-center rounded-md px-2 py-1 text-sm ring-1 ring-inset ring-gray-500/10 w-14">Red</span><span>&nbsp;= slowest.</span></div>
+        <div class="inline-flex items-center">
+          <span
+            class="good w-14 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
+            >Green</span
+          ><span>&nbsp;= fastest,</span>
+        </div>
+        <div class="inline-flex items-center">
+          <span
+            class="bad w-14 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
+            >Red</span
+          ><span>&nbsp;= slowest.</span>
+        </div>
       </p>
     </div>
-    <div id="lastUpdated" class=" font-mono italic text-right"></div>
+    <div id="lastUpdated" class="text-right font-mono italic"></div>
   </div>
 </form>
 
 <script>
-  import { createGrid } from 'ag-grid-community';
-  import { BenchmarkRegions, gridOptionsBase, TTFTDefinition, TPSDefinition, TotalTimeDefinition } from '@/utils/DataGridDefinitions.ts';
-  import { fetchLocalJsonFile } from '@/utils/FetchData.ts';
+  import { createGrid } from "ag-grid-community";
+  import {
+    BenchmarkRegions,
+    gridOptionsBase,
+    TTFTDefinition,
+    TPSDefinition,
+    TotalTimeDefinition,
+  } from "@/utils/DataGridDefinitions.ts";
+  import { fetchLocalJsonFile } from "@/utils/FetchData.ts";
 
   let gridApi;
-  const localData = '../../data/latest.json';
+  const localData = "../../data/latest.json";
   const gridData = await fetchLocalJsonFile(localData);
   const urlParams = new URLSearchParams(window.location.search);
-  let selectedRegion = urlParams.get('r') ?? 'sea';
+  let selectedRegion = urlParams.get("r") ?? "sea";
   let selectedRegionData = [];
-    
+
   function setUrlParam(key: string, value?: string) {
     const url = new URL(window.location.href);
     if (value) {
@@ -96,7 +138,7 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
     } else {
       url.searchParams.delete(key);
     }
-    window.history.replaceState({}, '', url);
+    window.history.replaceState({}, "", url);
   }
 
   function updateRegion(region: string, updateUrl: boolean = true) {
@@ -108,123 +150,137 @@ import 'ag-grid-community/styles/ag-theme-quartz.css';
       }
     });
     if (updateUrl) {
-      setUrlParam('r', region);
+      setUrlParam("r", region);
     }
-  };
+  }
 
   // Returns the background color for the cell based on the value
   function colFunction(params) {
     const currentColumnID = params.column.colId;
-    const myGrid = document.getElementById('myGrid');
+    const myGrid = document.getElementById("myGrid");
     const style = getComputedStyle(myGrid!);
     const map = {
-      "ttft": TTFTDefinition,
-      "tps": TPSDefinition,
-      "total_time": TotalTimeDefinition
+      ttft: TTFTDefinition,
+      tps: TPSDefinition,
+      total_time: TotalTimeDefinition,
     };
     const def = map[currentColumnID];
     if (def) {
-      const isGood = def.worstPerformance > def.bestPerformance ?
-          params.value < def.bestPerformance : params.value > def.bestPerformance;
-      const isBad = def.worstPerformance > def.bestPerformance ?
-          params.value > def.worstPerformance : params.value < def.worstPerformance;
+      const isGood =
+        def.worstPerformance > def.bestPerformance
+          ? params.value < def.bestPerformance
+          : params.value > def.bestPerformance;
+      const isBad =
+        def.worstPerformance > def.bestPerformance
+          ? params.value > def.worstPerformance
+          : params.value < def.worstPerformance;
       if (isGood) {
-        return { backgroundColor: style.getPropertyValue('--good-color') };
+        return { backgroundColor: style.getPropertyValue("--good-color") };
       } else if (isBad) {
-        return { backgroundColor: style.getPropertyValue('--bad-color') };
+        return { backgroundColor: style.getPropertyValue("--bad-color") };
       }
     }
     return {};
   }
 
   function filterToText(column) {
-		if (!column) {
-			return undefined;
-		}
-		if (column.operator) {
-			const operator = column.operator === 'OR' ? '|' : '&';
-			return column.conditions.reduce(
-				(acc, condition) => acc + (acc ? operator : '') + filterToText(condition),
-				''
-			);
-		}
-		return column.filter;
-	}
+    if (!column) {
+      return undefined;
+    }
+    if (column.operator) {
+      const operator = column.operator === "OR" ? "|" : "&";
+      return column.conditions.reduce(
+        (acc, condition) =>
+          acc + (acc ? operator : "") + filterToText(condition),
+        "",
+      );
+    }
+    return column.filter;
+  }
 
-	function textToFilter(text) {
-		if (!text) {
-			return undefined;
-		}
-		const opChar = ['|', '&'].find(ch => text.includes(ch));
-		if (opChar) {
+  function textToFilter(text) {
+    if (!text) {
+      return undefined;
+    }
+    const opChar = ["|", "&"].find((ch) => text.includes(ch));
+    if (opChar) {
       const parts = text.split(opChar);
-			const operator = opChar === '|' ? 'OR' : 'AND';
-			return { filterType: 'text', operator, conditions: parts.map(textToFilter) };
-		}
-		return { filterType: 'text', type: 'contains', filter: text };
-	}
+      const operator = opChar === "|" ? "OR" : "AND";
+      return {
+        filterType: "text",
+        operator,
+        conditions: parts.map(textToFilter),
+      };
+    }
+    return { filterType: "text", type: "contains", filter: text };
+  }
 
-	async function onDOMContentLoaded() {
-		const gridDiv = document.querySelector('#myGrid') as HTMLElement;
-		const gridOptions = gridOptionsBase;
-		const isMobile = window.matchMedia('(max-width: 640px)').matches;
-		const providerFilter = urlParams.get('pf');
-		const modelFilter = urlParams.get('mf');
+  async function onDOMContentLoaded() {
+    const gridDiv = document.querySelector("#myGrid") as HTMLElement;
+    const gridOptions = gridOptionsBase;
+    const isMobile = window.matchMedia("(max-width: 640px)").matches;
+    const providerFilter = urlParams.get("pf");
+    const modelFilter = urlParams.get("mf");
 
-		// remove TTFT and TPS columns on mobile
-		if (isMobile) {
-			gridOptions.columnDefs.splice(2, 2);
-		}
-		// set the style proc for each column
-		gridOptions.columnDefs.forEach((columnDef) => {
-			columnDef.cellStyle = colFunction;
-		});
-		gridOptions.onFilterChanged = (x) => {
-			const filterModel = gridApi.getFilterModel();
-			const providerFilter = filterToText(filterModel.provider);
-			const modelFilter = filterToText(filterModel.model);
-			setUrlParam('pf', providerFilter);
-			setUrlParam('mf', modelFilter);
-		};
+    // remove TTFT and TPS columns on mobile
+    if (isMobile) {
+      gridOptions.columnDefs.splice(2, 2);
+    }
+    // set the style proc for each column
+    gridOptions.columnDefs.forEach((columnDef) => {
+      columnDef.cellStyle = colFunction;
+    });
+    gridOptions.onFilterChanged = (x) => {
+      const filterModel = gridApi.getFilterModel();
+      const providerFilter = filterToText(filterModel.provider);
+      const modelFilter = filterToText(filterModel.model);
+      setUrlParam("pf", providerFilter);
+      setUrlParam("mf", modelFilter);
+    };
 
-		// create the grid and set the filter if needed
-		gridApi = createGrid(gridDiv, gridOptions);
-		let filterModel = { provider: textToFilter(providerFilter), model: textToFilter(modelFilter) };
-		gridApi.setFilterModel(filterModel);
-		// set the selected region and populate the grid
-		const selectedRegionRadio = document.querySelector(
-			`input[name=selectedRegion][value=${selectedRegion}]`
-		) as HTMLInputElement;
-		selectedRegionRadio.checked = true;
-		updateRegion(selectedRegion, false);
+    // create the grid and set the filter if needed
+    gridApi = createGrid(gridDiv, gridOptions);
+    let filterModel = {
+      provider: textToFilter(providerFilter),
+      model: textToFilter(modelFilter),
+    };
+    gridApi.setFilterModel(filterModel);
+    // set the selected region and populate the grid
+    const selectedRegionRadio = document.querySelector(
+      `input[name=selectedRegion][value=${selectedRegion}]`,
+    ) as HTMLInputElement;
+    selectedRegionRadio.checked = true;
+    updateRegion(selectedRegion, false);
 
-		// Add text for our last updated date
-		const ourDiv = document.getElementById('lastUpdated');
-		// ourDiv.classList.add('text-base', 'font-mono', 'italic', 'text-right');
-		ourDiv!.innerText = `Last Updated: ${gridData[0].time.split('T')[0]}`;
+    // Add text for our last updated date
+    const ourDiv = document.getElementById("lastUpdated");
+    // ourDiv.classList.add('text-base', 'font-mono', 'italic', 'text-right');
+    ourDiv!.innerText = `Last Updated: ${gridData[0].time.split("T")[0]}`;
 
-		// Add an event listener to the radio buttons to filter the grid data
-		document.getElementById('benchmarks')!.addEventListener('change', function (event) {
-			// Filter the grid data based on the selected region
-			if (event.target.name === 'selectedRegion') {
-				updateRegion(event.target.value);
-			}
-		});
-	}
+    // Add an event listener to the radio buttons to filter the grid data
+    document
+      .getElementById("benchmarks")!
+      .addEventListener("change", function (event) {
+        // Filter the grid data based on the selected region
+        if (event.target.name === "selectedRegion") {
+          updateRegion(event.target.value);
+        }
+      });
+  }
 
   if (document.readyState === "loading") {
-      // The document is still loading, add the event listener normally
-      document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+    // The document is still loading, add the event listener normally
+    document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
   } else {
-      // The DOMContentLoaded event has already fired, call the function directly
-      onDOMContentLoaded();
+    // The DOMContentLoaded event has already fired, call the function directly
+    onDOMContentLoaded();
   }
 
   // Watch for dark mode changes and refresh the grid accordingly
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
-      if (mutation.attributeName === 'class') {        
-        gridApi.refreshCells({ force: true });      
+      if (mutation.attributeName === "class") {
+        gridApi.refreshCells({ force: true });
       }
     });
   });

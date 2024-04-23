@@ -1,1 +1,7 @@
+.pnp*
+.yarn*
+.vscode*
+.astro
+dist
+public
 node_modules/**

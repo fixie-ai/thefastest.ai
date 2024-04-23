@@ -1,24 +1,24 @@
 ---
-import { AppConfig } from '@/utils/AppConfig';
-import Base from '@/layouts/Base.astro';
-import Hero from '@/components/Hero.astro';
-import Section from '@/components/Section.astro';
-import DataGrid from '@/components/DataGrid.astro';
-import BenchmarkDefinitions from '@/components/BenchmarkDefinitions.astro';
-import HowToUse from '@/components/HowToUse.astro';
-import Methodology from '@/components/Methodology.astro';
-import Sources from '@/components/Sources.astro';
+import { AppConfig } from "@/utils/AppConfig";
+import Base from "@/layouts/Base.astro";
+import Hero from "@/components/Hero.astro";
+import Section from "@/components/Section.astro";
+import DataGrid from "@/components/DataGrid.astro";
+import BenchmarkDefinitions from "@/components/BenchmarkDefinitions.astro";
+import HowToUse from "@/components/HowToUse.astro";
+import Methodology from "@/components/Methodology.astro";
+import Sources from "@/components/Sources.astro";
 
 const { title } = AppConfig;
 const { description } = AppConfig;
-
 ---
+
 <Base head={{ title, description }}>
-	<Hero />
-	<Section>
-		<DataGrid />
-	</Section>
-	<BenchmarkDefinitions />
-	<Methodology />
-	<Sources />
+  <Hero />
+  <Section>
+    <DataGrid />
+  </Section>
+  <BenchmarkDefinitions />
+  <Methodology />
+  <Sources />
 </Base>

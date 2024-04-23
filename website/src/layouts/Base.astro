@@ -1,55 +1,64 @@
 ---
-import Footer from '@/components/Footer.astro';
-import Navbar from '@/components/Navbar.astro';
-import { AppConfig } from '@/utils/AppConfig';
+import Footer from "@/components/Footer.astro";
+import Navbar from "@/components/Navbar.astro";
+import { AppConfig } from "@/utils/AppConfig";
 
 export interface Props {
-	head: {
-		title: string;
-		description: string;
-	};
+  head: {
+    title: string;
+    description: string;
+  };
 }
 
 const {
-	head: { title, description }
+  head: { title, description },
 } = Astro.props as Props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="author" content={AppConfig.author} />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={AppConfig.author} />
 
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>"
+    />
 
-	<script>		
-		const isDarkMode = localStorage.getItem('dark-mode') === 'true' || 
-			(!('dark-mode' in localStorage) && 
-				window.matchMedia('(prefers-color-scheme: dark)').matches);
-		localStorage.setItem('dark-mode', isDarkMode.toString());
-		document.querySelector('html')?.classList.toggle('dark', isDarkMode);
-		const elements = [document.getElementById('myGrid'), document.getElementById('myFooter')];
-		elements.forEach((el) => {
-			el.classList.toggle('ag-theme-quartz', !isDarkMode);
-			el.classList.toggle('ag-theme-quartz-dark', isDarkMode);
-		});
-	</script>
-	</head>
-	<body"
-		class="flex min-h-screen flex-col bg-stone-100 font-mono text-gray-950 dark:bg-zinc-800 dark:text-slate-50"
-	>
-		<Navbar />
-		<div class="flex-1 text-sm">
-			<slot />
-		</div>
+    <script>
+      const isDarkMode =
+        localStorage.getItem("dark-mode") === "true" ||
+        (!("dark-mode" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
+      localStorage.setItem("dark-mode", isDarkMode.toString());
+      document.querySelector("html")?.classList.toggle("dark", isDarkMode);
+      const elements = [
+        document.getElementById("myGrid"),
+        document.getElementById("myFooter"),
+      ];
+      elements.forEach((el) => {
+        el.classList.toggle("ag-theme-quartz", !isDarkMode);
+        el.classList.toggle("ag-theme-quartz-dark", isDarkMode);
+      });
+    </script>
+  </head>
+  <body"
+    class="flex min-h-screen flex-col bg-stone-100 font-mono text-gray-950 dark:bg-zinc-800 dark:text-slate-50"
+  >
+    <Navbar />
+    <div class="flex-1 text-sm">
+      <slot />
+    </div>
 
-		<Footer />
-	</body>
+    <Footer />
+  </body">
+
+  <style is:global>
+    :root {
+    }
+  </style>
+
 </html>
-<style is:global>
-	:root {
-	}
-</style>

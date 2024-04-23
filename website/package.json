@@ -7,7 +7,9 @@
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"format": "prettier --write src",
+		"check": "prettier --check src"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.5.0",

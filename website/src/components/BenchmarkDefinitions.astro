@@ -1,17 +1,30 @@
 ---
-import Section from './Section.astro';
-import { ModelDefinition, TTFTDefinition, TPSDefinition, TotalTimeDefinition } from '@/utils/DataGridDefinitions';
+import Section from "./Section.astro";
+import {
+  ModelDefinition,
+  TTFTDefinition,
+  TPSDefinition,
+  TotalTimeDefinition,
+} from "@/utils/DataGridDefinitions";
 ---
 
 <Section>
-	<div>
-		<p id="definitions" class="text-base font-bold">Definitions</p>
-		<p class="text-base font-bold mb-4">===========</p>
-		<ul class="list-none">
-			<li class="pb-2"><b>{ ModelDefinition.title }: </b>{ ModelDefinition.definition }</li>
-			<li class="pb-2"><b>{ TTFTDefinition.title }: </b>{ TTFTDefinition.definition }</li>
-			<li class="pb-2"><b>{ TPSDefinition.title }: </b>{ TPSDefinition.definition }</li>
-			<li class="pb-2"><b>{ TotalTimeDefinition.title }: </b>{ TotalTimeDefinition.definition }</li>
-		</ul>
-	</div>
+  <div>
+    <p id="definitions" class="text-base font-bold">Definitions</p>
+    <p class="mb-4 text-base font-bold">===========</p>
+    <ul class="list-none">
+      <li class="pb-2">
+        <b>{ModelDefinition.title}: </b>{ModelDefinition.definition}
+      </li>
+      <li class="pb-2">
+        <b>{TTFTDefinition.title}: </b>{TTFTDefinition.definition}
+      </li>
+      <li class="pb-2">
+        <b>{TPSDefinition.title}: </b>{TPSDefinition.definition}
+      </li>
+      <li class="pb-2">
+        <b>{TotalTimeDefinition.title}: </b>{TotalTimeDefinition.definition}
+      </li>
+    </ul>
+  </div>
 </Section>
