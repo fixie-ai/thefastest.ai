@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  make-http-request:
+  run-benchmarks:
     runs-on: ubuntu-latest
     
     steps:
@@ -20,6 +20,7 @@ jobs:
         done
 
   generate-latest-data:
+    needs: run-benchmarks
     runs-on: ubuntu-latest
 
     steps:
@@ -42,4 +43,5 @@ jobs:
           git push
 
   build-and-deploy-site:
+    needs: generate-latest-data
     uses: ./.github/workflows/astro.yml
