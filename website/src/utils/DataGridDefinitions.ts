@@ -86,8 +86,8 @@ const columnTTFT = {
   minWidth: 0,
   maxWidth: 120,
   valueFormatter: (p: ValueFormatterParam) =>
-    p.value.toFixed(2) < 1.0
-      ? p.value.toFixed(2) * 1000 + "ms"
+    p.value < 1.0
+      ? p.value.toFixed(3) * 1000 + "ms"
       : p.value.toFixed(2) + "s",
 };
 
@@ -115,8 +115,8 @@ const columnTotalTime = {
   wrapHeaderText: true,
   // valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2) + "s",
   valueFormatter: (p: ValueFormatterParam) =>
-    p.value.toFixed(2) < 1
-      ? p.value.toFixed(2) * 1000 + "ms"
+    p.value < 1.0
+      ? p.value.toFixed(3) * 1000 + "ms"
       : p.value.toFixed(2) + "s",
   sort: "asc",
 };
