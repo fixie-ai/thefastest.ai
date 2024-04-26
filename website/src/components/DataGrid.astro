@@ -254,7 +254,9 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 
     // Add text for our last updated date
     const ourDiv = document.getElementById("lastUpdated");
-    // ourDiv.classList.add('text-base', 'font-mono', 'italic', 'text-right');
+    const lastUpdate = new Date(gridData[0].time);
+    // print date as local date
+    
     ourDiv!.innerText = `Last Updated: ${gridData[0].time.split("T")[0]}`;
 
     // Add an event listener to the radio buttons to filter the grid data
