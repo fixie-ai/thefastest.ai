@@ -39,6 +39,5 @@ async function fetchAndMergeFiles(date) {
 }
 
 // Example usage with the current date
-// const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
-const currentDate = '2024-03-01';
+const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
 fetchAndMergeFiles(currentDate);

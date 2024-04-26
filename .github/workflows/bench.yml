@@ -44,7 +44,6 @@ jobs:
 
             # Delete the file
             rm "$FILE"
-            echo "File $FILE has been deleted."
             exit 1
           elif [ -n "$OUTPUT" ]; then
             echo "$OUTPUT" > ./website/public/data/latest.json
