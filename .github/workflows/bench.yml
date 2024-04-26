@@ -34,7 +34,7 @@ jobs:
 
       - name: Get data and update file
         run: |
-          TEMP_FILE=$(mktemp)
+          TEMP_FILE="/tmp/$(date +%s).tmp"
           OUTPUT="$(node ./utils/GenerateLatestData.js 2>$TEMP_FILE)"
 
           if [[ -f "$TEMP_FILE" ]]; then
