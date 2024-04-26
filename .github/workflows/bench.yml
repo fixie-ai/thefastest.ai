@@ -34,8 +34,19 @@ jobs:
 
       - name: Get data and update file
         run: |
-          OUTPUT="$(node ./utils/GenerateLatestData.js)"
-          if [ -n "$OUTPUT" ]; then
+          OUTPUT="$(node ./utils/GenerateLatestData.js 2>err.txt)"
+          FILE="err.txt"
+          if [[ -f "$FILE" ]]; then
+            # Read the file contents and echo them so they are captured by the GitHub Actions runner
+            while read -r line; do
+                echo "$line"
+            done < "$FILE"
+
+            # Delete the file
+            rm "$FILE"
+            echo "File $FILE has been deleted."
+            exit 1
+          elif [ -n "$OUTPUT" ]; then
             echo "$OUTPUT" > ./website/public/data/latest.json
             
             git config --local user.email "action@github.com"
