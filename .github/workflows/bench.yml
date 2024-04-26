@@ -35,9 +35,9 @@ jobs:
       - name: Get data and update file
         run: |
           TEMP_FILE="/tmp/$(date +%s).tmp"
-          OUTPUT="$(node ./utils/GenerateLatestData.js 2>$TEMP_FILE)"
+          OUTPUT="$(node ./utils/GenerateLatestData.js 2>"$TEMP_FILE")"
 
-          if [[ -f "$TEMP_FILE" ]]; then
+          if [[ -s "$TEMP_FILE" ]]; then
             # Read the file contents and echo them so they are captured by the GitHub Actions runner
             while read -r line; do
                 echo "$line"
