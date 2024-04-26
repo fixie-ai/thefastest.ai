@@ -35,12 +35,17 @@ jobs:
       - name: Get data and update file
         run: |
           OUTPUT="$(node ./utils/GenerateLatestData.js)"
-          echo "$OUTPUT" > ./website/public/data/latest.json
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add ./website/public/data/latest.json
-          git commit -m "Update latest data"
-          git push
+          if [ -n "$OUTPUT" ]; then
+            echo "$OUTPUT" > ./website/public/data/latest.json
+            
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add ./website/public/data/latest.json
+            git commit -m "Update latest data"
+            git push
+          else
+            echo "No data generated, skipping Git operations."
+          fi
 
   build-and-deploy-site:
     needs: generate-latest-data

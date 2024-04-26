@@ -31,7 +31,6 @@ async function fetchAndMergeFiles(date) {
 
     // If no files were found, do not update "latest.json"
     if (validResults.length === 0) {
-        console.log('No files found for the given date. "latest.json" will not be updated.');
         return;
     }
 
@@ -40,5 +39,6 @@ async function fetchAndMergeFiles(date) {
 }
 
 // Example usage with the current date
-const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+// const currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+const currentDate = '2024-03-01';
 fetchAndMergeFiles(currentDate);
