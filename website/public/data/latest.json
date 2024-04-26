@@ -1,1 +1,1589 @@
-No files found for the given date. "latest.json" will not be updated.
+[
+  {
+    "time": "2024-04-26T17:09:52.807478",
+    "region": "cdg",
+    "cmd": "--max-tokens=20",
+    "results": [
+      {
+        "model": "openai/gpt-4-turbo",
+        "ttr": 0.7599616050720215,
+        "ttft": 0.7641046047210693,
+        "tps": 19.64010198134121,
+        "num_tokens": 20,
+        "total_time": 1.7315130233764648,
+        "output": "Amber hues paint the evening sky,\nHorizon blushes as the sun sighs,\nClouds"
+      },
+      {
+        "model": "openai/gpt-4-0125-preview",
+        "ttr": 0.5417869091033936,
+        "ttft": 0.8846495151519775,
+        "tps": 44.84962625206403,
+        "num_tokens": 20,
+        "total_time": 1.3082873821258545,
+        "output": "Beneath the vast, expansive sky at dusk,\nThe sun dips low, in shades of gold"
+      },
+      {
+        "model": "azure.scentralus/gpt-4-0125-preview",
+        "ttr": 0.6461608409881592,
+        "ttft": 0.9605495929718018,
+        "tps": 17.6654066111793,
+        "num_tokens": 20,
+        "total_time": 2.036098003387451,
+        "output": "Amidst the tranquil evening sky,\nA canvas painted with goodbye,\nWhere sun and horizon embrace,\n"
+      },
+      {
+        "model": "openai/gpt-4-1106-preview",
+        "ttr": 0.9857916831970215,
+        "ttft": 0.9929277896881104,
+        "tps": 22.84401374910098,
+        "num_tokens": 20,
+        "total_time": 1.824655532836914,
+        "output": "Amber hues dance across the evening sky,\nHorizon ablaze with the day's last sigh,\n"
+      },
+      {
+        "model": "azure.westus/gpt-4-1106-preview",
+        "ttr": 1.2584223747253418,
+        "ttft": 1.2585034370422363,
+        "tps": 27.840748458906205,
+        "num_tokens": 20,
+        "total_time": 1.9409563541412354,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with hues of gold and pink"
+      },
+      {
+        "model": "azure.eastus2/gpt-4-1106-preview",
+        "ttr": 0.5328190326690674,
+        "ttft": 0.5329258441925049,
+        "tps": 5.516916493855826,
+        "num_tokens": 20,
+        "total_time": 3.9768786430358887,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\n"
+      },
+      {
+        "model": "azure.frcentral/gpt-4-1106-preview",
+        "ttr": 0.3970980644226074,
+        "ttft": 0.39728832244873047,
+        "tps": 13.817472636153429,
+        "num_tokens": 20,
+        "total_time": 1.7723588943481445,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
+      },
+      {
+        "model": "azure.secentral/gpt-4-1106-preview",
+        "ttr": 0.4454336166381836,
+        "ttft": 0.4479939937591553,
+        "tps": 14.70046979949958,
+        "num_tokens": 20,
+        "total_time": 1.7404696941375732,
+        "output": "Golden sun dips beneath the horizon,\nPainting the sky with hues of passion,\nCrimson,"
+      },
+      {
+        "model": "azure.uksouth/gpt-4-1106-preview",
+        "ttr": 0.2757229804992676,
+        "ttft": 0.2775249481201172,
+        "tps": 9.973337778622115,
+        "num_tokens": 20,
+        "total_time": 2.1826043128967285,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
+      },
+      {
+        "model": "openai/gpt-3.5-turbo-0125",
+        "ttr": 0.7885339260101318,
+        "ttft": 1.1024460792541504,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.1027071475982666,
+        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink,"
+      },
+      {
+        "model": "openai/gpt-3.5-turbo-1106",
+        "ttr": 0.720449686050415,
+        "ttft": 1.0330452919006348,
+        "tps": 605.9888523044401,
+        "num_tokens": 20,
+        "total_time": 1.064399003982544,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nCasting a"
+      },
+      {
+        "model": "azure.westus/gpt-3.5-turbo-1106",
+        "ttr": 0.19906830787658691,
+        "ttft": 0.199141263961792,
+        "tps": 54.30111679692557,
+        "num_tokens": 20,
+        "total_time": 0.5490419864654541,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nCasting a"
+      },
+      {
+        "model": "azure.eastus2/gpt-3.5-turbo",
+        "ttr": 0.1600019931793213,
+        "ttft": 0.16013669967651367,
+        "tps": 30.57601879103681,
+        "num_tokens": 20,
+        "total_time": 0.781538724899292,
+        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, a fiery ball.\nSil"
+      },
+      {
+        "model": "anthropic/claude-3-opus-20240229",
+        "ttr": 1.566176176071167,
+        "ttft": 1.566338062286377,
+        "tps": 34.98526296750425,
+        "num_tokens": 20,
+        "total_time": 2.109423875808716,
+        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,"
+      },
+      {
+        "model": "anthropic/claude-3-sonnet-20240229",
+        "ttr": 1.0165133476257324,
+        "ttft": 1.32896089553833,
+        "tps": 580.2264063023314,
+        "num_tokens": 20,
+        "total_time": 1.3617067337036133,
+        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,"
+      },
+      {
+        "model": "anthropic/claude-3-haiku-20240307",
+        "ttr": 0.3737313747406006,
+        "ttft": 0.3801558017730713,
+        "tps": 94.1573594464819,
+        "num_tokens": 20,
+        "total_time": 0.5819456577301025,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,"
+      },
+      {
+        "model": "anthropic/claude-2.1",
+        "ttr": 0.4140026569366455,
+        "ttft": 0.41899728775024414,
+        "tps": 19.753547453809855,
+        "num_tokens": 20,
+        "total_time": 1.380849838256836,
+        "output": "Here is a nonet poem about a sunset:\n\nRadiant, glowing\nColors fill the"
+      },
+      {
+        "model": "anthropic/claude-instant-1.2",
+        "ttr": 0.5004663467407227,
+        "ttft": 0.5011985301971436,
+        "tps": 115.05561499024742,
+        "num_tokens": 20,
+        "total_time": 0.6663360595703125,
+        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe setting sun sinks"
+      },
+      {
+        "model": "cohere/command-r-plus",
+        "ttr": 0.12048983573913574,
+        "ttft": 0.21037793159484863,
+        "tps": 18.93261893530921,
+        "num_tokens": 17,
+        "total_time": 1.0554802417755127,
+        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and"
+      },
+      {
+        "model": "cohere/command-r",
+        "ttr": 0.132720947265625,
+        "ttft": 0.191666841506958,
+        "tps": 91.97631682820929,
+        "num_tokens": 18,
+        "total_time": 0.3764970302581787,
+        "output": "The horizon's fiery blaze,\nThe sky's golden embrace,\nSun slowly sinks, a silent"
+      },
+      {
+        "model": "cohere/command-light",
+        "ttr": 0.13827896118164062,
+        "ttft": 0.20483970642089844,
+        "tps": 98.20534334533414,
+        "num_tokens": 18,
+        "total_time": 0.3779463768005371,
+        "output": "Here is a short story about a sunset: \n\nAs the sun began its descent into the horizon"
+      },
+      {
+        "model": "google/gemini-pro",
+        "ttr": 1.0521936416625977,
+        "ttft": 1.0549652576446533,
+        "tps": 490.22690559236224,
+        "num_tokens": 20,
+        "total_time": 1.0937228202819824,
+        "output": "The sun dips low, a fiery ball,\nAcross the sky, it starts to fall.\n"
+      },
+      {
+        "model": "google/gemini-1.5-pro-preview-0409",
+        "ttr": 1.4469847679138184,
+        "ttft": 1.512603998184204,
+        "tps": 407.62639768391114,
+        "num_tokens": 20,
+        "total_time": 1.5592153072357178,
+        "output": "Golden glow,\nPainting the clouds,\nBirds fly home,\nSun descends,\nNight falls"
+      },
+      {
+        "model": "azure.eastus2/mistral-large",
+        "ttr": 1.1552681922912598,
+        "ttft": 1.155484914779663,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.1557209491729736,
+        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink kiss"
+      },
+      {
+        "model": "anyscale.com/mixtral-8x7b-instruct",
+        "ttr": 0.7905600070953369,
+        "ttft": 0.8192970752716064,
+        "tps": 25.02345633772655,
+        "num_tokens": 20,
+        "total_time": 1.5785846710205078,
+        "output": " Sunset's glow, soon to wane,\nDay's fiery orb in night"
+      },
+      {
+        "model": "databricks.com/mixtral-8x7b-instruct",
+        "ttr": 0.47112512588500977,
+        "ttft": 0.785351037979126,
+        "tps": 684.7431389733807,
+        "num_tokens": 20,
+        "total_time": 0.813098669052124,
+        "output": "\nSunset's glow, soon fades,\nDay's fiery end in view"
+      },
+      {
+        "model": "fireworks.ai/mixtral-8x7b-instruct",
+        "ttr": 0.19328856468200684,
+        "ttft": 0.19427752494812012,
+        "tps": 265.82170368449863,
+        "num_tokens": 12,
+        "total_time": 0.2356586456298828,
+        "output": "Golden orb descends, a fiery sight,\n"
+      },
+      {
+        "model": "groq.com/mixtral-8x7b-instruct",
+        "ttr": 0.1722431182861328,
+        "ttft": 0.21870827674865723,
+        "tps": 256.21893708002443,
+        "num_tokens": 20,
+        "total_time": 0.2928636074066162,
+        "output": "Radiant sun, your day is done,\nSinking low, the day is won.\n"
+      },
+      {
+        "model": "octo.ai/mixtral-8x7b-instruct",
+        "ttr": 0.14418911933898926,
+        "ttft": 0.17067837715148926,
+        "tps": 33.87617723362479,
+        "num_tokens": 20,
+        "total_time": 0.7315444946289062,
+        "output": " Radiant sun descends, a fiery sphere,\nIts brilliant hues of orange and"
+      },
+      {
+        "model": "perplexity.ai/mixtral-8x7b-instruct",
+        "ttr": 0.14154458045959473,
+        "ttft": 0.143416166305542,
+        "tps": 141.08609618567925,
+        "num_tokens": 20,
+        "total_time": 0.27808570861816406,
+        "output": "Radiant sun, in fiery decline,\nYour parting light, a mystic sign."
+      },
+      {
+        "model": "perplexity.ai/sonar-medium-chat",
+        "ttr": 0.13895821571350098,
+        "ttft": 0.14045929908752441,
+        "tps": 123.32561011467216,
+        "num_tokens": 20,
+        "total_time": 0.2945230007171631,
+        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\n"
+      },
+      {
+        "model": "anyscale.com/llama-3-70b-chat",
+        "ttr": 0.5767576694488525,
+        "ttft": 0.8911161422729492,
+        "tps": 20.096330112124885,
+        "num_tokens": 20,
+        "total_time": 1.8365623950958252,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "fireworks.ai/llama-3-70b-chat",
+        "ttr": 0.2782115936279297,
+        "ttft": 0.2857844829559326,
+        "tps": 177.71245966492057,
+        "num_tokens": 20,
+        "total_time": 0.3926987648010254,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sea\nDance with"
+      },
+      {
+        "model": "groq.com/llama-3-70b-chat",
+        "ttr": 0.1807878017425537,
+        "ttft": 1.227198600769043,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.2275941371917725,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sea\nGolden rays upon"
+      },
+      {
+        "model": "perplexity.ai/llama-3-70b-chat",
+        "ttr": 0.18817925453186035,
+        "ttft": 0.18822765350341797,
+        "tps": 30.670760628688473,
+        "num_tokens": 20,
+        "total_time": 0.8077101707458496,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "together.ai/llama-3-70b-chat",
+        "ttr": 2.2512197494506836,
+        "ttft": 2.25140118598938,
+        "tps": 17.179276162620244,
+        "num_tokens": 20,
+        "total_time": 3.3573849201202393,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "azure.westus3/llama-2-70b-chat",
+        "ttr": 1.244659185409546,
+        "ttft": 1.244764804840088,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.2450292110443115,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "azure.eastus2/llama-2-70b-chat",
+        "ttr": 1.310166358947754,
+        "ttft": 1.3103880882263184,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.3106374740600586,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "anyscale.com/llama-2-70b-chat",
+        "ttr": 0.9526901245117188,
+        "ttft": 0.959256649017334,
+        "tps": 32.17315383947694,
+        "num_tokens": 20,
+        "total_time": 1.5498111248016357,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "databricks.com/llama-2-70b-chat",
+        "ttr": 0.4288783073425293,
+        "ttft": 0.7432026863098145,
+        "tps": 680.2367502326018,
+        "num_tokens": 20,
+        "total_time": 0.7711341381072998,
+        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange"
+      },
+      {
+        "model": "fireworks.ai/llama-2-70b-chat",
+        "ttr": 0.24059462547302246,
+        "ttft": 0.2633521556854248,
+        "tps": 34.47541177926192,
+        "num_tokens": 20,
+        "total_time": 0.814469575881958,
+        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is"
+      },
+      {
+        "model": "octo.ai/llama-2-70b-chat",
+        "ttr": 0.12329411506652832,
+        "ttft": 0.147660493850708,
+        "tps": 26.7875477822193,
+        "num_tokens": 20,
+        "total_time": 0.856945276260376,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "together.ai/llama-2-70b-chat",
+        "ttr": 0.5154597759246826,
+        "ttft": 0.8293049335479736,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8296334743499756,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "anyscale.com/llama-2-13b-chat",
+        "ttr": 0.4752469062805176,
+        "ttft": 0.4847378730773926,
+        "tps": 30.43994499618029,
+        "num_tokens": 20,
+        "total_time": 1.1089177131652832,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "fireworks.ai/llama-2-13b-chat",
+        "ttr": 0.24774408340454102,
+        "ttft": 0.2551882266998291,
+        "tps": 218.48447695395177,
+        "num_tokens": 20,
+        "total_time": 0.3421509265899658,
+        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with"
+      },
+      {
+        "model": "octo.ai/llama-2-13b-chat",
+        "ttr": 0.12071704864501953,
+        "ttft": 0.13457870483398438,
+        "tps": 57.278684164942256,
+        "num_tokens": 20,
+        "total_time": 0.4662902355194092,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "together.ai/llama-2-13b-chat",
+        "ttr": 0.4969661235809326,
+        "ttft": 0.811129093170166,
+        "tps": 641.7853944528557,
+        "num_tokens": 20,
+        "total_time": 0.8407340049743652,
+        "output": "  Sure! Here's a nonet about a sunset:\n\nThe sky is painted"
+      },
+      {
+        "model": "anyscale.com/llama-3-8b-chat",
+        "ttr": 0.6088793277740479,
+        "ttft": 0.9230587482452393,
+        "tps": 28.72174193536761,
+        "num_tokens": 20,
+        "total_time": 1.584578514099121,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "cloudflare.com/llama-3-8b-chat",
+        "ttr": 1.3140194416046143,
+        "ttft": 1.3141331672668457,
+        "tps": 16.237078474950753,
+        "num_tokens": 20,
+        "total_time": 2.4842944145202637,
+        "output": "Here is a nonet about a sunset:\n\nOrange glow on the sea\nSky ablaze with colors"
+      },
+      {
+        "model": "fireworks.ai/llama-3-8b-chat",
+        "ttr": 0.3344075679779053,
+        "ttft": 0.3412292003631592,
+        "tps": 496.7107498800167,
+        "num_tokens": 20,
+        "total_time": 0.37948083877563477,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nSoftly fading, wild"
+      },
+      {
+        "model": "groq.com/llama-3-8b-chat",
+        "ttr": 0.17758393287658691,
+        "ttft": 0.23407840728759766,
+        "tps": 369.2476948596529,
+        "num_tokens": 20,
+        "total_time": 0.2855343818664551,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "perplexity.ai/llama-3-8b-chat",
+        "ttr": 0.3581688404083252,
+        "ttft": 0.35823941230773926,
+        "tps": 53.145140552393045,
+        "num_tokens": 20,
+        "total_time": 0.7157509326934814,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "together.ai/llama-3-8b-chat",
+        "ttr": 0.2818577289581299,
+        "ttft": 0.28304266929626465,
+        "tps": 412.1334684843094,
+        "num_tokens": 20,
+        "total_time": 0.3291442394256592,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "anyscale.com/llama-2-7b-chat",
+        "ttr": 0.44952988624572754,
+        "ttft": 0.7626931667327881,
+        "tps": 27.75388228771313,
+        "num_tokens": 20,
+        "total_time": 1.447282075881958,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "cloudflare.com/llama-2-7b-chat",
+        "ttr": 0.6687676906585693,
+        "ttft": 0.9828600883483887,
+        "tps": 41.477147935811004,
+        "num_tokens": 21,
+        "total_time": 1.4650533199310303,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "fireworks.ai/llama-2-7b-chat",
+        "ttr": 0.24620652198791504,
+        "ttft": 0.2516143321990967,
+        "tps": 281.44720466184003,
+        "num_tokens": 20,
+        "total_time": 0.3191225528717041,
+        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "together.ai/llama-2-7b-chat",
+        "ttr": 0.7435283660888672,
+        "ttft": 1.0563833713531494,
+        "tps": 656.8996084573218,
+        "num_tokens": 20,
+        "total_time": 1.0853071212768555,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "cloudflare.com/phi-2",
+        "ttr": 0.43101930618286133,
+        "ttft": 0.4311227798461914,
+        "tps": 42.08117700050112,
+        "num_tokens": 20,
+        "total_time": 0.8826310634613037,
+        "output": "Input: \nAssistant: In the golden hour, the sky makes a show,\nAs the"
+      }
+    ]
+  },
+  {
+    "time": "2024-04-26T17:08:56.224575",
+    "region": "sea",
+    "cmd": "--max-tokens=20",
+    "results": [
+      {
+        "model": "openai/gpt-4-turbo",
+        "ttr": 0.5255300998687744,
+        "ttft": 0.5255913734436035,
+        "tps": 23.052846221069235,
+        "num_tokens": 20,
+        "total_time": 1.3497846126556396,
+        "output": "Sunset paints the sky with grace,\nHorizon blushes in embrace,\nColors blend in soft ballet"
+      },
+      {
+        "model": "openai/gpt-4-0125-preview",
+        "ttr": 0.6531970500946045,
+        "ttft": 0.7429337501525879,
+        "tps": 23.556108637677937,
+        "num_tokens": 20,
+        "total_time": 1.5495185852050781,
+        "output": "Amidst the tranquil evening sky,\nA canvas painted with goodbye,\nThe sun dips low, in"
+      },
+      {
+        "model": "azure.scentralus/gpt-4-0125-preview",
+        "ttr": 0.4975748062133789,
+        "ttft": 0.4985384941101074,
+        "tps": 18.412731742481654,
+        "num_tokens": 20,
+        "total_time": 1.530433177947998,
+        "output": "Amidst the tranquil evening sky,\nA canvas painted with goodbye,\nThe sun dips low, in"
+      },
+      {
+        "model": "openai/gpt-4-1106-preview",
+        "ttr": 0.5152161121368408,
+        "ttft": 0.5694828033447266,
+        "tps": 34.01497325472801,
+        "num_tokens": 20,
+        "total_time": 1.1280603408813477,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\n"
+      },
+      {
+        "model": "azure.westus/gpt-4-1106-preview",
+        "ttr": 0.38785529136657715,
+        "ttft": 0.3880929946899414,
+        "tps": 14.871544924818169,
+        "num_tokens": 20,
+        "total_time": 1.6657006740570068,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
+      },
+      {
+        "model": "azure.eastus2/gpt-4-1106-preview",
+        "ttr": 0.4482762813568115,
+        "ttft": 0.4483916759490967,
+        "tps": 14.272027485353096,
+        "num_tokens": 20,
+        "total_time": 1.7796671390533447,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
+      },
+      {
+        "model": "azure.frcentral/gpt-4-1106-preview",
+        "ttr": 0.7537112236022949,
+        "ttft": 0.7537708282470703,
+        "tps": 20.956359728186108,
+        "num_tokens": 20,
+        "total_time": 1.660416841506958,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\n"
+      },
+      {
+        "model": "azure.secentral/gpt-4-1106-preview",
+        "ttr": 0.4622197151184082,
+        "ttft": 0.46227097511291504,
+        "tps": 17.420825653096987,
+        "num_tokens": 20,
+        "total_time": 1.552919626235962,
+        "output": "Golden sun dips beneath the horizon,\nPainting the sky with hues of passion,\nCrimson,"
+      },
+      {
+        "model": "azure.uksouth/gpt-4-1106-preview",
+        "ttr": 0.8988156318664551,
+        "ttft": 0.898881196975708,
+        "tps": 16.983354594908388,
+        "num_tokens": 20,
+        "total_time": 2.0176236629486084,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
+      },
+      {
+        "model": "openai/gpt-3.5-turbo-0125",
+        "ttr": 0.3556547164916992,
+        "ttft": 0.39051055908203125,
+        "tps": 64.26289704779492,
+        "num_tokens": 20,
+        "total_time": 0.6861710548400879,
+        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink,"
+      },
+      {
+        "model": "openai/gpt-3.5-turbo-1106",
+        "ttr": 0.4191105365753174,
+        "ttft": 0.5495421886444092,
+        "tps": 186.35727698542428,
+        "num_tokens": 20,
+        "total_time": 0.6514968872070312,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nCasting a"
+      },
+      {
+        "model": "azure.westus/gpt-3.5-turbo-1106",
+        "ttr": 0.28920769691467285,
+        "ttft": 0.5859034061431885,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.5860683917999268,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
+      },
+      {
+        "model": "azure.eastus2/gpt-3.5-turbo",
+        "ttr": 0.16163945198059082,
+        "ttft": 0.16672921180725098,
+        "tps": 39.63867681693945,
+        "num_tokens": 20,
+        "total_time": 0.6460590362548828,
+        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, a fiery ball.\nSil"
+      },
+      {
+        "model": "anthropic/claude-3-opus-20240229",
+        "ttr": 0.8605160713195801,
+        "ttft": 0.8605890274047852,
+        "tps": 37.22959670626554,
+        "num_tokens": 20,
+        "total_time": 1.3709356784820557,
+        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,"
+      },
+      {
+        "model": "anthropic/claude-3-sonnet-20240229",
+        "ttr": 0.7969157695770264,
+        "ttft": 0.798931360244751,
+        "tps": 80.63349458323763,
+        "num_tokens": 20,
+        "total_time": 1.0345654487609863,
+        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,"
+      },
+      {
+        "model": "anthropic/claude-3-haiku-20240307",
+        "ttr": 0.31212711334228516,
+        "ttft": 0.6090285778045654,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.6161646842956543,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,"
+      },
+      {
+        "model": "anthropic/claude-2.1",
+        "ttr": 0.6305177211761475,
+        "ttft": 0.6443543434143066,
+        "tps": 43.726242183882064,
+        "num_tokens": 20,
+        "total_time": 1.07887601852417,
+        "output": "Here is a nonet poem about a sunset:\n\nSun descending\nGolden horizon glowing\nCl"
+      },
+      {
+        "model": "anthropic/claude-instant-1.2",
+        "ttr": 0.6288208961486816,
+        "ttft": 0.6426160335540771,
+        "tps": 181.99871194646812,
+        "num_tokens": 20,
+        "total_time": 0.7470123767852783,
+        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe setting sun sinks"
+      },
+      {
+        "model": "cohere/command-r-plus",
+        "ttr": 0.3103203773498535,
+        "ttft": 0.6071898937225342,
+        "tps": 150.6118251697245,
+        "num_tokens": 17,
+        "total_time": 0.7134232521057129,
+        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and"
+      },
+      {
+        "model": "cohere/command-r",
+        "ttr": 0.3328711986541748,
+        "ttft": 0.6295387744903564,
+        "tps": 999,
+        "num_tokens": 18,
+        "total_time": 0.6366608142852783,
+        "output": "The horizon's fiery blaze,\nThe sky's golden embrace,\nSun slowly sinks, a silent"
+      },
+      {
+        "model": "cohere/command-light",
+        "ttr": 0.3188023567199707,
+        "ttft": 0.622706413269043,
+        "tps": 999,
+        "num_tokens": 18,
+        "total_time": 0.622826099395752,
+        "output": "Here is a short story about a sunset: \n\nAs the sun began its descent into the horizon"
+      },
+      {
+        "model": "google/gemini-pro",
+        "ttr": 0.8525383472442627,
+        "ttft": 0.8526835441589355,
+        "tps": 403.72138829644416,
+        "num_tokens": 20,
+        "total_time": 0.8997457027435303,
+        "output": "The sun dips low, a fiery ball,\nAcross the sky, it starts to fall.\n"
+      },
+      {
+        "model": "google/gemini-1.5-pro-preview-0409",
+        "ttr": 1.3287994861602783,
+        "ttft": 1.4297738075256348,
+        "tps": 550.3879772363114,
+        "num_tokens": 20,
+        "total_time": 1.4642949104309082,
+        "output": "Golden glow,\nPainting the clouds,\nBirds fly home,\nSun descends low,\nSky"
+      },
+      {
+        "model": "azure.eastus2/mistral-large",
+        "ttr": 0.8273160457611084,
+        "ttft": 0.8273758888244629,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8275299072265625,
+        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink,"
+      },
+      {
+        "model": "anyscale.com/mixtral-8x7b-instruct",
+        "ttr": 0.27522969245910645,
+        "ttft": 0.27550196647644043,
+        "tps": 30.339400824464075,
+        "num_tokens": 20,
+        "total_time": 0.9017503261566162,
+        "output": " Sunset's glow, soon to wane,\nDay's fiery orb in night"
+      },
+      {
+        "model": "databricks.com/mixtral-8x7b-instruct",
+        "ttr": 0.2513275146484375,
+        "ttft": 0.25144147872924805,
+        "tps": 59.346934641632636,
+        "num_tokens": 20,
+        "total_time": 0.5715928077697754,
+        "output": "\nSunset's glow, soon fades,\nDay's fiery end in view"
+      },
+      {
+        "model": "fireworks.ai/mixtral-8x7b-instruct",
+        "ttr": 0.1737511157989502,
+        "ttft": 0.17766404151916504,
+        "tps": 374.5856830858414,
+        "num_tokens": 12,
+        "total_time": 0.2070298194885254,
+        "output": "Golden orb descends, a fiery sight,\n"
+      },
+      {
+        "model": "groq.com/mixtral-8x7b-instruct",
+        "ttr": 0.05326724052429199,
+        "ttft": 0.1466078758239746,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.14684796333312988,
+        "output": "Radiant sun, your day is done,\nSinking low, the day is won.\n"
+      },
+      {
+        "model": "octo.ai/mixtral-8x7b-instruct",
+        "ttr": 0.1530747413635254,
+        "ttft": 0.17506742477416992,
+        "tps": 50.08303581023798,
+        "num_tokens": 20,
+        "total_time": 0.5544373989105225,
+        "output": " Radiant sun, your day is done,\nDescending low, the race is won.\n"
+      },
+      {
+        "model": "perplexity.ai/mixtral-8x7b-instruct",
+        "ttr": 0.15285348892211914,
+        "ttft": 0.16254734992980957,
+        "tps": 205.6784890233264,
+        "num_tokens": 20,
+        "total_time": 0.2549245357513428,
+        "output": "Radiant sun, in fiery decline,\nYour parting light, a mystic sign."
+      },
+      {
+        "model": "perplexity.ai/sonar-medium-chat",
+        "ttr": 0.14081716537475586,
+        "ttft": 0.15039944648742676,
+        "tps": 197.94330338624786,
+        "num_tokens": 20,
+        "total_time": 0.24638652801513672,
+        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\n"
+      },
+      {
+        "model": "anyscale.com/llama-3-70b-chat",
+        "ttr": 0.31342124938964844,
+        "ttft": 0.31621813774108887,
+        "tps": 10.631757816382468,
+        "num_tokens": 20,
+        "total_time": 2.1033167839050293,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "fireworks.ai/llama-3-70b-chat",
+        "ttr": 0.19922542572021484,
+        "ttft": 0.19943547248840332,
+        "tps": 149.2665628997788,
+        "num_tokens": 20,
+        "total_time": 0.3267245292663574,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sea\nDance with"
+      },
+      {
+        "model": "groq.com/llama-3-70b-chat",
+        "ttr": 0.1343059539794922,
+        "ttft": 0.1519787311553955,
+        "tps": 516.6370136984525,
+        "num_tokens": 20,
+        "total_time": 0.18875503540039062,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sea\nGolden rays upon"
+      },
+      {
+        "model": "perplexity.ai/llama-3-70b-chat",
+        "ttr": 0.16531968116760254,
+        "ttft": 0.17039704322814941,
+        "tps": 46.779416106811304,
+        "num_tokens": 20,
+        "total_time": 0.5765585899353027,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "together.ai/llama-3-70b-chat",
+        "ttr": 2.337332010269165,
+        "ttft": 2.3374385833740234,
+        "tps": 52.633412390668724,
+        "num_tokens": 20,
+        "total_time": 2.6984260082244873,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "azure.westus3/llama-2-70b-chat",
+        "ttr": 1.678602695465088,
+        "ttft": 1.6786727905273438,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.6788463592529297,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "azure.eastus2/llama-2-70b-chat",
+        "ttr": 1.2129111289978027,
+        "ttft": 1.2129716873168945,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.2131249904632568,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "anyscale.com/llama-2-70b-chat",
+        "ttr": 0.24094867706298828,
+        "ttft": 0.24334144592285156,
+        "tps": 30.011891509185265,
+        "num_tokens": 20,
+        "total_time": 0.8764238357543945,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "databricks.com/llama-2-70b-chat",
+        "ttr": 0.2317519187927246,
+        "ttft": 0.2317960262298584,
+        "tps": 82.25144083890677,
+        "num_tokens": 20,
+        "total_time": 0.4627950191497803,
+        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange"
+      },
+      {
+        "model": "fireworks.ai/llama-2-70b-chat",
+        "ttr": 0.19954466819763184,
+        "ttft": 0.21412158012390137,
+        "tps": 123.38766770145463,
+        "num_tokens": 20,
+        "total_time": 0.36810779571533203,
+        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is"
+      },
+      {
+        "model": "octo.ai/llama-2-70b-chat",
+        "ttr": 0.1369483470916748,
+        "ttft": 0.1490933895111084,
+        "tps": 27.232166386912997,
+        "num_tokens": 20,
+        "total_time": 0.8467977046966553,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "together.ai/llama-2-70b-chat",
+        "ttr": 0.2908761501312256,
+        "ttft": 0.290921688079834,
+        "tps": 71.02128452173324,
+        "num_tokens": 20,
+        "total_time": 0.5584471225738525,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "anyscale.com/llama-2-13b-chat",
+        "ttr": 0.4555323123931885,
+        "ttft": 0.45651841163635254,
+        "tps": 29.470143146486166,
+        "num_tokens": 20,
+        "total_time": 1.10123872756958,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "fireworks.ai/llama-2-13b-chat",
+        "ttr": 0.1761763095855713,
+        "ttft": 0.1848583221435547,
+        "tps": 225.14535946456772,
+        "num_tokens": 20,
+        "total_time": 0.26924824714660645,
+        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with"
+      },
+      {
+        "model": "octo.ai/llama-2-13b-chat",
+        "ttr": 0.13671541213989258,
+        "ttft": 0.14960289001464844,
+        "tps": 61.081426034409944,
+        "num_tokens": 20,
+        "total_time": 0.4606630802154541,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "together.ai/llama-2-13b-chat",
+        "ttr": 0.17296981811523438,
+        "ttft": 0.17697405815124512,
+        "tps": 31.117432597644438,
+        "num_tokens": 20,
+        "total_time": 0.7875642776489258,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "anyscale.com/llama-3-8b-chat",
+        "ttr": 0.6578640937805176,
+        "ttft": 0.680328369140625,
+        "tps": 18.964668769415805,
+        "num_tokens": 20,
+        "total_time": 1.6821913719177246,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "cloudflare.com/llama-3-8b-chat",
+        "ttr": 0.455763578414917,
+        "ttft": 0.4558737277984619,
+        "tps": 15.336723156665688,
+        "num_tokens": 20,
+        "total_time": 1.694730281829834,
+        "output": "Here is a nonet about a sunset:\n\nOrange hues upon the sea\nDancing clouds in twilight"
+      },
+      {
+        "model": "fireworks.ai/llama-3-8b-chat",
+        "ttr": 0.20955371856689453,
+        "ttft": 0.2109508514404297,
+        "tps": 422.41845475362567,
+        "num_tokens": 20,
+        "total_time": 0.25592994689941406,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nSoftly fading, wild"
+      },
+      {
+        "model": "groq.com/llama-3-8b-chat",
+        "ttr": 0.07489180564880371,
+        "ttft": 0.41436767578125,
+        "tps": 429.22578421234056,
+        "num_tokens": 20,
+        "total_time": 0.4586334228515625,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "perplexity.ai/llama-3-8b-chat",
+        "ttr": 0.148362398147583,
+        "ttft": 0.15808463096618652,
+        "tps": 136.19173400051952,
+        "num_tokens": 20,
+        "total_time": 0.2975938320159912,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "together.ai/llama-3-8b-chat",
+        "ttr": 0.1554279327392578,
+        "ttft": 0.16817212104797363,
+        "tps": 376.24535428312436,
+        "num_tokens": 20,
+        "total_time": 0.21867108345031738,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "anyscale.com/llama-2-7b-chat",
+        "ttr": 0.8405554294586182,
+        "ttft": 0.8406174182891846,
+        "tps": 20.494194041154635,
+        "num_tokens": 20,
+        "total_time": 1.7677092552185059,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "cloudflare.com/llama-2-7b-chat",
+        "ttr": 0.5929241180419922,
+        "ttft": 0.5929727554321289,
+        "tps": 19.61507389141828,
+        "num_tokens": 21,
+        "total_time": 1.6125967502593994,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "fireworks.ai/llama-2-7b-chat",
+        "ttr": 0.21059536933898926,
+        "ttft": 0.21248459815979004,
+        "tps": 328.83470740181394,
+        "num_tokens": 20,
+        "total_time": 0.2702643871307373,
+        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "together.ai/llama-2-7b-chat",
+        "ttr": 0.20003533363342285,
+        "ttft": 0.20051860809326172,
+        "tps": 86.95371555453717,
+        "num_tokens": 20,
+        "total_time": 0.4190256595611572,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "cloudflare.com/phi-2",
+        "ttr": 0.5463783740997314,
+        "ttft": 0.5464303493499756,
+        "tps": 38.05243852010875,
+        "num_tokens": 20,
+        "total_time": 1.045741319656372,
+        "output": "Input: \nAssistant: As the sun sinks low in the empty sky,\nCasting shadows"
+      }
+    ]
+  },
+  {
+    "time": "2024-04-26T17:09:14.678336",
+    "region": "iad",
+    "cmd": "--max-tokens=20",
+    "results": [
+      {
+        "model": "openai/gpt-4-turbo",
+        "ttr": 0.4831082820892334,
+        "ttft": 0.4831886291503906,
+        "tps": 4.281658394565934,
+        "num_tokens": 20,
+        "total_time": 4.920721530914307,
+        "output": "Golden blaze dips low, kissing sea,\nHorizon swallows sun’s fierce glow,\nColors bleed—"
+      },
+      {
+        "model": "openai/gpt-4-0125-preview",
+        "ttr": 0.5769996643066406,
+        "ttft": 0.6852238178253174,
+        "tps": 24.61001332536591,
+        "num_tokens": 20,
+        "total_time": 1.4572672843933105,
+        "output": "Amidst the tranquil evening sky,\nA canvas painted with goodbye,\nThe sun dips low, in"
+      },
+      {
+        "model": "azure.scentralus/gpt-4-0125-preview",
+        "ttr": 0.5088775157928467,
+        "ttft": 0.5090653896331787,
+        "tps": 5.890078753379939,
+        "num_tokens": 20,
+        "total_time": 3.7348287105560303,
+        "output": "Amidst the tranquil evening sky,\nA canvas painted with goodbye,\nThe sun dips low, in"
+      },
+      {
+        "model": "openai/gpt-4-1106-preview",
+        "ttr": 1.2877576351165771,
+        "ttft": 1.3624811172485352,
+        "tps": 21.30491956496051,
+        "num_tokens": 20,
+        "total_time": 2.254293918609619,
+        "output": "The sun dips low, horizon kissed,\nA fiery orb on evening's wrist,\nPainting skies in"
+      },
+      {
+        "model": "azure.westus/gpt-4-1106-preview",
+        "ttr": 0.5378470420837402,
+        "ttft": 0.5380244255065918,
+        "tps": 15.46054399570397,
+        "num_tokens": 20,
+        "total_time": 1.7669591903686523,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\n"
+      },
+      {
+        "model": "azure.eastus2/gpt-4-1106-preview",
+        "ttr": 0.2056431770324707,
+        "ttft": 0.20580363273620605,
+        "tps": 11.775057529382318,
+        "num_tokens": 20,
+        "total_time": 1.8193838596343994,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting skies in shades of amber and pink,\n"
+      },
+      {
+        "model": "azure.frcentral/gpt-4-1106-preview",
+        "ttr": 0.7474548816680908,
+        "ttft": 0.7475998401641846,
+        "tps": 19.605472582472032,
+        "num_tokens": 20,
+        "total_time": 1.716717004776001,
+        "output": "The sun dips low, horizon's fiery kiss,\nPainting the sky with shades of gold and pink"
+      },
+      {
+        "model": "azure.secentral/gpt-4-1106-preview",
+        "ttr": 0.6220877170562744,
+        "ttft": 0.6221911907196045,
+        "tps": 10.42459369648587,
+        "num_tokens": 20,
+        "total_time": 2.4448041915893555,
+        "output": "Golden orb descends in the sky,\nPainting hues of red and gold,\nSilhouettes of"
+      },
+      {
+        "model": "azure.uksouth/gpt-4-1106-preview",
+        "ttr": 0.6143500804901123,
+        "ttft": 0.6144764423370361,
+        "tps": 4.005994229264942,
+        "num_tokens": 20,
+        "total_time": 5.3573689460754395,
+        "output": "The sun dips low, horizon kissed,\nPainting skies with amethyst,\nCrimson streaks"
+      },
+      {
+        "model": "openai/gpt-3.5-turbo-0125",
+        "ttr": 0.5272223949432373,
+        "ttft": 0.5676217079162598,
+        "tps": 60.045129664149584,
+        "num_tokens": 20,
+        "total_time": 0.8840503692626953,
+        "output": "The sun dips below the horizon line\nPainting the sky in hues divine\nOrange, pink,"
+      },
+      {
+        "model": "openai/gpt-3.5-turbo-1106",
+        "ttr": 0.8053805828094482,
+        "ttft": 0.8477659225463867,
+        "tps": 117.61182910433114,
+        "num_tokens": 20,
+        "total_time": 1.0093142986297607,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
+      },
+      {
+        "model": "azure.westus/gpt-3.5-turbo-1106",
+        "ttr": 0.815112829208374,
+        "ttft": 0.8569376468658447,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8571476936340332,
+        "output": "The sky is painted in hues of gold\nAs the sun dips below the horizon\nA fiery glow"
+      },
+      {
+        "model": "azure.eastus2/gpt-3.5-turbo",
+        "ttr": 0.1095278263092041,
+        "ttft": 0.11139583587646484,
+        "tps": 19.68574553066464,
+        "num_tokens": 20,
+        "total_time": 1.0765612125396729,
+        "output": "Golden hues paint the sky's vast canvas,\nAs the sun descends, bidding farewell.\nCrim"
+      },
+      {
+        "model": "anthropic/claude-3-opus-20240229",
+        "ttr": 1.0773780345916748,
+        "ttft": 1.1198453903198242,
+        "tps": 48.831732504395006,
+        "num_tokens": 20,
+        "total_time": 1.5089366436004639,
+        "output": "Here is a nonet poem about a sunset:\n\nGolden sun descends in the west,"
+      },
+      {
+        "model": "anthropic/claude-3-sonnet-20240229",
+        "ttr": 1.1337580680847168,
+        "ttft": 1.1758666038513184,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.1761343479156494,
+        "output": "Here's a nonet about a sunset:\n\nBrilliant hues paint the evening sky,"
+      },
+      {
+        "model": "anthropic/claude-3-haiku-20240307",
+        "ttr": 1.1129417419433594,
+        "ttft": 1.1545217037200928,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.1547942161560059,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues paint the sky,"
+      },
+      {
+        "model": "anthropic/claude-2.1",
+        "ttr": 1.147944688796997,
+        "ttft": 1.1894447803497314,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.1896967887878418,
+        "output": "Here is a nonet poem about a sunset:\n\nSun descending\nGolden horizon glowing\nCl"
+      },
+      {
+        "model": "anthropic/claude-instant-1.2",
+        "ttr": 1.1139922142028809,
+        "ttft": 1.1558797359466553,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.1560912132263184,
+        "output": "Here is a 9 line (nonet) poem about a sunset:\n\nThe Setting Sun"
+      },
+      {
+        "model": "cohere/command-r-plus",
+        "ttr": 0.04383206367492676,
+        "ttft": 0.15996694564819336,
+        "tps": 18.864762298846955,
+        "num_tokens": 17,
+        "total_time": 1.0081090927124023,
+        "output": "Here's a nonet about a sunset: \n\n\"Sky's canvas, painted\nOrange and"
+      },
+      {
+        "model": "cohere/command-r",
+        "ttr": 0.0786886215209961,
+        "ttft": 0.1656935214996338,
+        "tps": 20.549209567840215,
+        "num_tokens": 18,
+        "total_time": 0.9929759502410889,
+        "output": "The sun slowly sinks low,\nThe sky's fiery glow fades,\nA horizon aglow with"
+      },
+      {
+        "model": "cohere/command-light",
+        "ttr": 0.08205461502075195,
+        "ttft": 0.1569962501525879,
+        "tps": 20.366287836268032,
+        "num_tokens": 18,
+        "total_time": 0.9917089939117432,
+        "output": "Here is a short story about a sunset: \n\nAs the sun began its descent into the horizon"
+      },
+      {
+        "model": "google/gemini-pro",
+        "ttr": 1.3941287994384766,
+        "ttft": 1.39445161819458,
+        "tps": 404.1923484629469,
+        "num_tokens": 20,
+        "total_time": 1.4414589405059814,
+        "output": "The sun dips low, a fiery ball,\nAcross the sky, it starts to fall.\n"
+      },
+      {
+        "model": "google/gemini-1.5-pro-preview-0409",
+        "ttr": 1.6973421573638916,
+        "ttft": 1.776336431503296,
+        "tps": 468.24906134872,
+        "num_tokens": 20,
+        "total_time": 1.81691312789917,
+        "output": "Golden glow,\nWarm light paints the clouds,\nBirds fly home to roost,\nSun dips"
+      },
+      {
+        "model": "azure.eastus2/mistral-large",
+        "ttr": 0.8380787372589111,
+        "ttft": 0.83884596824646,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8392000198364258,
+        "output": "Golden orb descends, painting the sky,\nVibrant hues of red and pink kiss"
+      },
+      {
+        "model": "anyscale.com/mixtral-8x7b-instruct",
+        "ttr": 0.9303901195526123,
+        "ttft": 0.9724893569946289,
+        "tps": 21.602137558283676,
+        "num_tokens": 20,
+        "total_time": 1.852031946182251,
+        "output": " Sunset's glow, soon to wane,\nDay's fiery orb in night"
+      },
+      {
+        "model": "databricks.com/mixtral-8x7b-instruct",
+        "ttr": 0.3019435405731201,
+        "ttft": 0.3023512363433838,
+        "tps": 70.0599359988747,
+        "num_tokens": 20,
+        "total_time": 0.5735476016998291,
+        "output": "\nSunset's glow, soon fades,\nDay's fiery end in view"
+      },
+      {
+        "model": "fireworks.ai/mixtral-8x7b-instruct",
+        "ttr": 0.1439666748046875,
+        "ttft": 0.15186333656311035,
+        "tps": 13.803397075749231,
+        "num_tokens": 12,
+        "total_time": 0.9487686157226562,
+        "output": "Golden orb descends, a fiery sight,\n"
+      },
+      {
+        "model": "groq.com/mixtral-8x7b-instruct",
+        "ttr": 0.11650967597961426,
+        "ttft": 0.9337887763977051,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.9340441226959229,
+        "output": "Radiant sun, your day is done,\nSinking low, the day is won.\n"
+      },
+      {
+        "model": "octo.ai/mixtral-8x7b-instruct",
+        "ttr": 0.8409435749053955,
+        "ttft": 0.8826582431793213,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8829240798950195,
+        "output": " Radiant sun, your daylong work is done,\nDescending now, a breathtaking"
+      },
+      {
+        "model": "perplexity.ai/mixtral-8x7b-instruct",
+        "ttr": 0.08896684646606445,
+        "ttft": 0.8649482727050781,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8651199340820312,
+        "output": "Radiant sun, in fiery decline,\nYour parting light, a mystic sign."
+      },
+      {
+        "model": "perplexity.ai/sonar-medium-chat",
+        "ttr": 0.12100529670715332,
+        "ttft": 0.14036941528320312,
+        "tps": 22.874957230610253,
+        "num_tokens": 20,
+        "total_time": 0.9709720611572266,
+        "output": "Radiant sun, descending low,\nPainting hues of orange, red.\n"
+      },
+      {
+        "model": "anyscale.com/llama-3-70b-chat",
+        "ttr": 0.33451080322265625,
+        "ttft": 0.33464717864990234,
+        "tps": 18.629968309421237,
+        "num_tokens": 20,
+        "total_time": 1.3545093536376953,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "fireworks.ai/llama-3-70b-chat",
+        "ttr": 0.8598103523254395,
+        "ttft": 0.9018385410308838,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.9018967151641846,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sea\nDance with"
+      },
+      {
+        "model": "groq.com/llama-3-70b-chat",
+        "ttr": 0.11196517944335938,
+        "ttft": 0.15718746185302734,
+        "tps": 24.43331576528474,
+        "num_tokens": 20,
+        "total_time": 0.9348142147064209,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sea\nGolden rays upon"
+      },
+      {
+        "model": "perplexity.ai/llama-3-70b-chat",
+        "ttr": 0.12072086334228516,
+        "ttft": 0.1372997760772705,
+        "tps": 23.325751242802518,
+        "num_tokens": 20,
+        "total_time": 0.951850175857544,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "together.ai/llama-3-70b-chat",
+        "ttr": 1.6762917041778564,
+        "ttft": 1.6763927936553955,
+        "tps": 101.6357468256276,
+        "num_tokens": 20,
+        "total_time": 1.8633348941802979,
+        "output": "Here is a nonet about a sunset:\n\nVibrant hues upon the sky\nOrange, pink"
+      },
+      {
+        "model": "azure.westus3/llama-2-70b-chat",
+        "ttr": 1.7081713676452637,
+        "ttft": 1.7082841396331787,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.7085866928100586,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "azure.eastus2/llama-2-70b-chat",
+        "ttr": 1.1506569385528564,
+        "ttft": 1.1508021354675293,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 1.151064395904541,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "anyscale.com/llama-2-70b-chat",
+        "ttr": 0.3505592346191406,
+        "ttft": 0.38080263137817383,
+        "tps": 24.782663157966752,
+        "num_tokens": 20,
+        "total_time": 1.1474676132202148,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "databricks.com/llama-2-70b-chat",
+        "ttr": 0.325023889541626,
+        "ttft": 0.3256950378417969,
+        "tps": 82.17341307486079,
+        "num_tokens": 20,
+        "total_time": 0.5569133758544922,
+        "output": "Sure! Here is a nonet about a sunset:\n\nThe sky is painted orange"
+      },
+      {
+        "model": "fireworks.ai/llama-2-70b-chat",
+        "ttr": 0.8422966003417969,
+        "ttft": 0.8839378356933594,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.8840141296386719,
+        "output": "Sure, here's a nonet about a sunset:\n\n1. The sky is"
+      },
+      {
+        "model": "octo.ai/llama-2-70b-chat",
+        "ttr": 0.0503847599029541,
+        "ttft": 0.07649731636047363,
+        "tps": 22.142041545757348,
+        "num_tokens": 20,
+        "total_time": 0.9345934391021729,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "together.ai/llama-2-70b-chat",
+        "ttr": 0.5182900428771973,
+        "ttft": 0.5183892250061035,
+        "tps": 76.2243311748558,
+        "num_tokens": 20,
+        "total_time": 0.7676534652709961,
+        "output": "  Sure! Here's a nonet about a sunset:\n\n1. The sky"
+      },
+      {
+        "model": "anyscale.com/llama-2-13b-chat",
+        "ttr": 0.34842538833618164,
+        "ttft": 0.41586995124816895,
+        "tps": 35.96833917897968,
+        "num_tokens": 20,
+        "total_time": 0.9441123008728027,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "fireworks.ai/llama-2-13b-chat",
+        "ttr": 0.2012629508972168,
+        "ttft": 0.2185802459716797,
+        "tps": 194.52390669699957,
+        "num_tokens": 20,
+        "total_time": 0.3162546157836914,
+        "output": "Sure, here's a nonet about a sunset:\n\nThe sky is painted with"
+      },
+      {
+        "model": "octo.ai/llama-2-13b-chat",
+        "ttr": 0.07490110397338867,
+        "ttft": 0.09360313415527344,
+        "tps": 23.366232983331443,
+        "num_tokens": 20,
+        "total_time": 0.9067423343658447,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "together.ai/llama-2-13b-chat",
+        "ttr": 0.257096529006958,
+        "ttft": 0.3036048412322998,
+        "tps": 33.7678590874788,
+        "num_tokens": 20,
+        "total_time": 0.8662700653076172,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nThe sun sets slow and"
+      },
+      {
+        "model": "anyscale.com/llama-3-8b-chat",
+        "ttr": 0.24204707145690918,
+        "ttft": 0.2453155517578125,
+        "tps": 21.35803867409978,
+        "num_tokens": 20,
+        "total_time": 1.1349103450775146,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "cloudflare.com/llama-3-8b-chat",
+        "ttr": 0.9106287956237793,
+        "ttft": 0.9107258319854736,
+        "tps": 14.209910054646933,
+        "num_tokens": 20,
+        "total_time": 2.2478208541870117,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues descend from high\nSoftly glowing, the"
+      },
+      {
+        "model": "fireworks.ai/llama-3-8b-chat",
+        "ttr": 0.21017026901245117,
+        "ttft": 0.22302031517028809,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.2231123447418213,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nSoftly fading, wild"
+      },
+      {
+        "model": "groq.com/llama-3-8b-chat",
+        "ttr": 0.4778437614440918,
+        "ttft": 0.7604849338531494,
+        "tps": 999,
+        "num_tokens": 20,
+        "total_time": 0.7759637832641602,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "perplexity.ai/llama-3-8b-chat",
+        "ttr": 0.09365630149841309,
+        "ttft": 0.11743974685668945,
+        "tps": 23.347277520257393,
+        "num_tokens": 20,
+        "total_time": 0.931239128112793,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "together.ai/llama-3-8b-chat",
+        "ttr": 0.24281692504882812,
+        "ttft": 0.24301433563232422,
+        "tps": 289.14899422368,
+        "num_tokens": 20,
+        "total_time": 0.30872440338134766,
+        "output": "Here is a nonet about a sunset:\n\nGolden hues upon the sea\nFading light, a"
+      },
+      {
+        "model": "anyscale.com/llama-2-7b-chat",
+        "ttr": 0.20244455337524414,
+        "ttft": 0.20959901809692383,
+        "tps": 20.782172532260024,
+        "num_tokens": 20,
+        "total_time": 1.1238441467285156,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "cloudflare.com/llama-2-7b-chat",
+        "ttr": 0.27313780784606934,
+        "ttft": 0.27322816848754883,
+        "tps": 19.778943648007477,
+        "num_tokens": 21,
+        "total_time": 1.2844045162200928,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "fireworks.ai/llama-2-7b-chat",
+        "ttr": 0.21636343002319336,
+        "ttft": 0.2237393856048584,
+        "tps": 211.36327734413334,
+        "num_tokens": 20,
+        "total_time": 0.3136320114135742,
+        "output": "Of course! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "together.ai/llama-2-7b-chat",
+        "ttr": 0.24050545692443848,
+        "ttft": 0.24060797691345215,
+        "tps": 80.87136574069376,
+        "num_tokens": 20,
+        "total_time": 0.47554898262023926,
+        "output": "  Sure! Here is a nonet about a sunset:\n\nGolden hues"
+      },
+      {
+        "model": "cloudflare.com/phi-2",
+        "ttr": 0.41324758529663086,
+        "ttft": 0.41335415840148926,
+        "tps": 38.58831413645016,
+        "num_tokens": 20,
+        "total_time": 0.905731201171875,
+        "output": "Input: \nAssistant: A golden haze descends from the horizon,\nAs warmth from the"
+      }
+    ]
+  }
+]
