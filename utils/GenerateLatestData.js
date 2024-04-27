@@ -9,10 +9,6 @@ async function fetchData(url) {
 
 // Main function to fetch files from all regions and merge them
 async function fetchAndMergeFiles(date) {
-  if (!date) {
-    throw new Error("Invalid date provided.");
-  }
-
   const baseUrl = "https://storage.googleapis.com/thefastest-data";
   const promises = regions.map((region) =>
     fetchData(`${baseUrl}/${region}/text/${date}.json`)
