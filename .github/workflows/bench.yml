@@ -3,21 +3,21 @@ name: Update LLM Benchmark Data
 on:
   schedule:
     # Runs at 08:00 UTC every day
-    - cron: '0 8 * * *'
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 jobs:
   run-benchmarks:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Send Benchmark Requests
-      run: |
-        regions=("sea" "iad" "cdg")
-        for region in "${regions[@]}"
-        do
-          curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&max_tokens=20&store=true' -H "fly-prefer-region: $region"          
-        done
+      - name: Send Benchmark Requests
+        run: |
+          regions=("sea" "iad" "cdg")
+          for region in "${regions[@]}"
+          do
+            curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&max_tokens=20&store=true' -H "fly-prefer-region: $region"          
+          done
 
   generate-latest-data:
     needs: run-benchmarks
@@ -34,19 +34,8 @@ jobs:
 
       - name: Get data and update file
         run: |
-          TEMP_FILE="/tmp/$(date +%s).tmp"
-          OUTPUT="$(node ./utils/GenerateLatestData.js 2>"$TEMP_FILE")"
-
-          if [[ -s "$TEMP_FILE" ]]; then
-            # Read the file contents and echo them so they are captured by the GitHub Actions runner
-            while read -r line; do
-                echo "$line"
-            done < "$TEMP_FILE"
-
-            # Delete the file
-            rm "$TEMP_FILE"
-            exit 1
-          elif [ -n "$OUTPUT" ]; then
+          OUTPUT=$(node ./utils/GenerateLatestData.js) || { echo "Failed to generate latest data."; exit 1; }
+          if [ -n "$OUTPUT" ]; then
             echo "$OUTPUT" > ./website/public/data/latest.json
             
             git config --local user.email "action@github.com"
@@ -56,6 +45,7 @@ jobs:
             git push
           else
             echo "No data generated, skipping Git operations."
+            exit 1
           fi
 
   build-and-deploy-site:
