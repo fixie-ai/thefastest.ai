@@ -34,7 +34,7 @@ jobs:
 
       - name: Get data and update file
         run: |
-          OUTPUT="$(node ./utils/GenerateLatestData.js) || { echo 'Failed to generate latest data.'; exit 1; }"
+          OUTPUT=$(node ./utils/GenerateLatestData.js) || { echo "Failed to generate latest data."; exit 1; }
           if [ -n "$OUTPUT" ]; then
             echo "$OUTPUT" > ./website/public/data/latest.json
             
