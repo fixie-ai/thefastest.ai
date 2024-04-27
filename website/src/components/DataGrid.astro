@@ -97,15 +97,15 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
       <p class="inline-flex">
         <div class="inline-flex items-center">
           <span
-            class="good w-14 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
-            >Green</span
-          ><span>&nbsp;= fastest,</span>
+            class="good w-18 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
+            >Fastest</span
+          >
         </div>
         <div class="inline-flex items-center">
           <span
-            class="bad w-14 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
-            >Red</span
-          ><span>&nbsp;= slowest.</span>
+            class="bad w-18 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
+            >Slowest</span
+          >
         </div>
       </p>
     </div>
@@ -254,10 +254,8 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 
     // Add text for our last updated date
     const ourDiv = document.getElementById("lastUpdated");
-    const lastUpdate = new Date(gridData[0].time);
-    // print date as local date
-    
-    ourDiv!.innerText = `Last Updated: ${gridData[0].time.split("T")[0]}`;
+    const lastUpdate = new Date(gridData[0].time).toLocaleDateString();
+    ourDiv!.innerText = `Last Update: ${lastUpdate}`;
 
     // Add an event listener to the radio buttons to filter the grid data
     document
