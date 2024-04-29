@@ -7,20 +7,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  # run-benchmarks:
-  #   runs-on: ubuntu-latest
+  run-benchmarks:
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Send Benchmark Requests
-  #       run: |
-  #         regions=("sea" "iad" "cdg")
-  #         for region in "${regions[@]}"
-  #         do
-  #           curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&max_tokens=20&store=true' -H "fly-prefer-region: $region"          
-  #         done
+    steps:
+      - name: Send Benchmark Requests
+        run: |
+          regions=("sea" "iad" "cdg")
+          for region in "${regions[@]}"
+          do
+            curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&max_tokens=20&store=true' -H "fly-prefer-region: $region"          
+          done
 
   generate-latest-data:
-    # needs: run-benchmarks
+    needs: run-benchmarks
     runs-on: ubuntu-latest
 
     steps:
