@@ -47,6 +47,10 @@ jobs:
             echo "No data generated, skipping Git operations."
             exit 1
           fi
+      - name: Push changes
+        run: |
+          git push https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}.git ${{ github.ref }}
+        
 
   # build-and-deploy-site:
   #   needs: generate-latest-data
