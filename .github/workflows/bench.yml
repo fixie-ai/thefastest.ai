@@ -48,6 +48,6 @@ jobs:
             exit 1
           fi
 
-  build-and-deploy-site:
-    needs: generate-latest-data
-    uses: ./.github/workflows/astro.yml
+  # build-and-deploy-site:
+  #   needs: generate-latest-data
+  #   uses: ./.github/workflows/astro.yml
