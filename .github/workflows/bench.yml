@@ -43,8 +43,7 @@ jobs:
             git add ./website/public/data/latest.json
             git commit -m "Update latest data"
             git push
-            COMMIT_SHA=$(git rev-parse HEAD)
-            echo "COMMIT_SHA=$COMMIT_SHA" >> $GITHUB_ENV
+
           else
             echo "No data generated, skipping Git operations."
             exit 1
@@ -52,8 +51,5 @@ jobs:
 
   build-and-deploy-site:
     needs: generate-latest-data
-    # uses: ./.github/workflows/astro.yml
+    uses: ./.github/workflows/astro.yml
     
-    steps:
-      - name: Display SHA
-        run: echo ${{ env.COMMIT_SHA }}
