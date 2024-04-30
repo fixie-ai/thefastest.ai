@@ -42,14 +42,17 @@ jobs:
             git config --local user.name "GitHub Action"
             git add ./website/public/data/latest.json
             git commit -m "Update latest data"
+
           else
             echo "No data generated, skipping Git operations."
             exit 1
           fi
+      
       - name: Push changes
-        run: |
-          git push https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}.git ${{ github.ref }}
-        
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          branch: ${{ github.ref }}
 
   # build-and-deploy-site:
   #   needs: generate-latest-data
