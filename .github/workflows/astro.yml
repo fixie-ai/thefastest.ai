@@ -36,6 +36,9 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Print out current commit
+        run: |
+          echo "Commit: ${{ inputs.commit-sha }}" || echo "No commit sha provided"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager

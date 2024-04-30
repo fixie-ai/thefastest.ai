@@ -49,7 +49,12 @@ jobs:
             exit 1
           fi
 
+      - name: Get commit hash
+        id: commit_hash
+        run: echo "::set-output name=hash::$(git rev-parse HEAD)"
+
   build-and-deploy-site:
     needs: generate-latest-data
     uses: ./.github/workflows/astro.yml
-    
+    with:
+      commit-sha: ${{ needs.generate-latest-data.outputs.commit_hash.hash }}
