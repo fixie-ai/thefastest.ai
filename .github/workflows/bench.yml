@@ -13,10 +13,10 @@ jobs:
     steps:
       - name: Send Benchmark Requests
         run: |
-          regions=("sea" "iad" "cdg")
+          regions=("sea" "iad" "cdg")          
           for region in "${regions[@]}"
           do
-            curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&max_tokens=20&store=true' -H "fly-prefer-region: $region"          
+            curl -X POST 'https://ai-benchmarks.fly.dev/bench?mode=text&max_tokens=20&spread=30&store=true' -H "fly-prefer-region: $region"          
           done
 
   generate-latest-data:
