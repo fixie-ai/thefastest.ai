@@ -5,8 +5,11 @@ export async function fetchLatestJsonFile(region: string, medium: string) {
   yesterday.setDate(today.getDate() - 1);
   const p1 = fetchJsonFile(region, medium, today);
   const p2 = fetchJsonFile(region, medium, yesterday);
-  const [f1, f2] = await Promise.all([p1, p2]);
-  return f1 ?? f2;
+  const f1 = await p1;
+  if (f1) {
+    return f1;
+  }
+  return await p2;
 }
 
 export async function fetchJsonFile(
@@ -25,7 +28,7 @@ function postproc(item: any) {
   }
 }
 
-export async function fetchWithPostproc(
+async function fetchWithPostproc(
   url: string,
   postproc: (item: any) => void,
 ) {
