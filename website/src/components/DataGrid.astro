@@ -122,14 +122,16 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     TPSDefinition,
     TotalTimeDefinition,
   } from "@/utils/DataGridDefinitions.ts";
-  import { fetchLocalJsonFile } from "@/utils/FetchData.ts";
+  import { fetchLatestJsonFile } from "@/utils/FetchData.ts";
 
   let gridApi;
-  const localData = "../../data/latest.json";
-  const gridData = await fetchLocalJsonFile(localData);
   const urlParams = new URLSearchParams(window.location.search);
   let selectedRegion = urlParams.get("r") ?? "sea";
-  let selectedRegionData = [];
+  const initialData = await fetchData();
+
+  async function fetchData() {
+    return fetchLatestJsonFile(selectedRegion, "text");
+  }
 
   function setUrlParam(key: string, value?: string) {
     const url = new URL(window.location.href);
@@ -141,17 +143,14 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     window.history.replaceState({}, "", url);
   }
 
-  function updateRegion(region: string, updateUrl: boolean = true) {
-    selectedRegion = region;
-    gridData.forEach((regionData) => {
-      if (regionData.region === region) {
-        selectedRegionData = regionData.results;
-        gridApi.setGridOption("rowData", selectedRegionData);
-      }
-    });
-    if (updateUrl) {
-      setUrlParam("r", region);
-    }
+  async function updateRegion(region: string) {
+    selectedRegion = region;    
+    updateGrid(await fetchData());    
+    setUrlParam("r", region);
+  }
+
+  function updateGrid(data) {
+    gridApi.setRowData(data.results);
   }
 
   // Returns the background color for the cell based on the value
@@ -215,6 +214,10 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     return { filterType: "text", type: "contains", filter: text };
   }
 
+  function makeProviderUrl(provider: string) {
+    return provider.includes(".") ? `https://${provider}` : `https://${provider}.com`;
+  }
+
   async function onDOMContentLoaded() {
     const gridDiv = document.querySelector("#myGrid") as HTMLElement;
     const gridOptions = gridOptionsBase;
@@ -222,6 +225,9 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     const providerFilter = urlParams.get("pf");
     const modelFilter = urlParams.get("mf");
 
+    gridOptions.columnDefs[0].cellRenderer = function (params) {
+      return `<a href="${makeProviderUrl(params.value)}" class="hover:text-orange-600" target="_blank">${params.value}</a>`;
+    };
     // remove TTFT and TPS columns on mobile
     if (isMobile) {
       gridOptions.columnDefs.splice(2, 2);
@@ -250,20 +256,20 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
       `input[name=selectedRegion][value=${selectedRegion}]`,
     ) as HTMLInputElement;
     selectedRegionRadio.checked = true;
-    updateRegion(selectedRegion, false);
+    updateGrid(initialData);
 
     // Add text for our last updated date
     const ourDiv = document.getElementById("lastUpdated");
-    const lastUpdate = new Date(gridData[0].time).toLocaleDateString();
+    const lastUpdate = new Date(initialData.time).toLocaleDateString();
     ourDiv!.innerText = `Last Update: ${lastUpdate}`;
 
     // Add an event listener to the radio buttons to filter the grid data
     document
       .getElementById("benchmarks")!
-      .addEventListener("change", function (event) {
+      .addEventListener("change", async function (event) {
         // Filter the grid data based on the selected region
         if (event.target.name === "selectedRegion") {
-          updateRegion(event.target.value);
+          await updateRegion(event.target.value);
         }
       });
   }
