@@ -28,10 +28,7 @@ function postproc(item: any) {
   }
 }
 
-async function fetchWithPostproc(
-  url: string,
-  postproc: (item: any) => void,
-) {
+async function fetchWithPostproc(url: string, postproc: (item: any) => void) {
   const response = await fetch(url);
   if (!response.ok) {
     return null;

@@ -86,7 +86,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 
   <div
     id="myGrid"
-    class="ag-theme-quartz w-full bg-stone-100 font-mono text-sm text-gray-950 dark:bg-stone-900 dark:text-white hidden"
+    class="ag-theme-quartz hidden w-full bg-stone-100 font-mono text-sm text-gray-950 dark:bg-stone-900 dark:text-white"
   >
   </div>
   <div
@@ -132,7 +132,9 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
   const initialData = await fetchData(date);
 
   async function fetchData(date?: Date) {
-    return (date) ? fetchJsonFile(selectedRegion, "text", date) : fetchLatestJsonFile(selectedRegion, "text");
+    return date
+      ? fetchJsonFile(selectedRegion, "text", date)
+      : fetchLatestJsonFile(selectedRegion, "text");
   }
 
   function setUrlParam(key: string, value?: string) {
@@ -280,14 +282,14 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
   }
 
   // Init the grid when the DOM is ready, or now if it has already loaded.
-  if (document.readyState === "loading") {    
+  if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
-  } else {    
+  } else {
     onDOMContentLoaded();
   }
 
   // Resize columns when the window resizes (eg orientation change on mobile)
-  window.addEventListener("resize", () => gridApi.sizeColumnsToFit());  
+  window.addEventListener("resize", () => gridApi.sizeColumnsToFit());
 
   // Watch for dark mode changes and refresh the grid accordingly
   const observer = new MutationObserver((mutations) => {
