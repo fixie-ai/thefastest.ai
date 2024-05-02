@@ -1,4 +1,5 @@
 export async function fetchLatestJsonFile(region: string, medium: string) {
+  // Today's benchmark might not have run yet, so we'll try the previous benchmark as well.
   const today = new Date();
   const yesterday = new Date();
   yesterday.setDate(today.getDate() - 1);
@@ -8,19 +9,26 @@ export async function fetchLatestJsonFile(region: string, medium: string) {
   return f1 ?? f2;
 }
 
-export async function fetchJsonFile(region: string, medium: string, date: Date) {
+export async function fetchJsonFile(
+  region: string,
+  medium: string,
+  date: Date,
+) {
   let dateStr = date.toISOString().slice(0, 10);
   const url = `https://storage.googleapis.com/thefastest-data/${region}/${medium}/${dateStr}.json`;
   return await fetchWithPostproc(url, postproc);
 }
 
-function postproc(item: any) {  
+function postproc(item: any) {
   if (item.model.includes("/")) {
     [item.provider, item.model] = item.model.split("/");
   }
 }
 
-export async function fetchWithPostproc(url: string, postproc: (item: any) => void) {
+export async function fetchWithPostproc(
+  url: string,
+  postproc: (item: any) => void,
+) {
   const response = await fetch(url);
   if (!response.ok) {
     return null;

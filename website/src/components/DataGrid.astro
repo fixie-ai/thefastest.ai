@@ -144,8 +144,8 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
   }
 
   async function updateRegion(region: string) {
-    selectedRegion = region;    
-    updateGrid(await fetchData());    
+    selectedRegion = region;
+    updateGrid(await fetchData());
     setUrlParam("r", region);
   }
 
@@ -215,7 +215,9 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
   }
 
   function makeProviderUrl(provider: string) {
-    return provider.includes(".") ? `https://${provider}` : `https://${provider}.com`;
+    return provider.includes(".")
+      ? `https://${provider}`
+      : `https://${provider}.com`;
   }
 
   async function onDOMContentLoaded() {
