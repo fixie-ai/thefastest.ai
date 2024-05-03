@@ -86,7 +86,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 
   <div
     id="myGrid"
-    class="ag-theme-quartz w-full bg-stone-100 font-mono text-sm text-gray-950 dark:bg-stone-900 dark:text-white"
+    class="ag-theme-quartz hidden w-full bg-stone-100 font-mono text-sm text-gray-950 dark:bg-stone-900 dark:text-white"
   >
   </div>
   <div
@@ -122,15 +122,19 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     TPSDefinition,
     TotalTimeDefinition,
   } from "@/utils/DataGridDefinitions.ts";
-  import { fetchLatestJsonFile } from "@/utils/FetchData.ts";
+  import { fetchJsonFile, fetchLatestJsonFile } from "@/utils/FetchData.ts";
 
   let gridApi;
   const urlParams = new URLSearchParams(window.location.search);
   let selectedRegion = urlParams.get("r") ?? "sea";
-  const initialData = await fetchData();
+  const dateStr = urlParams.get("d");
+  const date = dateStr ? new Date(dateStr) : undefined;
+  const initialData = await fetchData(date);
 
-  async function fetchData() {
-    return fetchLatestJsonFile(selectedRegion, "text");
+  async function fetchData(date?: Date) {
+    return date
+      ? fetchJsonFile(selectedRegion, "text", date)
+      : fetchLatestJsonFile(selectedRegion, "text");
   }
 
   function setUrlParam(key: string, value?: string) {
@@ -259,6 +263,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     ) as HTMLInputElement;
     selectedRegionRadio.checked = true;
     updateGrid(initialData);
+    gridDiv.classList.remove("hidden");
 
     // Add text for our last updated date
     const ourDiv = document.getElementById("lastUpdated");
@@ -276,13 +281,15 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
       });
   }
 
+  // Init the grid when the DOM is ready, or now if it has already loaded.
   if (document.readyState === "loading") {
-    // The document is still loading, add the event listener normally
     document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
   } else {
-    // The DOMContentLoaded event has already fired, call the function directly
     onDOMContentLoaded();
   }
+
+  // Resize columns when the window resizes (eg orientation change on mobile)
+  window.addEventListener("resize", () => gridApi.sizeColumnsToFit());
 
   // Watch for dark mode changes and refresh the grid accordingly
   const observer = new MutationObserver((mutations) => {

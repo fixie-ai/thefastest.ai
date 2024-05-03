@@ -120,7 +120,7 @@ const columnTotalTime = {
 export const gridOptionsBase = {
   // alwaysShowVerticalScroll: true,
   autoSizeStrategy: { type: "fitGridWidth" },
-  enableCellTextSelection: true,  
+  enableCellTextSelection: true,
   suppressCellFocus: true,
   suppressRowHoverHighlight: true,
   defaultColDef: {
