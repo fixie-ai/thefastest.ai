@@ -121,6 +121,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     TTFTDefinition,
     TPSDefinition,
     TotalTimeDefinition,
+    customTooltip,
   } from "@/utils/DataGridDefinitions.ts";
   import { fetchLatestJsonFile } from "@/utils/FetchData.ts";
 
@@ -244,6 +245,10 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
       const modelFilter = filterToText(filterModel.model);
       setUrlParam("pf", providerFilter);
       setUrlParam("mf", modelFilter);
+    };
+    gridOptions.components = {
+      ...gridOptions.components,
+      customTooltip: customTooltip,
     };
 
     // create the grid and set the filter if needed
