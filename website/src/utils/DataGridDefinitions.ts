@@ -57,6 +57,13 @@ export const TotalTimeDefinition = {
 // Set-up all of our column definitions that will be used in the Data Grid
 const headerClass = "font-bold";
 
+function milliSecParser(text: string) {
+  return parseFloat(text) / 1000;
+}
+function milliSecFormatter(value: number) {
+  return (value * 1000).toString();
+}
+
 // Model column
 const columnModel = {
   field: "model",
@@ -98,6 +105,8 @@ const columnTTFT = {
   filterParams: {
     filterOptions: ["lessThanOrEqual"],
     maxNumConditions: 1,
+    numberParser: milliSecParser,
+    numberFormatter: milliSecFormatter,
   },
 };
 
@@ -111,7 +120,7 @@ const columnTPS = {
   maxWidth: 120,
   valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2),
   filterParams: {
-    filterOptions: ["lessThanOrEqual"],
+    filterOptions: ["greaterThanOrEqual"],
     maxNumConditions: 1,
   },
 };
@@ -134,13 +143,15 @@ const columnTotalTime = {
   filterParams: {
     filterOptions: ["lessThanOrEqual"],
     maxNumConditions: 1,
+    numberParser: milliSecParser,
+    numberFormatter: milliSecFormatter,
   },
 };
 
 export const gridOptionsBase = {
   // alwaysShowVerticalScroll: true,
   autoSizeStrategy: { type: "fitGridWidth" },
-  enableCellTextSelection: true,  
+  enableCellTextSelection: true,
   suppressCellFocus: true,
   suppressRowHoverHighlight: true,
   defaultColDef: {
