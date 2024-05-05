@@ -14,7 +14,7 @@ jobs:
       - name: Send Benchmark Requests
         run: |
           regions=("sea" "iad" "cdg")
-          media=("text" "image")
+          media=("text" "image") 
           for region in "${regions[@]}"
           for media in "${media[@]}"
           do
