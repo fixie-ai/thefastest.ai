@@ -16,7 +16,7 @@ jobs:
           regions=("sea" "iad" "cdg")
           media=("text" "image")
           for region in "${regions[@]}"; do
-            for media in "${media[@]}"; do
-              curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=$media&max_tokens=20&spread=30&store" -H "fly-prefer-region: $region"
+            for medium in "${media[@]}"; do
+              curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=$medium&max_tokens=20&spread=30&store" -H "fly-prefer-region: $region"
             done
           done
