@@ -57,6 +57,13 @@ export const TotalTimeDefinition = {
 // Set-up all of our column definitions that will be used in the Data Grid
 const headerClass = "font-bold";
 
+function milliSecParser(text: string) {
+  return parseFloat(text) / 1000;
+}
+function milliSecFormatter(value: number) {
+  return (value * 1000).toString();
+}
+
 // Model column
 const columnModel = {
   field: "model",
@@ -66,6 +73,10 @@ const columnModel = {
   //TODO: Make this ~200 on mobile screen size by default
   minWidth: 160,
   // tooltipField: "output"
+  filterParams: {
+    filterOptions: ["contains"],
+    maxNumConditions: 4,
+  },
 };
 
 const columnProvider = {
@@ -75,6 +86,10 @@ const columnProvider = {
   headerClass: headerClass,
   minWidth: 130,
   maxWidth: 200,
+  filterParams: {
+    filterOptions: ["contains"],
+    maxNumConditions: 4,
+  },
 };
 
 // TTFT column
@@ -87,6 +102,12 @@ const columnTTFT = {
   maxWidth: 120,
   valueFormatter: (p: ValueFormatterParam) =>
     p.value < 1.0 ? p.value.toFixed(3) * 1000 + "ms" : p.value.toFixed(2) + "s",
+  filterParams: {
+    filterOptions: ["lessThanOrEqual"],
+    maxNumConditions: 1,
+    numberParser: milliSecParser,
+    numberFormatter: milliSecFormatter,
+  },
 };
 
 // TPS column
@@ -98,6 +119,10 @@ const columnTPS = {
   minWidth: 0,
   maxWidth: 120,
   valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2),
+  filterParams: {
+    filterOptions: ["greaterThanOrEqual"],
+    maxNumConditions: 1,
+  },
 };
 
 // Total Time column
@@ -115,6 +140,12 @@ const columnTotalTime = {
   valueFormatter: (p: ValueFormatterParam) =>
     p.value < 1.0 ? p.value.toFixed(3) * 1000 + "ms" : p.value.toFixed(2) + "s",
   sort: "asc",
+  filterParams: {
+    filterOptions: ["lessThanOrEqual"],
+    maxNumConditions: 1,
+    numberParser: milliSecParser,
+    numberFormatter: milliSecFormatter,
+  },
 };
 
 export const gridOptionsBase = {
@@ -126,10 +157,8 @@ export const gridOptionsBase = {
   defaultColDef: {
     suppressMovable: true,
     filter: true,
-    filterParams: {
-      filterOptions: ["contains"],
-      maxNumConditions: 4,
-    },
+    floatingFilter: true,
+    suppressHeaderMenuButton: true,
     // minWidth: 80,
   },
   domLayout: "autoHeight",
