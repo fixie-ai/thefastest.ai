@@ -38,13 +38,11 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 </style>
 
 <form id="benchmarks" class="text-sm">
-  <div class="flex flex-row justify-between">
+  <div class="flex flex-row">
     <div class="flex flex-col">
-      <label for="regionSelector" class="text-base font-bold"
-        >Select a Region</label
-      >
+      <label for="regionSelector" class="text-base font-bold">Region</label>
       <label class="text-base font-bold">===============</label>
-      <div id="regionSelector" class="my-4 flex flex-col">
+      <div id="regionSelector" class="my-4">
         <div>
           <input
             type="radio"
@@ -75,7 +73,35 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
         </div>
       </div>
     </div>
-    <div id="legend" class="mb-4 mt-10 flex flex-col justify-end text-left">
+    <div class="ml-8 flex flex-col">
+      <label for="mediaSelector" class="text-base font-bold">Prompt Type</label>
+      <label class="text-base font-bold">===============</label>
+      <div id="mediaSelector" class="my-4">
+        <div>
+          <input
+            type="radio"
+            id="textMediaSelector"
+            name="selectedMedia"
+            value="text"
+            checked
+          />
+          <label for="textMediaSelector">Text</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="imageMediaSelector"
+            name="selectedMedia"
+            value="image"
+          />
+          <label for="imageMediaSelector">Image</label>
+        </div>
+      </div>
+    </div>
+    <div
+      id="legend"
+      class="mb-4 ml-auto mt-10 flex flex-col justify-end text-left"
+    >
       <div><span class="font-bold">TTFT:</span> Time To First Token</div>
       <div><span class="font-bold">TPS: </span>Tokens Per Second</div>
       <div>
@@ -89,6 +115,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     class="ag-theme-quartz hidden w-full bg-stone-100 font-mono text-sm text-gray-950 dark:bg-stone-900 dark:text-white"
   >
   </div>
+
   <div
     id="myFooter"
     class="ag-theme-quartz mt-4 flex flex-row items-center justify-between text-sm"
@@ -127,14 +154,15 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
   let gridApi;
   const urlParams = new URLSearchParams(window.location.search);
   let selectedRegion = urlParams.get("r") ?? "sea";
+  let selectedMedia = urlParams.get("m") ?? "text";
   const dateStr = urlParams.get("d");
   const date = dateStr ? new Date(dateStr) : undefined;
   const initialData = await fetchData(date);
 
-  async function fetchData(date?: Date) {
+  async function fetchData() {
     return date
-      ? fetchJsonFile(selectedRegion, "text", date)
-      : fetchLatestJsonFile(selectedRegion, "text");
+      ? fetchJsonFile(selectedRegion, selectedMedia, date)
+      : fetchLatestJsonFile(selectedRegion, selectedMedia);
   }
 
   function setUrlParam(key: string, value?: string) {
@@ -151,6 +179,12 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     selectedRegion = region;
     updateGrid(await fetchData());
     setUrlParam("r", region);
+  }
+
+  async function updateMedia(media: string) {
+    selectedMedia = media;
+    updateGrid(await fetchData());
+    setUrlParam("m", media);
   }
 
   function updateGrid(data) {
@@ -257,11 +291,16 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
       model: textToFilter(modelFilter),
     };
     gridApi.setFilterModel(filterModel);
-    // set the selected region and populate the grid
+
+    // set the selected region and media and populate the grid
     const selectedRegionRadio = document.querySelector(
       `input[name=selectedRegion][value=${selectedRegion}]`,
     ) as HTMLInputElement;
     selectedRegionRadio.checked = true;
+    const selectedMediaRadio = document.querySelector(
+      `input[name=selectedMedia][value=${selectedMedia}]`,
+    ) as HTMLInputElement;
+    selectedMediaRadio.checked = true;
     updateGrid(initialData);
     gridDiv.classList.remove("hidden");
 
@@ -270,13 +309,14 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     const lastUpdate = new Date(initialData.time).toLocaleDateString();
     ourDiv!.innerText = `Last Update: ${lastUpdate}`;
 
-    // Add an event listener to the radio buttons to filter the grid data
+    // Add event listeners to the radio buttons to filter the grid data
     document
       .getElementById("benchmarks")!
       .addEventListener("change", async function (event) {
-        // Filter the grid data based on the selected region
         if (event.target.name === "selectedRegion") {
           await updateRegion(event.target.value);
+        } else if (event.target.name === "selectedMedia") {
+          await updateMedia(event.target.value);
         }
       });
   }
