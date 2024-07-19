@@ -14,7 +14,7 @@ jobs:
       - name: Send Benchmark Requests
         run: |
           # Pre-warm any spun-down instances (only audio right now)
-          curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=audio&max_tokens=20&n=1"
+          curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=audio&max_tokens=20&num_requests=1"
           # Run the benchmarks
           regions=("sea" "iad" "cdg")
           media=("text" "tools" "image" "audio")
