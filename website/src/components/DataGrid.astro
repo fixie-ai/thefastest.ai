@@ -42,7 +42,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     <div class="flex flex-col">
       <label for="regionSelector" class="text-base font-bold">Region</label>
       <label class="text-base font-bold">===============</label>
-      <div id="regionSelector" class="my-4">
+      <div id="regionSelector" class="mb-4">
         <div>
           <input
             type="radio"
@@ -76,7 +76,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
     <div class="ml-8 flex flex-col">
       <label for="mediaSelector" class="text-base font-bold">Prompt Type</label>
       <label class="text-base font-bold">===============</label>
-      <div id="mediaSelector" class="my-4">
+      <div id="mediaSelector" class="mb-4">
         <div>
           <input
             type="radio"
@@ -86,6 +86,15 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
             checked
           />
           <label for="textMediaSelector">Text</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="toolsMediaSelector"
+            name="selectedMedia"
+            value="tools"
+          />
+          <label for="toolsMediaSelector">Function</label>
         </div>
         <div>
           <input
