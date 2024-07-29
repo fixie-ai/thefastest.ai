@@ -16,10 +16,15 @@ jobs:
           # Pre-warm any spun-down instances (only audio right now)
           curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=audio&max_tokens=20&num_requests=1"
           # Run the benchmarks
+          declare -A max_tokens=(
+            ["tools"]=50
+          )
+          default_max_tokens=20
           regions=("sea" "iad" "cdg")
           media=("text" "tools" "image" "audio")
           for region in "${regions[@]}"; do
             for medium in "${media[@]}"; do
-              curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=$medium&max_tokens=20&spread=30&store" -H "fly-prefer-region: $region"
+              max_tokens=${max_tokens[$medium]:-$default_max_tokens}
+              curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=$medium&max_tokens=$max_tokens&spread=30&store" -H "fly-prefer-region: $region"
             done
           done
