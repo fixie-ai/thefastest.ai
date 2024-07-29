@@ -17,7 +17,7 @@ jobs:
           curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=audio&max_tokens=20&num_requests=1"
           # Run the benchmarks
           declare -A max_tokens=(
-            ["tools"]=50
+            ["tools"]=100
           )
           default_max_tokens=20
           regions=("sea" "iad" "cdg")
