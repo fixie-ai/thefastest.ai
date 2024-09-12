@@ -118,7 +118,8 @@ const columnTPS = {
   headerClass: headerClass,
   minWidth: 0,
   maxWidth: 120,
-  valueFormatter: (p: ValueFormatterParam) => p.value.toFixed(2),
+  valueFormatter: (p: ValueFormatterParam) => 
+    p.value < 1000 ? p.value.toFixed(2) : p.value.toFixed(1),
   filterParams: {
     filterOptions: ["greaterThanOrEqual"],
     maxNumConditions: 1,
