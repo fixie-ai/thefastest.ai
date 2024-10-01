@@ -5,6 +5,12 @@ on:
     # Runs at 08:00 UTC every day
     - cron: "0 8 * * *"
   workflow_dispatch:
+    inputs:
+      max_parallel:
+        description: 'Maximum number of parallel jobs (1-20, use 1 for sequential execution)'
+        required: true
+        default: 10
+        type: number
 
 jobs:
   pre-warm:
@@ -20,7 +26,7 @@ jobs:
       matrix:
         region: [sea, iad, cdg, nrt]
         medium: [text, tools, image, audio]
-      max-parallel: 20 # This is the limit of total concurrent jobs for the GitHub Free tier
+      max-parallel: ${{ github.event.inputs.max_parallel || 10 }}
     
     steps:
       - name: Send Benchmark Request
