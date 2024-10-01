@@ -20,7 +20,7 @@ jobs:
             ["tools"]=100
           )
           default_max_tokens=20
-          regions=("sea" "iad" "cdg")
+          regions=("sea" "iad" "cdg" "nrt")
           media=("text" "tools" "image" "audio")
           for region in "${regions[@]}"; do
             for medium in "${media[@]}"; do

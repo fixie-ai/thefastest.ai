@@ -1,5 +1,5 @@
 // Define the regions to search for files
-const regions = ["cdg", "sea", "iad"];
+const regions = ["cdg", "sea", "iad", "nrt"];
 
 // Function to fetch data from a given URL
 async function fetchData(url) {
