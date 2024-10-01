@@ -5,26 +5,40 @@ on:
     # Runs at 08:00 UTC every day
     - cron: "0 8 * * *"
   workflow_dispatch:
+    inputs:
+      max_parallel:
+        description: 'Maximum number of parallel jobs (1-20, use 1 for sequential execution)'
+        required: true
+        default: '10'
+        type: string
 
 jobs:
-  run-benchmarks:
+  pre-warm:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Send Benchmark Requests
-        run: |
-          # Pre-warm any spun-down instances (only audio right now)
-          curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=audio&max_tokens=20&num_requests=1"
-          # Run the benchmarks
-          declare -A max_tokens=(
-            ["tools"]=100
-          )
-          default_max_tokens=20
-          regions=("sea" "iad" "cdg")
-          media=("text" "tools" "image" "audio")
-          for region in "${regions[@]}"; do
-            for medium in "${media[@]}"; do
-              max_tokens=${max_tokens[$medium]:-$default_max_tokens}
-              curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=$medium&max_tokens=$max_tokens&spread=30&store" -H "fly-prefer-region: $region"
-            done
-          done
+      - name: Pre-warm audio instance
+        run: curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=audio&max_tokens=20&num_requests=1"
+
+  run-benchmarks:
+    needs: pre-warm
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        region: [sea, iad, cdg, nrt]
+        medium: [text, tools, image, audio]
+      max-parallel: ${{ fromJson(github.event.inputs.max_parallel || '10') }}
+    
+    steps:
+      - name: Send Benchmark Request
+        env:
+          MAX_TOKENS: ${{ (matrix.medium == 'tools' && 100) || 20 }}
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 15
+          max_attempts: 3
+          retry_on: error
+          command: |
+            echo "Running benchmark for ${{ matrix.medium }} in region ${{ matrix.region }}"
+            curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=${{ matrix.medium }}&max_tokens=${{ env.MAX_TOKENS }}&spread=30&store" -H "fly-prefer-region: ${{ matrix.region }}"
+            echo "Benchmark completed for ${{ matrix.medium }} in region ${{ matrix.region }}"
