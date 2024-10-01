@@ -9,8 +9,8 @@ on:
       max_parallel:
         description: 'Maximum number of parallel jobs (1-20, use 1 for sequential execution)'
         required: true
-        default: 10
-        type: number
+        default: '10'
+        type: string
 
 jobs:
   pre-warm:
@@ -26,7 +26,7 @@ jobs:
       matrix:
         region: [sea, iad, cdg, nrt]
         medium: [text, tools, image, audio]
-      max-parallel: ${{ github.event.inputs.max_parallel || 10 }}
+      max-parallel: ${{ fromJson(github.event.inputs.max_parallel || '10') }}
     
     steps:
       - name: Send Benchmark Request
