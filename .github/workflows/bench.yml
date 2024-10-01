@@ -23,6 +23,7 @@ jobs:
     needs: pre-warm
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         region: [sea, iad, cdg, nrt]
         medium: [text, tools, image, audio]
@@ -32,7 +33,12 @@ jobs:
       - name: Send Benchmark Request
         env:
           MAX_TOKENS: ${{ (matrix.medium == 'tools' && 100) || 20 }}
-        run: |
-          echo "Running benchmark for ${{ matrix.medium }} in region ${{ matrix.region }}"
-          curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=${{ matrix.medium }}&max_tokens=$MAX_TOKENS&spread=30&store" -H "fly-prefer-region: ${{ matrix.region }}"
-          echo "Benchmark completed for ${{ matrix.medium }} in region ${{ matrix.region }}"
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 15
+          max_attempts: 3
+          retry_on: error
+          command: |
+            echo "Running benchmark for ${{ matrix.medium }} in region ${{ matrix.region }}"
+            curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=${{ matrix.medium }}&max_tokens=${{ env.MAX_TOKENS }}&spread=30&store" -H "fly-prefer-region: ${{ matrix.region }}"
+            echo "Benchmark completed for ${{ matrix.medium }} in region ${{ matrix.region }}"
