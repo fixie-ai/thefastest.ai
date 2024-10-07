@@ -24,6 +24,7 @@ jobs:
           media=("text" "tools" "image" "audio")
           for region in "${regions[@]}"; do
             for medium in "${media[@]}"; do
+              echo "Running benchmarks for $medium in $region"
               max_tokens=${max_tokens[$medium]:-$default_max_tokens}
               curl -f -X POST "https://ai-benchmarks.fly.dev/bench?mode=$medium&max_tokens=$max_tokens&spread=30&store" -H "fly-prefer-region: $region"
             done
